@@ -11,7 +11,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 
 # Import page modules
-from pages import landing, console
+from pages import landing, console, about, manual, brute_ledger
 
 # Page configuration
 st.set_page_config(
@@ -32,27 +32,13 @@ def main():
     elif st.session_state.page == 'console':
         console.render()
     elif st.session_state.page == 'manual':
-        st.title("🚧 Manual Coming Soon")
-        st.markdown("""
-        The User Manual page is under construction. 
-        
-        For now, refer to the tooltips on each toggle and slider in the Console for guidance.
-        """)
-        if st.button("← Back to Landing"):
-            st.session_state.page = 'landing'
-            st.rerun()
+    manual.render()
+    
     elif st.session_state.page == 'about':
-        st.title("🚧 About Coming Soon")
-        st.markdown("""
-        The About page is under construction.
-        
-        **CFA v2.0** - Comparative Framework Audit
-        
-        "All Named, All Priced" - Where ideas reveal their true weight.
-        """)
-        if st.button("← Back to Landing"):
-            st.session_state.page = 'landing'
-            st.rerun()
+        about.render()
+    
+    elif st.session_state.page == 'brute_ledger':
+        brute_ledger.render()
 
 if __name__ == "__main__":
     main()
