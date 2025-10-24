@@ -1,14 +1,13 @@
-"""
+“””
 CFA v2.0 Interactive Console
-“All Named, All Priced” - Now with knobs and dials
+All Named, All Priced - Now with knobs and dials
 
 Usage: streamlit run app.py
-"""
+“””
 
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
-import plotly.express as px
 from typing import Dict, Tuple, List
 import json
 
@@ -29,7 +28,7 @@ MDN_DEFAULT = {
 “AR”: 7.0,
 “MG”: 4.0
 },
-“admits_limits”: True  # for fallibilism bonus eligibility
+“admits_limits”: True
 }
 
 CT_DEFAULT = {
@@ -43,7 +42,7 @@ CT_DEFAULT = {
 “AR”: 8.5,
 “MG”: 8.5
 },
-“admits_limits”: True  # acknowledges mystery
+“admits_limits”: True
 }
 
 PF_TYPES = [“Instrumental”, “Composite_70_30”, “Holistic_50_50”]
@@ -61,17 +60,16 @@ if pf_type == “Instrumental”:
 return pf_inst
 if pf_type == “Holistic_50_50”:
 return 0.5 * pf_inst + 0.5 * pf_exist
-# Default: Composite_70_30
 return 0.7 * pf_inst + 0.3 * pf_exist
 
 def apply_fallibilism_bonus(cci: float, bonus: str, admitted_limits: bool = True) -> float:
 “”“Apply +0.3 CCI if framework admits limits and bonus is ON.”””
 if bonus == “ON” and admitted_limits:
-return min(cci + 0.3, 10.0)  # Cap at 10
+return min(cci + 0.3, 10.0)
 return cci
 
 def parity_weight(mg: float, parity: str) -> float:
-“”“Apply parity weighting to MG (0.5× if OFF).”””
+“”“Apply parity weighting to MG (0.5x if OFF).”””
 return mg if parity == “ON” else 0.5 * mg
 
 def bfi_total(axioms: int, debts: int, debt_weight: str) -> float:
@@ -80,31 +78,22 @@ w = 1.0 if debt_weight == “Equal_1.0x” else 1.2
 return axioms + w * debts
 
 def ypa_scenario_scores(fr: Dict, cfg: Dict) -> Tuple[Dict, Dict, float]:
-“””
-Compute YPA for all three scenarios.
+“”“Compute YPA for all three scenarios.”””
+CCI = apply_fallibilism_bonus(
+fr[“levers”][“CCI”],
+cfg[“fallibilism_bonus”],
+fr.get(“admits_limits”, True)
+)
+EDB = fr[“levers”][“EDB”]
+PF = composite_pf(
+fr[“levers”][“PF_instrumental”],
+fr[“levers”][“PF_existential”],
+cfg[“pf_type”]
+)
+AR = fr[“levers”][“AR”]
+MG = parity_weight(fr[“levers”][“MG”], cfg[“lever_parity”])
 
 ```
-Returns:
-    - scenarios: Dict of {scenario_name: {total, YPA}}
-    - final_levers: Dict of adjusted lever values
-    - bfi: Total BFI
-"""
-# Apply adjustments
-CCI = apply_fallibilism_bonus(
-    fr["levers"]["CCI"], 
-    cfg["fallibilism_bonus"],
-    fr.get("admits_limits", True)
-)
-EDB = fr["levers"]["EDB"]
-PF = composite_pf(
-    fr["levers"]["PF_instrumental"],
-    fr["levers"]["PF_existential"],
-    cfg["pf_type"]
-)
-AR = fr["levers"]["AR"]
-MG = parity_weight(fr["levers"]["MG"], cfg["lever_parity"])
-
-# Weight scenarios
 scenarios_weights = {
     "Neutral": {"CCI": 1.0, "EDB": 1.0, "PF": 1.0, "AR": 1.0, "MG": 1.0},
     "Existential": {"CCI": 1.0, "EDB": 2.0, "PF": 1.0, "AR": 1.0, "MG": 2.0},
@@ -114,7 +103,6 @@ scenarios_weights = {
 lever_map = {"CCI": CCI, "EDB": EDB, "PF": PF, "AR": AR, "MG": MG}
 bfi = bfi_total(fr["bf_i"]["axioms"], fr["bf_i"]["debts"], cfg["bfi_debt_weight"])
 
-# Calculate YPA for each scenario
 results = {}
 for name, weights in scenarios_weights.items():
     total = sum(lever_map[k] * w for k, w in weights.items())
@@ -130,30 +118,23 @@ return results, lever_map, bfi
 # ============================================================================
 
 def guardrail_lever_coupling(PF: float, CCI: float) -> Tuple[bool, str]:
-“”“Check if PF ≥ 9 requires CCI ≥ 6.5.”””
+“”“Check if PF >= 9 requires CCI >= 6.5.”””
 if PF >= 9 and CCI < 6.5:
-return False, f”⚠️ FAIL: PF={PF:.2f} ≥ 9 but CCI={CCI:.2f} < 6.5”
-return True, f”✅ PASS: Lever-Coupling satisfied (PF={PF:.2f}, CCI={CCI:.2f})”
+return False, f”WARNING FAIL: PF={PF:.2f} >= 9 but CCI={CCI:.2f} < 6.5”
+return True, f”PASS: Lever-Coupling satisfied (PF={PF:.2f}, CCI={CCI:.2f})”
 
 def guardrail_bfi_sensitivity(ypa_current: float, ypa_baseline: float,
 bfi_current: float, bfi_baseline: float) -> Tuple[bool, str]:
-“”“Check if YPA increases faster than BFI (suspicious efficiency gain).”””
+“”“Check if YPA increases faster than BFI.”””
 if bfi_current == bfi_baseline:
-return True, “✅ N/A: BFI unchanged”
+return True, “N/A: BFI unchanged”
 
 ```
 slope = (ypa_current - ypa_baseline) / (bfi_current - bfi_baseline)
 if slope > 0.4:
-    return False, f"⚠️ FLAG: ΔYPA/ΔBFI = {slope:.3f} > 0.4 (suspicious efficiency)"
-return True, f"✅ PASS: ΔYPA/ΔBFI = {slope:.3f} ≤ 0.4"
+    return False, f"FLAG: YPA/BFI = {slope:.3f} > 0.4"
+return True, f"PASS: YPA/BFI = {slope:.3f} <= 0.4"
 ```
-
-def guardrail_weight_bounds(weights: Dict) -> Tuple[bool, str]:
-“”“Check if any scenario weight is <0.3× or >3×.”””
-violations = [k for k, v in weights.items() if v < 0.3 or v > 3.0]
-if violations:
-return False, f”⚠️ FAIL: Extreme weights on {’, ’.join(violations)}”
-return True, “✅ PASS: All weights within [0.3×, 3×]”
 
 # ============================================================================
 
@@ -162,35 +143,28 @@ return True, “✅ PASS: All weights within [0.3×, 3×]”
 # ============================================================================
 
 def symmetry_audit(fr: Dict, cfg: Dict) -> List[Tuple[str, float, float, float]]:
-“””
-Test toggle inversions and report ΔYPA.
+“”“Test toggle inversions and report YPA changes.”””
+def get_ypa(framework, config):
+results, _, _ = ypa_scenario_scores(framework, config)
+return results[“Neutral”][“YPA”]
 
 ```
-Returns list of (toggle_name, baseline_ypa, flipped_ypa, delta)
-"""
-def get_ypa(framework, config):
-    results, _, _ = ypa_scenario_scores(framework, config)
-    return results["Neutral"]["YPA"]
-
 baseline = get_ypa(fr, cfg)
 reports = []
 
-# Test 1: Lever-Parity flip
 cfg_parity = cfg.copy()
 cfg_parity["lever_parity"] = "OFF" if cfg["lever_parity"] == "ON" else "ON"
 flipped = get_ypa(fr, cfg_parity)
 reports.append(("Lever-Parity", baseline, flipped, flipped - baseline))
 
-# Test 2: PF-Type variations
 for pf_type in PF_TYPES:
     if pf_type == cfg["pf_type"]:
         continue
     cfg_pf = cfg.copy()
     cfg_pf["pf_type"] = pf_type
     flipped = get_ypa(fr, cfg_pf)
-    reports.append((f"PF-Type→{pf_type}", baseline, flipped, flipped - baseline))
+    reports.append((f"PF-Type->{pf_type}", baseline, flipped, flipped - baseline))
 
-# Test 3: Fallibilism-Bonus flip
 cfg_fall = cfg.copy()
 cfg_fall["fallibilism_bonus"] = "OFF" if cfg["fallibilism_bonus"] == "ON" else "ON"
 flipped = get_ypa(fr, cfg_fall)
@@ -201,7 +175,7 @@ return reports
 
 # ============================================================================
 
-# VISUALIZATION HELPERS
+# VISUALIZATION
 
 # ============================================================================
 
@@ -280,53 +254,39 @@ initial_sidebar_state=“expanded”
 )
 
 ```
-# Custom CSS
-st.markdown("""
-    <style>
-    .main-header {font-size: 2.5rem; font-weight: bold; color: #1f77b4;}
-    .sub-header {font-size: 1.5rem; font-weight: bold; color: #ff7f0e;}
-    .metric-card {background-color: #f0f2f6; padding: 1rem; border-radius: 0.5rem; margin: 0.5rem 0;}
-    </style>
-""", unsafe_allow_html=True)
-
-# Header
-st.markdown('<p class="main-header">⚖️ CFA v2.0 Interactive Console</p>', unsafe_allow_html=True)
+st.markdown('<p style="font-size:2.5rem;font-weight:bold;color:#1f77b4;">⚖️ CFA v2.0 Interactive Console</p>', unsafe_allow_html=True)
 st.markdown('**"All Named, All Priced" — Now with knobs and dials**')
 st.markdown("---")
 
-# ========================================================================
-# SIDEBAR: CONFIGURATION TOGGLES
-# ========================================================================
-
+# SIDEBAR: TOGGLES
 st.sidebar.header("🎛️ Configuration Toggles")
-st.sidebar.markdown("*Adjust these to see how frameworks respond*")
 
 lever_parity = st.sidebar.selectbox(
     "Lever-Parity",
     ["ON", "OFF"],
     index=0,
-    help="ON = Moral norms weighted equal to epistemic | OFF = MG down-weighted 0.5×"
+    help="ON = Moral norms weighted equal | OFF = MG down-weighted 0.5x"
 )
 
 pf_type = st.sidebar.selectbox(
     "PF-Type",
     PF_TYPES,
-    index=1,  # Composite default
-    help="Instrumental = Tech only | Holistic = 50:50 mix | Composite = 70:30 mix"
+    index=1,
+    help="Instrumental = Tech only | Holistic = 50:50 | Composite = 70:30"
 )
 
 fall_bonus = st.sidebar.selectbox(
     "Fallibilism-Bonus",
     ["ON", "OFF"],
     index=0,
-    help="ON = +0.3 CCI for frameworks that admit limits"
+    help="ON = +0.3 CCI for frameworks admitting limits"
 )
 
 bfi_weight = st.sidebar.selectbox(
     "BFI Debt Weight",
     ["Equal_1.0x", "Weighted_1.2x"],
     index=0,
-    help="Equal = Axioms and debts count same | Weighted = Debts cost 1.2×"
+    help="Equal = Same weight | Weighted = Debts cost 1.2x"
 )
 
 cfg = {
@@ -336,35 +296,30 @@ cfg = {
     "bfi_debt_weight": bfi_weight
 }
 
-# Show current config
 st.sidebar.markdown("---")
-st.sidebar.markdown("**Current Configuration:**")
+st.sidebar.markdown("**Current Config:**")
 st.sidebar.json(cfg)
 
-# ========================================================================
 # MAIN AREA: FRAMEWORK EDITORS
-# ========================================================================
-
 col1, col2 = st.columns(2)
 
-# Framework A (MdN default)
 with col1:
-    st.markdown('<p class="sub-header">📘 Framework A</p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-size:1.5rem;font-weight:bold;">📘 Framework A</p>', unsafe_allow_html=True)
     
     fa_name = st.text_input("Name", value=MDN_DEFAULT["name"], key="fa_name")
     
-    with st.expander("🔢 BFI (Brute-Fact Index)", expanded=False):
+    with st.expander("🔢 BFI", expanded=False):
         fa_axioms = st.number_input("Axioms", 1, 30, MDN_DEFAULT["bf_i"]["axioms"], key="fa_axioms")
         fa_debts = st.number_input("Debts", 0, 30, MDN_DEFAULT["bf_i"]["debts"], key="fa_debts")
-        fa_admits = st.checkbox("Admits Limits (for Fallibilism bonus)", value=True, key="fa_admits")
+        fa_admits = st.checkbox("Admits Limits", value=True, key="fa_admits")
     
     st.markdown("**Lever Scores (0-10)**")
-    fa_cci = st.slider("CCI - Coherence & Closure", 0.0, 10.0, MDN_DEFAULT["levers"]["CCI"], 0.1, key="fa_cci")
-    fa_edb = st.slider("EDB - Explanatory Depth & Breadth", 0.0, 10.0, MDN_DEFAULT["levers"]["EDB"], 0.1, key="fa_edb")
-    fa_pf_inst = st.slider("PF Instrumental (Tech/Prediction)", 0.0, 10.0, MDN_DEFAULT["levers"]["PF_instrumental"], 0.1, key="fa_pf_inst")
-    fa_pf_exist = st.slider("PF Existential (Meaning/Purpose)", 0.0, 10.0, MDN_DEFAULT["levers"]["PF_existential"], 0.1, key="fa_pf_exist")
-    fa_ar = st.slider("AR - Aesthetic Resonance", 0.0, 10.0, MDN_DEFAULT["levers"]["AR"], 0.1, key="fa_ar")
-    fa_mg = st.slider("MG - Moral Generativity", 0.0, 10.0, MDN_DEFAULT["levers"]["MG"], 0.1, key="fa_mg")
+    fa_cci = st.slider("CCI", 0.0, 10.0, MDN_DEFAULT["levers"]["CCI"], 0.1, key="fa_cci")
+    fa_edb = st.slider("EDB", 0.0, 10.0, MDN_DEFAULT["levers"]["EDB"], 0.1, key="fa_edb")
+    fa_pf_inst = st.slider("PF Instrumental", 0.0, 10.0, MDN_DEFAULT["levers"]["PF_instrumental"], 0.1, key="fa_pf_inst")
+    fa_pf_exist = st.slider("PF Existential", 0.0, 10.0, MDN_DEFAULT["levers"]["PF_existential"], 0.1, key="fa_pf_exist")
+    fa_ar = st.slider("AR", 0.0, 10.0, MDN_DEFAULT["levers"]["AR"], 0.1, key="fa_ar")
+    fa_mg = st.slider("MG", 0.0, 10.0, MDN_DEFAULT["levers"]["MG"], 0.1, key="fa_mg")
 
     fa = {
         "name": fa_name,
@@ -380,24 +335,23 @@ with col1:
         "admits_limits": fa_admits
     }
 
-# Framework B (CT default)
 with col2:
-    st.markdown('<p class="sub-header">📕 Framework B</p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-size:1.5rem;font-weight:bold;">📕 Framework B</p>', unsafe_allow_html=True)
     
     fb_name = st.text_input("Name", value=CT_DEFAULT["name"], key="fb_name")
     
-    with st.expander("🔢 BFI (Brute-Fact Index)", expanded=False):
+    with st.expander("🔢 BFI", expanded=False):
         fb_axioms = st.number_input("Axioms", 1, 30, CT_DEFAULT["bf_i"]["axioms"], key="fb_axioms")
         fb_debts = st.number_input("Debts", 0, 30, CT_DEFAULT["bf_i"]["debts"], key="fb_debts")
-        fb_admits = st.checkbox("Admits Limits (for Fallibilism bonus)", value=True, key="fb_admits")
+        fb_admits = st.checkbox("Admits Limits", value=True, key="fb_admits")
     
     st.markdown("**Lever Scores (0-10)**")
-    fb_cci = st.slider("CCI - Coherence & Closure", 0.0, 10.0, CT_DEFAULT["levers"]["CCI"], 0.1, key="fb_cci")
-    fb_edb = st.slider("EDB - Explanatory Depth & Breadth", 0.0, 10.0, CT_DEFAULT["levers"]["EDB"], 0.1, key="fb_edb")
-    fb_pf_inst = st.slider("PF Instrumental (Tech/Prediction)", 0.0, 10.0, CT_DEFAULT["levers"]["PF_instrumental"], 0.1, key="fb_pf_inst")
-    fb_pf_exist = st.slider("PF Existential (Meaning/Purpose)", 0.0, 10.0, CT_DEFAULT["levers"]["PF_existential"], 0.1, key="fb_pf_exist")
-    fb_ar = st.slider("AR - Aesthetic Resonance", 0.0, 10.0, CT_DEFAULT["levers"]["AR"], 0.1, key="fb_ar")
-    fb_mg = st.slider("MG - Moral Generativity", 0.0, 10.0, CT_DEFAULT["levers"]["MG"], 0.1, key="fb_mg")
+    fb_cci = st.slider("CCI", 0.0, 10.0, CT_DEFAULT["levers"]["CCI"], 0.1, key="fb_cci")
+    fb_edb = st.slider("EDB", 0.0, 10.0, CT_DEFAULT["levers"]["EDB"], 0.1, key="fb_edb")
+    fb_pf_inst = st.slider("PF Instrumental", 0.0, 10.0, CT_DEFAULT["levers"]["PF_instrumental"], 0.1, key="fb_pf_inst")
+    fb_pf_exist = st.slider("PF Existential", 0.0, 10.0, CT_DEFAULT["levers"]["PF_existential"], 0.1, key="fb_pf_exist")
+    fb_ar = st.slider("AR", 0.0, 10.0, CT_DEFAULT["levers"]["AR"], 0.1, key="fb_ar")
+    fb_mg = st.slider("MG", 0.0, 10.0, CT_DEFAULT["levers"]["MG"], 0.1, key="fb_mg")
 
     fb = {
         "name": fb_name,
@@ -415,17 +369,12 @@ with col2:
 
 st.markdown("---")
 
-# ========================================================================
-# RESULTS SECTION
-# ========================================================================
+# RESULTS
+st.markdown('<p style="font-size:1.5rem;font-weight:bold;">📊 Results</p>', unsafe_allow_html=True)
 
-st.markdown('<p class="sub-header">📊 Results & Analysis</p>', unsafe_allow_html=True)
-
-# Compute results for both frameworks
 ya_results, ya_levers, ya_bfi = ypa_scenario_scores(fa, cfg)
 yb_results, yb_levers, yb_bfi = ypa_scenario_scores(fb, cfg)
 
-# Tab interface for different views
 tab1, tab2, tab3, tab4 = st.tabs([
     "📈 Visual Comparison",
     "📋 Detailed Scores",
@@ -433,7 +382,6 @@ tab1, tab2, tab3, tab4 = st.tabs([
     "🔄 Symmetry Audit"
 ])
 
-# TAB 1: VISUAL COMPARISON
 with tab1:
     st.plotly_chart(
         create_lever_comparison_chart(ya_levers, yb_levers, fa["name"], fb["name"]),
@@ -445,7 +393,6 @@ with tab1:
         use_container_width=True
     )
 
-    # Winner summary
     st.markdown("### 🏆 Scenario Winners")
     winner_df = pd.DataFrame({
         "Scenario": ["Neutral", "Existential", "Empirical"],
@@ -459,7 +406,7 @@ with tab1:
             f"{yb_results['Existential']['YPA']:.3f}",
             f"{yb_results['Empirical']['YPA']:.3f}"
         ],
-        "Δ (B-A)": [
+        "Delta (B-A)": [
             f"{yb_results['Neutral']['YPA'] - ya_results['Neutral']['YPA']:.3f}",
             f"{yb_results['Existential']['YPA'] - ya_results['Existential']['YPA']:.3f}",
             f"{yb_results['Empirical']['YPA'] - ya_results['Empirical']['YPA']:.3f}"
@@ -467,23 +414,15 @@ with tab1:
     })
     st.dataframe(winner_df, use_container_width=True)
 
-# TAB 2: DETAILED SCORES
 with tab2:
     col_a, col_b = st.columns(2)
     
     with col_a:
         st.markdown(f"#### {fa['name']}")
-        st.markdown(f"**BFI:** {ya_bfi:.2f} ({fa['bf_i']['axioms']} axioms + {fa['bf_i']['debts']} debts)")
-        st.markdown("**Adjusted Levers:**")
+        st.markdown(f"**BFI:** {ya_bfi:.2f}")
         st.json(ya_levers)
-        st.markdown("**YPA Trinity:**")
         st.table(pd.DataFrame({
             "Scenario": ["Neutral", "Existential", "Empirical"],
-            "Total": [
-                f"{ya_results['Neutral']['total']:.2f}",
-                f"{ya_results['Existential']['total']:.2f}",
-                f"{ya_results['Empirical']['total']:.2f}"
-            ],
             "YPA": [
                 f"{ya_results['Neutral']['YPA']:.3f}",
                 f"{ya_results['Existential']['YPA']:.3f}",
@@ -493,17 +432,10 @@ with tab2:
 
     with col_b:
         st.markdown(f"#### {fb['name']}")
-        st.markdown(f"**BFI:** {yb_bfi:.2f} ({fb['bf_i']['axioms']} axioms + {fb['bf_i']['debts']} debts)")
-        st.markdown("**Adjusted Levers:**")
+        st.markdown(f"**BFI:** {yb_bfi:.2f}")
         st.json(yb_levers)
-        st.markdown("**YPA Trinity:**")
         st.table(pd.DataFrame({
             "Scenario": ["Neutral", "Existential", "Empirical"],
-            "Total": [
-                f"{yb_results['Neutral']['total']:.2f}",
-                f"{yb_results['Existential']['total']:.2f}",
-                f"{yb_results['Empirical']['total']:.2f}"
-            ],
             "YPA": [
                 f"{yb_results['Neutral']['YPA']:.3f}",
                 f"{yb_results['Existential']['YPA']:.3f}",
@@ -511,20 +443,14 @@ with tab2:
             ]
         }))
 
-# TAB 3: GUARDRAILS
 with tab3:
-    st.markdown("### 🛡️ Automated Fairness Checks")
-    
     col_ga, col_gb = st.columns(2)
     
     with col_ga:
         st.markdown(f"#### {fa['name']}")
-        
-        # Lever-Coupling
         pass_lc, msg_lc = guardrail_lever_coupling(ya_levers["PF"], ya_levers["CCI"])
         st.markdown(f"**Lever-Coupling:** {msg_lc}")
         
-        # BFI-Sensitivity (compare to defaults)
         default_ya, _, default_bfi_a = ypa_scenario_scores(MDN_DEFAULT, cfg)
         pass_bfi, msg_bfi = guardrail_bfi_sensitivity(
             ya_results["Neutral"]["YPA"],
@@ -536,12 +462,9 @@ with tab3:
 
     with col_gb:
         st.markdown(f"#### {fb['name']}")
-        
-        # Lever-Coupling
         pass_lc, msg_lc = guardrail_lever_coupling(yb_levers["PF"], yb_levers["CCI"])
         st.markdown(f"**Lever-Coupling:** {msg_lc}")
         
-        # BFI-Sensitivity
         default_yb, _, default_bfi_b = ypa_scenario_scores(CT_DEFAULT, cfg)
         pass_bfi, msg_bfi = guardrail_bfi_sensitivity(
             yb_results["Neutral"]["YPA"],
@@ -551,58 +474,22 @@ with tab3:
         )
         st.markdown(f"**BFI-Sensitivity:** {msg_bfi}")
 
-# TAB 4: SYMMETRY AUDIT
 with tab4:
-    st.markdown("### 🔄 Toggle Impact Analysis")
-    st.markdown("*How does each framework respond to configuration changes?*")
-    
     col_sa, col_sb = st.columns(2)
     
     with col_sa:
         st.markdown(f"#### {fa['name']}")
         audit_a = symmetry_audit(fa, cfg)
-        df_a = pd.DataFrame(audit_a, columns=["Toggle", "Baseline", "Flipped", "ΔYPA"])
-        df_a["Flag"] = df_a["ΔYPA"].apply(lambda x: "⚠️" if abs(x) > 0.3 else "✅")
+        df_a = pd.DataFrame(audit_a, columns=["Toggle", "Baseline", "Flipped", "Delta-YPA"])
+        df_a["Flag"] = df_a["Delta-YPA"].apply(lambda x: "⚠️" if abs(x) > 0.3 else "✅")
         st.dataframe(df_a, use_container_width=True)
 
     with col_sb:
         st.markdown(f"#### {fb['name']}")
         audit_b = symmetry_audit(fb, cfg)
-        df_b = pd.DataFrame(audit_b, columns=["Toggle", "Baseline", "Flipped", "ΔYPA"])
-        df_b["Flag"] = df_b["ΔYPA"].apply(lambda x: "⚠️" if abs(x) > 0.3 else "✅")
+        df_b = pd.DataFrame(audit_b, columns=["Toggle", "Baseline", "Flipped", "Delta-YPA"])
+        df_b["Flag"] = df_b["Delta-YPA"].apply(lambda x: "⚠️" if abs(x) > 0.3 else "✅")
         st.dataframe(df_b, use_container_width=True)
-
-# ========================================================================
-# FOOTER: EXPORT & INFO
-# ========================================================================
-
-st.markdown("---")
-st.markdown("### 💾 Export Configuration")
-
-export_data = {
-    "config": cfg,
-    "framework_a": fa,
-    "framework_b": fb,
-    "results": {
-        "a": {
-            "levers": ya_levers,
-            "bfi": ya_bfi,
-            "ypa": {k: v["YPA"] for k, v in ya_results.items()}
-        },
-        "b": {
-            "levers": yb_levers,
-            "bfi": yb_bfi,
-            "ypa": {k: v["YPA"] for k, v in yb_results.items()}
-        }
-    }
-}
-
-st.download_button(
-    label="📥 Download Full Report (JSON)",
-    data=json.dumps(export_data, indent=2),
-    file_name="cfa_v2_report.json",
-    mime="application/json"
-)
 
 st.markdown("---")
 st.caption("CFA v2.0 | 'All Named, All Priced' | Built with Streamlit")
