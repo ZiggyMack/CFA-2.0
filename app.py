@@ -1,9 +1,9 @@
-“””
+"""
 CFA v2.0 Interactive Console
 “All Named, All Priced” - Now with knobs and dials
 
 Usage: streamlit run app.py
-“””
+"""
 
 import streamlit as st
 import pandas as pd
