@@ -32,11 +32,9 @@ def main():
     elif st.session_state.page == 'console':
         console.render()
     elif st.session_state.page == 'manual':
-    manual.render()
-    
+        manual.render()
     elif st.session_state.page == 'about':
         about.render()
-    
     elif st.session_state.page == 'brute_ledger':
         brute_ledger.render()
 
