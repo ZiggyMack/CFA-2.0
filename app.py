@@ -411,9 +411,9 @@ def show_manual_page():
         
         **Download Options:**
         
-        1. **[Download as TXT]** - Plain text version (best for copying)
-        2. **GitHub Repository** - View source code and documentation
-        3. **Contact** - Request PDF version
+        1. **[Download PDF Manual](https://github.com/ZiggyMack/CFA-2.0/raw/main/docs/CFA_v2_Manual.pdf.pdf)** - Complete technical guide
+        2. **[View on GitHub](https://github.com/ZiggyMack/cfa-2.0)** - Source code and documentation
+        3. **[Download as TXT]** - Plain text version for copying
         
         ### Quick Reference
         
