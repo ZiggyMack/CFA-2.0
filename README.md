@@ -1,4 +1,4 @@
-# CFA v2.0 - Interactive Console
+# CFA v2.0 - Interactive Console [Modular Architecture]
 ## "All Named, All Priced" - Epistemic Engineering Platform
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://cfa-voodoo.streamlit.app)
