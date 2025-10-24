@@ -191,7 +191,7 @@ def show_landing_page():
             <p><strong>Welcome to the Comparative Framework Analysis (CFA) Console,</strong><br/>
             the first interactive epistemic laboratory built to measure how worldviews hold their ground under pressure.</p>
             
-            <p>Here, philosophy meets engineering.<br/>
+            <p>Here, philosophy meets engineering!<br/>
             Every assumption is declared, every bias tagged, every outcome earned.</p>
             
             <hr style="margin: 1.5rem 0; border: none; border-top: 2px solid #667eea;">
