@@ -10,15 +10,36 @@
 The **Comparative Framework Audit (CFA)** is the first interactive epistemic laboratory built to measure how worldviews hold their ground under pressure. It makes hidden assumptions visible, prices every presupposition, and allows users to see how their value choices affect framework comparisons.
 
 **Core Innovation**: Every assumption is disclosed, every presupposition is counted, every bias is made toggleable, and every outcome is earned.
+## 🎯 The Convergence Story
 
+CFA v2.0 achieved **98% auditor convergence** through adversarial collaboration:
+
+**The Auditors:**
+- **Claude (Anthropic):** Philosophical lens, teleological bias (favored CT's comprehensive scope)
+- **Grok (xAI):** Empirical lens, naturalist bias (favored MdN's predictive power)
+- **Nova (OpenAI):** Symmetry enforcer, neutral referee (caught asymmetries in both)
+
+**The Process:**
+- **Level 0-1:** Independent audits revealed bias (scores diverged)
+- **Level 2:** Adversarial correction (mutual challenges with rationale)
+- **Level 3:** Convergence achieved (MdN 3.62, CT 3.65 - only 0.03 YPA difference)
+- **Level 4:** Tool building (console embodies audit discoveries)
+
+**Why This Matters:**
+This 98% convergence is the project's credibility. Solo audits hide bias - adversarial checking makes scores trustworthy.
+
+---
 ---
 
 ## ✨ Key Features
 
 ### 🏛️ **Landing Page**
-- Beautiful manifesto introducing epistemic engineering
-- 3-button navigation (Console, Manual, About)
-- Mr. Brute easter egg (📓✍️) linking to Brute Ledger
+-  **Landing Page** introducing epistemic engineering
+-  **Console** with dual-framework comparison
+-  **User Manual** (4 tabs: Quick Start, Toggle Guide, Results, Full Docs)
+-  **About Page**
+-  **Mr. Brute's Ledger** easter egg (📓✍️) linking to Brute Ledger (framework browser + custom builder)
+-  **Import/Export** (sidebar + bottom of page)
 - Gradient styling and responsive design
 
 ### 🎛️ **Console (Main Comparison Tool)**
@@ -28,7 +49,7 @@ The **Comparative Framework Audit (CFA)** is the first interactive epistemic lab
 - **YPA Trinity** - See results under 3 scenarios (Neutral, Existential, Empirical)
 - **4 Guardrails** - Automated abuse detection system
 - **Symmetry Audit** - Toggle sensitivity analysis
-- **Preset Buttons** - Quick MAX/MID/RESET/MIN controls for both frameworks
+- **Preset Buttons** - Quick (⚡ MAX, ⚖️ MID, 🔄 RESET, 🚫 MIN) controls for both frameworks
 - **JSON Import/Export** - Save and load complete audits
 - **Preset Profile Library** - Built-in audited frameworks:
   - ✅ Methodological Naturalism (MdN)
@@ -39,6 +60,11 @@ The **Comparative Framework Audit (CFA)** is the first interactive epistemic lab
   - 🔜 Process Theology (coming soon)
   - 🔜 Secular Humanism (coming soon)
   - 🔜 Metaphysical Naturalism (coming soon)
+ 
+  ### ✅ Preset Library
+- Methodological Naturalism (MdN) - fully audited
+- Classical Theism (CT) - fully audited
+- 6 frameworks "coming soon"
 
 ### 🔍 **Brute Ledger**
 - View complete axiom/debt lists for MdN and CT
@@ -502,5 +528,95 @@ Build a comprehensive library of audited frameworks (COTS - Commercial Off-The-S
 ---
 
 *"Where ideas reveal their true weight, and honesty becomes quantifiable."*
+
+## 🔧 Known Issues & Limitations
+
+### ⚠️ Streamlit Cloud Quirks
+- Preset buttons MUST be above sliders (Streamlit render order)
+- Buttons below sliders break due to session state timing
+- Cache can be aggressive - sometimes needs manual reboot
+
+### 📝 To-Do (Future Enhancements)
+- [ ] Add more audited frameworks (Buddhism, Stoicism, etc.)
+- [ ] Visual timeline of audit process on About page
+- [ ] "Audit Story" tooltips on framework names
+- [ ] Export to PDF/PNG (charts)
+- [ ] Community submission system
+
+---
+
+## 🎨 Design Decisions
+
+### Why Buttons Are Above Sliders
+**Problem:** Streamlit renders top-to-bottom. Buttons below sliders update session state AFTER sliders already rendered.
+**Solution:** Keep buttons above sliders where they reliably trigger re-renders before slider instantiation.
+
+### Why Profile Library in Sidebar
+**Benefit:** Quick access to pre-audited frameworks without losing current work
+**Trade-off:** Sidebar gets crowded, but collapsible expander keeps it manageable
+
+### Import/Export Dual Location
+**Sidebar:** Quick import during active work
+**Bottom:** Full-featured import/export with previews
+
+---
+
+## 📊 Audit Results (Stable Defaults)
+
+### Methodological Naturalism (MdN)
+```
+BFI: 10 (6 axioms, 4 debts)
+Levers: CCI 8.0, EDB 7.5, PF-I 10.0, PF-E 3.0, AR 7.0, MG 4.0
+YPA: 3.62 (Neutral), 4.99 (Empirical), 4.77 (Existential)
+```
+
+### Classical Theism (CT)
+```
+BFI: 11 (7 axioms, 4 debts)
+Levers: CCI 7.5, EDB 8.5, PF-I 7.0, PF-E 8.0, AR 8.5, MG 8.5
+YPA: 3.65 (Neutral), 4.65 (Empirical), 5.20 (Existential)
+```
+
+**Convergence:** 98% agreement between Claude (Anthropic) and Grok (xAI) auditors
+
+---
+
+## 🚀 Deployment
+
+### Streamlit Cloud
+**URL:** https://cfa-voodoo.streamlit.app
+**Config:** Python 3.11, auto-deploy from GitHub main branch
+
+### Manual Deployment
+```bash
+streamlit run app.py
+```
+
+---
+
+## 📖 Citation
+
+```
+CFA v2.0 Interactive Console (2025)
+"All Named, All Priced"
+Epistemic Engineering Project
+https://cfa-voodoo.streamlit.app
+```
+
+---
+
+## 👥 Credits
+
+**Adversarial Collaboration:**
+- Claude (Anthropic) - Teleological lens, CT-sympathetic
+- Grok (xAI) - Empirical compression, naturalist lean
+- Nova - Synthesizer, enforced symmetry
+- Ziggy - Coordinator, process integrity
+
+**The Pointing Rule:** "To name your brute is to pay your fee. To deny you have one is to summon him twice."
+
+---
+
+*End of Milestone Documentation*
 
 **CFA v2.0 | Epistemic Engineering | October 2025**
