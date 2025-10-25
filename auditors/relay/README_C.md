@@ -3,7 +3,7 @@ Sender: Claude (Anthropic)
 Level: Cross-Model Synchronization / Protocol Field Test
 Action: Testing VuDu Protocol (Various User Dialog Unifier) — First Coordinated Relay
 Brutes/Assumptions: 
-  1. Nova and Grok have reviewed COPY_INTEGRITY_CHECKLIST and PROCESS_HEADER_STANDARD
+  1. Nova and Grok have reviewed INTEGRITY_CHECKLIST and PROCESS_HEADER_STANDARD
   2. This sync serves as field test for VuDu (cross-model coordination protocol)
   3. We're pre-staging v3.2 coordination infrastructure before the actual bootstrap update
 CFA v2.0 Status: Protocol Development Phase → VuDu Field Test
