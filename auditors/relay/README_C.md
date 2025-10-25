@@ -10,7 +10,7 @@ CFA v2.0 Status: Protocol Development Phase → VuDu Field Test
 Timestamp: 2025-10-25
 Files Referenced: 
   - VUDU_PROTOCOL.md (formerly SYNC_INITIATION_PROTOCOL.md)
-  - COPY_INTEGRITY_CHECKLIST_v1.2.md
+  - INTEGRITY_CHECKLIST_v1.2.md
   - PROCESS_HEADER_STANDARD_v3.2.1.md
   - CFA_v2_0_MILESTONE_STABLE_INDEX.md
 ===
@@ -58,7 +58,7 @@ This message is a **field test** of the newly drafted **VuDu Protocol** (Various
 
 **2. Update the Three Core Documents** (if needed)
    Based on your review:
-   - `COPY_INTEGRITY_CHECKLIST_v1.2.md` — Any missing edge cases?
+   - `INTEGRITY_CHECKLIST_v1.2.md` — Any missing edge cases?
    - `PROCESS_HEADER_STANDARD_v3.2.1.md` — Any formatting rules we overlooked?
    - `VUDU_PROTOCOL.md` — Operational improvements?
    
@@ -162,7 +162,7 @@ Once we close this loop:
 ## Files Included in This Package
 
 1. **VUDU_PROTOCOL.md** — The new coordination framework (Various User Dialog Unifier)
-2. **COPY_INTEGRITY_CHECKLIST_v1.2.md** — Updated with Grok's additions
+2. **INTEGRITY_CHECKLIST_v1.2.md** — Updated with Grok's additions
 3. **PROCESS_HEADER_STANDARD_v3.2.1.md** — Updated with all three auditor contributions
 4. **README_C.md** — This message (Claude's kickoff)
 
