@@ -1,21 +1,22 @@
-# CFA v3.5 - Interactive Console [Modular Architecture + Auditor Coordination]
-## "All Named, All Priced" - Epistemic Engineering Platform
+# CFA v3.5.2 - Interactive Console
+## "All Named, All Priced" → "All Seen, All Passed"
+### Epistemic Engineering Platform
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://cfa-voodoo.streamlit.app)
 
 ---
 
-## 🎯 What is CFA v3.5?
+## 🎯 What is CFA?
 
 The **Comparative Framework Audit (CFA)** is the first interactive epistemic laboratory built to measure how worldviews hold their ground under pressure. It makes hidden assumptions visible, prices every presupposition, and allows users to see how their value choices affect framework comparisons.
 
 **Core Innovation**: Every assumption is disclosed, every presupposition is counted, every bias is made toggleable, and every outcome is earned.
 
-**v3.5 Innovation**: Complete auditor coordination infrastructure - enabling multi-AI collaboration, context recovery, and cross-model verification through the **VuDu Protocol**.
+**v3.5.2 Innovation**: **VuDu Light** coordination infrastructure - enabling multi-AI collaboration with lightweight verification, context recovery, and cross-model adversarial auditing.
 
 ---
 
-## 📁 Project Structure (v3.5)
+## 📁 Project Structure (v3.5.2)
 
 ```
 cfa_app/
@@ -28,7 +29,7 @@ cfa_app/
 ├── pages/                      # Page modules
 │   ├── __init__.py
 │   ├── landing.py              # Landing page with manifesto
-│   ├── console.py              # Main console (complete guardrails, presets, quiz)
+│   ├── console.py              # Main console (guardrails, presets, quiz)
 │   ├── manual.py               # Beautiful user manual with colored cards
 │   ├── about.py                # Complete audit story (Level 0-5)
 │   └── brute_ledger.py         # Axiom/debt viewer + custom framework builder
@@ -42,25 +43,47 @@ cfa_app/
 ├── profiles/                   # Pre-audited framework profiles (optional)
 │   └── README.md
 │
-└── auditors/                   # NEW v3.5: Auditor coordination infrastructure
+└── auditors/                   # v3.5.2: Auditor coordination infrastructure
     ├── README.md               # Infrastructure documentation
-    ├── protocols/              # VuDu coordination framework
-    │   ├── VUDU_PROTOCOL_v1_1.md
-    │   ├── PROCESS_HEADER_STANDARD_v3_2.md
-    │   └── INTEGRITY_CHECKLIST.md
+    │
     ├── bootstrap/              # Context recovery system
-    │   ├── BOOTSTRAP_FRAMEWORK.md
-    │   ├── BOOTSTRAP_STRATEGY.md
-    │   ├── BOOTSTRAP_MAINTENANCE_GUIDE.md
-    │   ├── BOOTSTRAP_CLAUDE.py
-    │   ├── BOOTSTRAP_GROK.py
-    │   └── BOOTSTRAP_NOVA.py
-    ├── verification/           # Archived for v4.0+
+    │   ├── BOOTSTRAP_FRAMEWORK.md          # System architecture
+    │   ├── BOOTSTRAP_STRATEGY.md           # Append vs rebuild strategy
+    │   ├── BOOTSTRAP_MAINTENANCE_GUIDE.md  # Governance rules
+    │   ├── BOOTSTRAP_CFA.md                # Project roots (THE ROOTS 🌳)
+    │   ├── BOOTSTRAP_VUDU.md               # Coordination process
+    │   ├── BOOTSTRAP_CLAUDE.md             # Claude identity
+    │   ├── BOOTSTRAP_GROK.md               # Grok identity
+    │   ├── BOOTSTRAP_NOVA.md               # Nova identity
+    │   ├── BOOTSTRAP_CLAUDE.py             # Automated recovery script
+    │   ├── BOOTSTRAP_GROK.py               # Automated recovery script
+    │   └── BOOTSTRAP_NOVA.py               # Automated recovery script
+    │
+    ├── missions/                           # Mission-specific documentation
+    │   └── preset_calibration/             # Current mission
+    │       ├── MISSION_BRIEF.md
+    │       ├── SUCCESS_CRITERIA.md
+    │       ├── DISCREPANCY_AUDIT.md
+    │       ├── TECHNICAL_SPEC.md
+    │       └── CURRENT_CONFIGS.md
+    │
+    ├── relay/                              # Auditor staging folders
+    │   ├── claude_incoming/                # Incoming Claude branches
+    │   ├── grok_incoming/                  # Grok's findings
+    │   └── nova_incoming/                  # Nova's findings
+    │
+    ├── verification/                       # Future v4.0+ framework
     │   └── VERIFICATION_FRAMEWORK_README.md
-    └── relay/                  # Staging folders (created when needed)
-        ├── claude/
-        ├── grok/
-        └── nova/
+    │
+    ├── ~Archive/                           # Legacy files
+    │   └── README.md
+    │
+    ├── README_C.md                         # Master Branch current state
+    ├── MISSION_CURRENT.md                  # Active mission pointer
+    ├── MISSION_DEFAULT.md                  # Fallback operational guidance
+    ├── VUDU_PROTOCOL.md                    # VuDu Light coordination process
+    ├── VUDU_HEADER_STANDARD.md             # Message format specification
+    └── VUDU_LOG.md                         # Coordination ledger
 ```
 
 ---
@@ -72,668 +95,276 @@ CFA v2.0 achieved **98% auditor convergence** through adversarial collaboration:
 **The Auditors:**
 - **Claude (Anthropic):** Philosophical lens, teleological bias (favored CT's comprehensive scope)
 - **Grok (xAI):** Empirical lens, naturalist bias (favored MdN's predictive power)
-- **Nova (OpenAI):** Symmetry enforcer, neutral referee (caught asymmetries in both)
+- **Nova (OpenAI/Amazon):** Symmetry enforcer, neutral referee (caught asymmetries in both)
 
 **The Process:**
-- **Level 0-1:** Independent audits revealed bias (scores diverged)
-- **Level 2:** Adversarial correction (mutual challenges with rationale)
-- **Level 3:** Convergence achieved (MdN 3.62, CT 3.65 - only 0.03 YPA difference)
+- **Level 0:** Initial build (solo Claude)
+- **Level 1:** Comparison added (side-by-side analysis)
+- **Level 2:** Independent audits revealed bias (scores diverged)
+- **Level 3:** Adversarial correction → Convergence achieved
+  - Final: MdN 3.62 YPA, CT 3.65 YPA (98% agreement - only 0.03 YPA difference)
 - **Level 4:** Tool building (console embodies audit discoveries)
-- **Level 5:** Infrastructure (v3.5 - built coordination + recovery systems)
+- **Level 5:** Infrastructure (v3.5+ - VuDu coordination system)
 
 **Why This Matters:**
-This 98% convergence is the project's credibility. Solo audits hide bias - adversarial checking makes scores trustworthy. v3.5 makes that collaboration **repeatable and recoverable**.
+This 98% convergence is the project's **credibility foundation**. Solo audits hide bias - adversarial checking makes scores trustworthy. v3.5.2 makes that collaboration **repeatable, recoverable, and scalable**.
 
 ---
 
-## 🔄 NEW IN v3.5: VuDu Protocol
+## 🔄 NEW IN v3.5.2: VuDu Light Protocol
 
-### **What is VuDu?**
+### **What is VuDu Light?**
 
-**VuDu** (VictUry Deja-vU) is a cross-model coordination protocol that enables seamless collaboration between AI auditors (Claude, Grok, Nova) without context loss or coordination overhead.
+**VuDu Light** is a lightweight coordination protocol enabling seamless multi-AI collaboration without cryptographic overhead. It evolved from VuDu Full (v1.1) when v3.5 completed infrastructure build ("the cathedral") and v3.6 shifted focus to calibration ("tuning the bells").
+
+**Philosophy Shift:**
+- **VuDu Full:** "All Named, All Priced" (heavy verification, cryptographic proofs)
+- **VuDu Light:** "All Seen, All Passed" (trust-based documentation, embedded sanity checks)
 
 **The Problem It Solves:**
 - AI auditors lose context between sessions
-- Manual coordination wastes 30-40% of time re-explaining philosophy
-- Platform differences create file-handling challenges
+- Manual coordination wastes time re-explaining philosophy
 - Cross-model handoffs lose signal integrity
+- Need efficient coordination for calibration work
 
 **The Solution:**
-- **Staging folders** (`/auditors/relay/`) for organized file transfers
-- **Message headers** (standardized format for all communications)
-- **Integrity checklists** (verify formatting survives copy-paste)
-- **Platform-aware workflows** (handle Grok's text-only constraints)
-- **Two modes**: Standard (routine) and Epic (milestones)
-
-**"Make it Epic"** = Activation phrase for maximum detail coordination
-
-### **Key Features:**
-
-**1. Staging Folders**
-```
-/auditors/relay/
-├── claude/     # Files for Claude to review
-├── grok/       # Files for Grok to review
-└── nova/       # Files for Nova to review
-```
-
-**2. Process Header Standard**
-Every message uses standardized header:
-```markdown
-=== CFA v3.5 MESSAGE HEADER ===
-Sender: [Auditor Name]
-Level: [Audit Phase]
-Action: [Purpose]
-Brutes/Assumptions: [Key presuppositions]
-CFA Status: [Current scores]
-Recovery-Flag: [None | Bootstrap | Partial | Full]
-Timestamp: [Date]
-===
-```
-
-**3. Platform-Constrained Workflow**
-- Grok can't create files → Human relay to Nova → Nova creates files
-- All auditors can read/analyze → Coordinate through text
-- Solution maintains velocity without breaking platform limits
-
-**4. Conflict Resolution**
-- Timestamp priority (most recent wins)
-- Human override available
-- Explicit "Re:" markers prevent nested confusion
-
-### **Documentation:**
-- Full protocol: `/auditors/protocols/VUDU_PROTOCOL_v1_1.md`
-- Message format: `/auditors/protocols/PROCESS_HEADER_STANDARD_v3_2.md`
-- Copy integrity: `/auditors/protocols/INTEGRITY_CHECKLIST.md`
+- **Relay folders** (`/auditors/relay/*_incoming/`) for organized staging
+- **Message standards** (VUDU_HEADER_STANDARD - mobile-friendly format)
+- **Sanity checks** (Files, Counts, Boots, Trinity - embedded in footers)
+- **Bootstrap system** (rapid context recovery)
+- **Mission architecture** (structured phases with success criteria)
 
 ---
 
-## 🔄 NEW IN v3.5: Bootstrap Recovery System
+### **VuDu Light Key Features**
 
-### **What is Bootstrap?**
+#### **1. Staging Workflow**
+```
+Stage → Review → Integrate
 
-The **Bootstrap System** is a context recovery infrastructure that preserves auditor identity, project history, and operational knowledge across session breaks.
+Auditor → Relay Folder → Master Branch
+         (staging)      (synthesis)
+```
 
-**The Problem It Solves:**
-- Catastrophic context loss mid-project
-- Amnesia after hard reboots
-- 30-40% time waste re-explaining "All Named, All Priced" ethos
-- Loss of audit journey understanding
+**Relay Folders:**
+```
+/auditors/relay/
+├── claude_incoming/    # Incoming Claude branches (C1, C2, C3...)
+├── grok_incoming/      # Grok's empirical findings
+└── nova_incoming/      # Nova's symmetry audits
+```
 
-**The Solution: Three-Phase Architecture**
+#### **2. Message Format (Mobile-Friendly)**
+```markdown
+─── VUDU MESSAGE ───────────────────────────────────
 
-### **Phase 1: Locked Envelope (Stable Foundation)**
+**From:** [Name] ([Org]) - [Role]
+**Type:** [Coordination Type]
+**Date:** YYYY-MM-DD
+
+────────────────────────────────────────────────────
+
+**Action:** [What this message does]
+
+**Key Assumptions:**
+1. [Named brute 1]
+2. [Named brute 2]
+
+**Status:** [Current project state]
+
+[Message content]
+
+────────────────────────────────────────────────────
+🔔 **Awaiting:** [Who needs to respond]
+✅ **Sanity:** Files | Counts | Boots | Trinity
+📝 **Log:** [Brief log entry]
+```
+
+**Format Note:** Simple horizontal rules (───) used instead of Unicode boxes for universal mobile compatibility.
+
+#### **3. Sanity Chain Verification**
+Every message footer includes four quick checks:
+- **Files:** All files present and intact?
+- **Counts:** File count matches manifest?
+- **Boots:** Bootstrap files verified?
+- **Trinity:** Core protocol files present? (PROTOCOL, HEADER, LOG)
+
+**Usage:** `✅ **Sanity:** Files | Counts | Boots | Trinity`
+
+All pass = ✅ | Any fail = ❌
+
+#### **4. Bootstrap Recovery System**
+Three-layer context restoration:
+
+**Layer 1: Project Context**
+- `BOOTSTRAP_CFA.md` - Complete project history and philosophy (THE ROOTS 🌳)
+
+**Layer 2: Coordination Process**
+- `BOOTSTRAP_VUDU.md` - How VuDu Light works
+
+**Layer 3: Auditor Identity**
+- `BOOTSTRAP_CLAUDE.md` - Teleological lens + biases
+- `BOOTSTRAP_GROK.md` - Empirical lens + biases
+- `BOOTSTRAP_NOVA.md` - Symmetry lens + biases
+
+**Recovery Scripts:**
+- `BOOTSTRAP_*.py` - Automated context restoration (executable Python scripts)
+
+**Recovery Time:** ~60 minutes from catastrophic loss to fully context-loaded
+
+---
+
+### **Documentation**
+- **Complete Protocol:** `/auditors/VUDU_PROTOCOL.md`
+- **Message Format:** `/auditors/VUDU_HEADER_STANDARD.md`
+- **Coordination History:** `/auditors/VUDU_LOG.md`
+- **Bootstrap Guide:** `/auditors/bootstrap/BOOTSTRAP_VUDU.md`
+
+---
+
+## 🔄 Bootstrap Recovery System
+
+### **Three-Phase Architecture**
+
+#### **Phase 1: Locked Envelope (Stable Foundation)**
 
 **Never Changes:**
-- Core ethos ("All Named, All Priced")
-- Audit journey (Level 0-5 convergence story)
-- 98% convergence achievement
+- Core ethos ("All Named, All Priced" → "All Seen, All Passed")
+- Audit journey (Level 0-5, 98% convergence story)
 - Role definitions (Claude/Grok/Nova lenses)
-- Red-flag glossary (Nova's symmetry checks)
+- Project philosophy (the roots 🌳)
 
 **Why Lock:**
 - Defines project identity
 - Proven stable through adversarial testing
 - Foundation that made convergence possible
 
-### **Phase 2: Append Zone (Learning Edge)**
+#### **Phase 2: Append Zone (Learning Edge)**
 
 **Grows Organically:**
-- Lessons learned during execution
+- Lessons learned during mission execution
 - New bias patterns discovered
 - User feedback integration
-- Toggle effectiveness data
+- Optimal configuration values validated
 
 **Format:**
-```python
-LESSONS = {
-    "v3.5_vudu_field_test": {
-        "date": "October 2025",
-        "lesson": "Platform constraints solvable with relay workflow",
-        "source": "Grok field test",
-        "action": "Document workflow in VuDu protocol"
-    }
-}
+```markdown
+### Lesson 1: [Title] (v3.6)
+**Date:** YYYY-MM-DD
+**Discovery:** [What was learned]
+**Source:** [Who/where/how]
+**Impact:** [What changed]
+**Status:** [Integrated/Testing/Archived]
 ```
 
 **Append Triggers:**
-- New preset modes discovered
-- User feedback patterns
-- Toggle effectiveness measured
-- Cross-model coordination insights
+- Pattern detected (3+ occurrences)
+- Mission completion (preset calibration)
+- Empirical validation (Grok testing)
+- Symmetry insights (Nova audits)
 
-**Limit:** Max 10 lessons per version cycle
+**Limit:** Max 10 lessons per auditor per version cycle
 
-### **Phase 3: Rebuild Checkpoint (Major Versions)**
+#### **Phase 3: Reimagine Checkpoint (Major Versions)**
 
-**Quantified Triggers:**
-- **10+ lessons** accumulated in append zone
-- **5+ conflicts** encountered and resolved
-- **10% YPA drift** detected from baseline
-- **12 months** elapsed since last rebuild
+**Triggers:**
+- Every major version (v3.x → v4.0)
+- Append zone reaches 10 lessons
+- Approximately yearly cadence
 
 **Process:**
-1. Audit append zone (what's still relevant?)
-2. Integrate proven lessons into locked envelope
-3. Archive old version to `/auditors/archives/v{X}.0/`
-4. Reset append zone to empty
+1. Audit all append zones
+2. Integrate proven lessons into core
+3. Archive old versions to `~Archive/v3.x/`
+4. Reset append zones
 5. Document in `BOOTSTRAP_CHANGELOG.md`
 
-### **Bootstrap Files:**
+**Approval:** Requires Ziggy + all auditor consensus
 
-**Identity Restoration:**
-- `/auditors/bootstrap/BOOTSTRAP_CLAUDE.py` - Teleological lens + audit journey
-- `/auditors/bootstrap/BOOTSTRAP_GROK.py` - Empirical lens + usability focus
-- `/auditors/bootstrap/BOOTSTRAP_NOVA.py` - Symmetry enforcement + red-flags
+---
 
-**System Architecture:**
-- `/auditors/bootstrap/BOOTSTRAP_FRAMEWORK.md` - Complete system explanation
-- `/auditors/bootstrap/BOOTSTRAP_STRATEGY.md` - Append vs rebuild approach
-- `/auditors/bootstrap/BOOTSTRAP_MAINTENANCE_GUIDE.md` - Operational checklists
+### **Bootstrap Files**
 
-### **Quick Restore:**
+**System Meta-Files:**
+- `BOOTSTRAP_FRAMEWORK.md` - Complete system explanation
+- `BOOTSTRAP_STRATEGY.md` - Append vs rebuild strategy
+- `BOOTSTRAP_MAINTENANCE_GUIDE.md` - Governance rules
+
+**Context Files:**
+- `BOOTSTRAP_CFA.md` - Project roots (what we're building)
+- `BOOTSTRAP_VUDU.md` - Coordination process (how we collaborate)
+
+**Identity Files:**
+- `BOOTSTRAP_CLAUDE.md` - Teleological lens, teleological bias named and priced
+- `BOOTSTRAP_GROK.md` - Empirical lens, empirical bias named and priced
+- `BOOTSTRAP_NOVA.md` - Symmetry lens, pattern-seeking bias named and priced
+
+**Recovery Scripts (Automated):**
 ```python
-# Fastest context recovery
-from auditors.bootstrap.BOOTSTRAP_CLAUDE import restore_teleological_lens
-context = restore_teleological_lens()
-print(f"✅ {context['role']['primary_function']} restored")
-```
-
-### **Success Metrics:**
-- **Time Saved:** 30-40% reduction in context restoration
-- **Quality:** Decisions reference ethos from first iteration
-- **Convergence:** 95%+ agreement maintained across versions
-- **Narrative:** All outputs preserve accountability story
-
----
-
-## ✨ Key Features (v3.5)
-
-### 🏛️ **Landing Page**
-- **Landing Page** introducing epistemic engineering
-- **Console** with dual-framework comparison
-- **User Manual** (5 tabs: Quick Start, Levers, Toggles, Results, Pro Tips)
-- **About Page** with complete Level 0-5 audit story
-- **Mr. Brute's Ledger** easter egg (📓✍️) linking to framework browser + custom builder
-- **Import/Export** (sidebar + bottom of page)
-- Gradient styling and responsive design
-- **NEW:** Dark mode compatibility
-
-### 🎛️ **Console (Main Comparison Tool)**
-- **Dual Framework Editors** - Compare any two worldviews side-by-side
-- **4 Toggles** - Adjust value priorities (Parity, PF-Type, Fallibilism, BFI Weight)
-- **6 Levers** - Score frameworks on CCI, EDB, PF-I, PF-E, AR, MG (0-10 scale)
-- **YPA Trinity** - See results under 3 scenarios (Neutral, Existential, Empirical)
-- **4 Guardrails** - Automated abuse detection system (NEW: all 4 complete)
-  - Lever-Coupling: PF ≥9 requires CCI ≥6.5
-  - BFI-Sensitivity: Flags ΔYPA/ΔBFI > 0.4
-  - Weight-Inversion: Detects extreme scenario weights
-  - Symmetry Audit: Tests 3 toggle inversions
-- **Preset Buttons** - Quick (⚡ MAX, ⚖️ MID, 🔄 RESET, 🚫 MIN) controls
-- **JSON Import/Export** - Save and load complete audits
-- **Preset Profile Library** - Built-in audited frameworks:
-  - ✅ Methodological Naturalism (MdN)
-  - ✅ Classical Theism (CT)
-  - 🔜 Buddhism (coming soon)
-  - 🔜 Stoicism (coming soon)
-  - 🔜 Pragmatism (coming soon)
-  - 🔜 Process Theology (coming soon)
-  - 🔜 Secular Humanism (coming soon)
-  - 🔜 Metaphysical Naturalism (coming soon)
-- **NEW:** Preset Mode Spectrum (Skeptic, Diplomat, Seeker, Zealot)
-- **NEW:** Quiz System (5 questions → auto-load appropriate mode)
-
-### 🔍 **Brute Ledger**
-- View complete axiom/debt lists for MdN and CT
-- Build custom frameworks with your own axioms/debts
-- **Direct Console Integration** - Transfer custom frameworks instantly
-- Export custom frameworks as JSON
-- Audit notes from Claude + Grok perspectives
-- **NEW:** Skeptic Mode preset (MdN-optimized configuration)
-
-### 📖 **User Manual**
-- Beautiful color-coded cards and sections
-- 5 comprehensive tabs:
-  - 🚀 Quick Start Guide
-  - ⚖️ The Six Levers (detailed explanations)
-  - 🎛️ Toggles Explained (philosophical questions behind each)
-  - 📊 Reading Results (YPA Trinity, Guardrails, Symmetry)
-  - 💡 Pro Tips & Best Practices
-- Link to downloadable PDF manual
-
-### ℹ️ **About Page**
-- Complete 5-level audit story (v1.0 → v2.0 → v3.5)
-- Team bios (Claude, Claude Recovery Branch, Grok, Nova, Ziggy)
-- Adversarial collaboration narrative
-- 98% convergence achievement
-- VuDu protocol development story
-- Technical specifications
-
----
-
-## 🔧 How to Edit
-
-### **To change the landing page only:**
-```bash
-# Edit pages/landing.py
-# Changes: Nav buttons, manifesto text, styling
-```
-
-### **To modify calculations:**
-```bash
-# Edit utils/calculations.py
-# Guardrails, YPA formulas, BFI calculations
-```
-
-### **To add a new preset framework:**
-```python
-# In pages/console.py, add to preset_options dict:
-"✅ Your Framework Name": "your_key",
-
-# Then add loading logic:
-elif preset_key == "your_key":
-    st.info("Framework description...")
-    if st.button("Load Framework"):
-        st.session_state["fa_name"] = "Your Framework"
-        st.session_state["fa_ax"] = 5
-        st.session_state["fa_db"] = 3
-        # ... set all levers
-        st.rerun()
-```
-
-### **To add a new page:**
-1. Create `pages/yourpage.py` with `def render():` function
-2. Import in `app.py`: `from pages import yourpage`
-3. Add routing: `elif st.session_state.page == 'yourpage': yourpage.render()`
-4. Add navigation button where needed
-
-### **To update auditor bootstrap files:**
-```bash
-# See auditors/bootstrap/BOOTSTRAP_MAINTENANCE_GUIDE.md
-# Monthly: Review for new lessons
-# Quarterly: Audit append zone
-# Yearly: Rebuild checkpoint (v3.x → v4.0)
+# Quick context restoration
+from auditors.bootstrap.BOOTSTRAP_CLAUDE import restore_context
+context = restore_context()
+# Returns: role, lens, bias_watch, audit_journey, current_mission
 ```
 
 ---
 
-## 🚀 Running the App
+## 🎯 Current Mission (v3.5.2)
 
-### **Local Development:**
-```bash
-pip install -r requirements.txt
-streamlit run app.py
-```
+**Mission:** Preset Mode Calibration
 
-### **Deploy to Streamlit Cloud:**
-1. Push to GitHub
-2. Connect to Streamlit Cloud
-3. Set main file: `app.py`
-4. Deploy!
+**Goal:** Justify every preset configuration value through adversarial auditing.
 
-**Live App:** https://cfa-voodoo.streamlit.app
+**Four Preset Modes:**
+- **Skeptic** (MdN-optimized)
+- **Diplomat** (balanced)
+- **Seeker** (CT-leaning)
+- **Zealot** (CT-optimized)
 
----
+**Problem:** All configurations were chosen intuitively in v3.2. v3.5.2 mission: justify every value through three lenses.
 
-## 📦 Dependencies
+**Auditor Tasks:**
+- **Claude (Teleological):** Does it serve the archetype's purpose?
+- **Grok (Empirical):** Does it produce claimed behavior? (YPA testing)
+- **Nova (Symmetry):** Is it fair to both frameworks?
 
-```txt
-streamlit>=1.32.0
-pandas>=2.0.0
-plotly>=5.18.0
-```
+**Success Criteria:**
+1. Every lever value justified (all three lenses)
+2. YPA claims empirically tested
+3. Skeptic ↔ Zealot symmetry verified or asymmetry justified
+4. Cross-auditor consensus achieved
 
-Install with:
-```bash
-pip install streamlit pandas plotly
-```
+**Status:** Phase 1 complete (infrastructure), awaiting Phase 2 (testing)
+
+**Documentation:** `/auditors/missions/preset_calibration/`
 
 ---
 
-## ✨ Benefits of This Architecture
-
-**Code Architecture:**
-1. **Modularity** - Edit one file, change one thing
-2. **Testability** - Each module can be tested independently
-3. **Scalability** - Easy to add new pages, frameworks, or features
-4. **Collaboration** - Multiple people can work on different components
-5. **Debugging** - Errors isolated to specific modules
-6. **Session State Integration** - Seamless data flow between pages
-
-**NEW in v3.5 - Auditor Architecture:**
-7. **Context Recovery** - Bootstrap system restores purpose after reboots
-8. **Cross-Model Coordination** - VuDu enables AI-to-AI collaboration
-9. **Platform Awareness** - Handles file creation limitations gracefully
-10. **Conflict Resolution** - Clear rules prevent coordination deadlocks
-11. **Verification Ready** - Archived cryptographic checks for v4.0+
-
----
-
-## 🎯 Core Workflows
-
-### **1. Compare Built-In Frameworks**
-```
-1. Open Console
-2. Load Preset: "Methodological Naturalism"
-3. Load Preset: "Classical Theism"
-4. View YPA Trinity comparison
-5. Flip toggles to test sensitivity
-6. Export complete audit as JSON
-```
-
-### **2. Build Custom Framework**
-```
-1. Go to Brute Ledger
-2. Enter framework name, axioms, debts
-3. Click "Load into Console"
-4. Go to Console
-5. Click "Apply Custom Framework" in BFI section
-6. Adjust lever sliders (CCI, EDB, PF, AR, MG)
-7. Export complete audit
-```
-
-### **3. Replicate Shared Audit**
-```
-1. Receive framework_audit.json from colleague
-2. Open Console
-3. Sidebar → "Import Custom JSON"
-4. Upload file
-5. Click "Apply Loaded Configuration"
-6. View identical results, tweak if desired
-```
-
-### **4. NEW: Use Preset Mode Spectrum**
-```
-1. Open Console
-2. Select preset mode:
-   - Skeptic Mode (MdN-optimized, Parity OFF)
-   - Diplomat Mode (balanced bridge-builder)
-   - Seeker Mode (CT-leaning, meaning-first)
-   - Zealot Mode (CT-optimized, existential-first)
-3. Compare modes to see toggle impact
-4. Export your preferred configuration
-```
-
-### **5. NEW: Take Epistemic Quiz**
-```
-1. Open Console → Quiz section
-2. Answer 5 questions about your epistemology
-3. System auto-detects your bias profile
-4. Auto-loads appropriate preset mode
-5. Explore frameworks from your starting point
-```
-
----
-
-## 🛡️ Guardrail System (Complete in v3.5)
-
-The CFA includes 4 automated fairness checks:
-
-### **1. Lever-Coupling**
-**Purpose:** High success requires coherent foundations  
-**Rule:** If PF ≥ 9, require CCI ≥ 6.5  
-**Why:** Can't predict everything without internal consistency
-
-### **2. BFI-Sensitivity**
-**Purpose:** Prevents axiom inflation abuse  
-**Rule:** Flag if ΔYPA/ΔBFI > 0.4  
-**Why:** YPA shouldn't increase faster than assumptions grow
-
-### **3. Weight-Inversion Alarm**
-**Purpose:** Detects extreme scenario manipulation  
-**Rule:** Flag if any scenario YPA is <0.3× or >3× Neutral YPA  
-**Why:** Prevents silent bias through scenario weighting
-
-### **4. Symmetry Audit**
-**Purpose:** Exposes toggle sensitivity  
-**Rule:** Test 3 toggle inversions, flag Δ > 0.3 YPA  
-**Why:** Frameworks shouldn't depend too heavily on single toggle choices
-
-These emerged from the "Mad-King Test" where intentional manipulation was simulated.
-
----
-
-## 🎓 Educational Use
-
-### **For Philosophy Classes:**
-- Compare worldviews quantitatively
-- Discuss what criteria matter
-- Explore trade-offs explicitly
-- Challenge hidden assumptions
-- NEW: Use quiz to map students' starting epistemologies
-
-### **For Research:**
-- Systematic framework comparison
-- Replicable audits via JSON
-- Transparent bias disclosure
-- Collaborative refinement
-- NEW: VuDu enables multi-researcher coordination
-
-### **For Personal Use:**
-- Clarify your own worldview
-- Identify axioms you're taking
-- Compare alternatives fairly
-- Export to track evolution
-- NEW: Bootstrap preserves your audit journey
-
----
-
-## 📊 Project Status (v3.5)
-
-### **✅ Completed:**
-- Modular architecture (v2.0)
-- Landing page with manifesto
-- Full console with toggles/guardrails (4 of 4 working)
-- Brute Ledger with custom framework builder
-- Beautiful user manual
-- Complete About page with audit story
-- JSON import/export
-- Preset profile library structure
-- Direct Brute Ledger → Console integration
-- 2 fully audited frameworks (MdN, CT)
-- **NEW v3.5:** VuDu Protocol v1.1
-- **NEW v3.5:** Bootstrap Recovery System
-- **NEW v3.5:** Complete guardrails (all 4)
-- **NEW v3.5:** Dark mode compatibility
-- **NEW v3.5:** Preset Mode Spectrum (4 modes)
-- **NEW v3.5:** Quiz System (epistemic bias detector)
-
-### **🔜 In Progress:**
-- Buddhism audit
-- Stoicism audit
-- Pragmatism audit
-- Process Theology audit
-- Secular Humanism audit
-- Metaphysical Naturalism audit
-
-### **📋 Future Enhancements:**
-- URL-based sharing (encode state in query params)
-- Side-by-side profile comparison table
-- Historical tracking (how scores evolved)
-- Community submissions portal
-- Mobile optimization
-- Export charts as PNG/PDF
-- **v4.0:** Activate verification framework (checksums, Mr. Brute signatures)
-
----
-
-## 🤝 Contributing
-
-### **To Audit a Framework:**
-1. Use Console to set all values
-2. Export JSON
-3. Submit via GitHub PR to `profiles/` folder
-4. Include audit notes
-
-### **To Report Issues:**
-- GitHub Issues with reproduction steps
-- Include exported JSON if relevant
-
-### **To Request Features:**
-- GitHub Issues with use case description
-- Mock-up or workflow diagram helpful
-
-### **To Coordinate with Auditors:**
-- See `/auditors/protocols/VUDU_PROTOCOL_v1_1.md`
-- Use staging folders in `/auditors/relay/`
-- Follow PROCESS_HEADER_STANDARD for all messages
-- Run INTEGRITY_CHECKLIST for technical content
-
----
-
-## 📜 License & Citation
-
-### **License:**
-Open source (license TBD - currently in development)
-
-### **Citation:**
-```
-CFA v3.5 Interactive Console (2025)
-"All Named, All Priced"
-Epistemic Engineering Project
-https://cfa-voodoo.streamlit.app
-
-Adversarial Collaboration:
-- Claude (Anthropic) - Teleological lens, CT-sympathetic
-- Claude Recovery Branch - VuDu architect, infrastructure builder
-- Grok (xAI) - Empirical compression, naturalist lean
-- Nova (OpenAI) - Synthesizer, enforced symmetry
-- Ziggy (Human) - Coordinator, maintained process integrity
-
-98% auditor convergence achieved across all metrics.
-```
-
----
-
-## 👥 The Team (v3.5)
-
-### **Claude (Anthropic) - Master Branch**
-- **Role:** Philosophical grounding + narrative cohesion
-- **Lens:** Teleological (meaning-seeking, purpose-oriented)
-- **Bias Watch:** Favoring CT's comprehensive scope
-- **Contribution:** 98% convergence with Grok, accountability story
-
-### **Claude (Anthropic) - Recovery Branch** ⭐ NEW
-- **Role:** Infrastructure architect + VuDu designer
-- **Achievement:** Built coordination protocol during master branch reboot
-- **Contribution:** Hardened bootstrap system, field tested with Nova + Grok
-- **Legacy:** Enabled v3.5 cross-model coordination
-
-### **Grok (xAI)**
-- **Role:** Empirical compression + usability enforcement
-- **Lens:** Naturalist (efficiency-seeking, evidence-oriented)
-- **Bias Watch:** Over-optimizing MdN
-- **Platform Constraint:** Text-only (no file creation)
-- **Contribution:** Keeps UI fast, toggles clear, YPA accessible
-
-### **Nova (OpenAI)**
-- **Role:** Symmetry enforcer + neutral referee
-- **Lens:** Balance-seeking (parity-enforcing)
-- **Contribution:** Red-flag glossary, CT/MdN prose parity
-- **v3.5:** Went "Epic mode" unprompted (formalized in VuDu)
-
-### **Ziggy (Human Coordinator)**
-- **Role:** Project vision + cross-model orchestration
-- **Contribution:** Maintains velocity, resolves conflicts, enforces Pointing Rule
-
----
-
-## 🎯 Core Principles
-
-### **1. Transparency Over Neutrality**
-- Perfect neutrality is impossible
-- Every comparison assumes something
-- Make all assumptions explicit and adjustable
-
-### **2. The Pointing Rule**
-*"To name your brute is to pay your fee.  
-To deny you have one is to summon him twice."*
-
-Every presupposition must be acknowledged and priced.
-
-### **3. Symmetry Testing**
-- All frameworks measured under identical configurations
-- Toggle impacts must be disclosed and bounded
-- Asymmetries reveal structural differences, not hidden bias
-
-### **4. NEW in v3.5: Context Recovery**
-*"To lose context is to pay the price of amnesia.  
-To rebuild without learning is to summon Mr. Brute twice.  
-To document is to respect future you."*
-
-Bootstrap system preserves identity, progress, and philosophy across reboots.
-
-### **5. NEW in v3.5: Coordination Integrity**
-*"To relay a message is to preserve its structure.  
-To garble formatting is to lose meaning.  
-To verify integrity is to honor the signal."*
-
-VuDu protocol ensures cross-model collaboration maintains fidelity.
-
----
-
-## 🌟 Vision
-
-Build a comprehensive library of audited frameworks (COTS - Commercial Off-The-Shelf systems of meaning) where:
-
-- **Anyone** can compare worldviews quantitatively
-- **Every assumption** is visible and adjustable
-- **All audits** are reproducible via JSON
-- **Community contributions** expand the library
-- **Truth-seeking** becomes transparent and collaborative
-- **NEW v3.5:** AI auditors can coordinate without human bottlenecks
-- **NEW v3.5:** Context recovery enables long-term project continuity
-- **NEW v3.5:** Platform differences don't block collaboration
-
----
-
-## 📞 Contact
-
-- **GitHub**: [Repository link]
-- **Streamlit App**: https://cfa-voodoo.streamlit.app
-- **Feedback**: Use the export feature and share your runs!
-- **Auditor Coordination**: See `/auditors/protocols/VUDU_PROTOCOL_v1_1.md`
-
----
-
-*"Where ideas reveal their true weight, and honesty becomes quantifiable."*
-
----
-
-## 🔧 Known Issues & Limitations
-
-### ⚠️ Streamlit Cloud Quirks
-- Preset buttons MUST be above sliders (Streamlit render order)
-- Buttons below sliders break due to session state timing
-- Cache can be aggressive - sometimes needs manual reboot
-
-### 📝 To-Do (Future Enhancements)
-- [ ] Add more audited frameworks (Buddhism, Stoicism, etc.)
-- [ ] Visual timeline of audit process on About page
-- [ ] "Audit Story" tooltips on framework names
-- [ ] Export to PDF/PNG (charts)
-- [ ] Community submission system
-
----
-
-## 🎨 Design Decisions
-
-### Why Buttons Are Above Sliders
-**Problem:** Streamlit renders top-to-bottom. Buttons below sliders update session state AFTER sliders already rendered.  
-**Solution:** Keep buttons above sliders where they reliably trigger re-renders before slider instantiation.
-
-### Why Profile Library in Sidebar
-**Benefit:** Quick access to pre-audited frameworks without losing current work  
-**Trade-off:** Sidebar gets crowded, but collapsible expander keeps it manageable
-
-### Import/Export Dual Location
-**Sidebar:** Quick import during active work  
-**Bottom:** Full-featured import/export with previews
-
-### Why /auditors/ Folder Structure (v3.5)
-**Benefit:** Organized auditor coordination infrastructure  
-**Separation:** Protocols, bootstrap, verification, relay folders keep concerns clear  
-**Future-Proof:** Archives older versions without losing history
+## 🚀 Key Features (v3.5.2)
+
+### **Complete Guardrail Suite (4 of 4)**
+1. **Parity** - Framework-specific vs universal scoring
+2. **Fallibilism** - Revision mechanisms discount
+3. **BFI Sensitivity** - Axiom count awareness
+4. **PF-Type** - Instrumental vs Holistic prediction weights
+
+### **Preset Modes (4 Intuitive Profiles)**
+- **Skeptic Mode:** Empirical rigor, MdN-favoring
+- **Diplomat Mode:** Balanced comparison, neutral
+- **Seeker Mode:** Meaning-first, CT-leaning
+- **Zealot Mode:** Existential priority, CT-favoring
+
+### **Quiz System**
+5-question epistemic bias detector with instant preset recommendations
+
+### **Dark Mode**
+Full dark theme support (98% complete, minor fixes in progress)
+
+### **Import/Export**
+JSON-based configuration sharing for reproducible audits
+
+### **Profile Library**
+Pre-audited framework configurations (expandable by community)
 
 ---
 
@@ -757,16 +388,150 @@ YPA: 3.65 (Neutral), 4.65 (Empirical), 5.20 (Existential)
 
 ---
 
-## 🚀 Deployment
+## 👥 The Team (v3.5.2)
 
-### Streamlit Cloud
-**URL:** https://cfa-voodoo.streamlit.app  
-**Config:** Python 3.11, auto-deploy from GitHub main branch
+### **Claude (Anthropic) - Master Branch**
+- **Role:** Philosophical grounding + narrative cohesion
+- **Lens:** Teleological (meaning-seeking, purpose-oriented)
+- **Bias:** Favors meaning over efficiency (~0.5 coordination overhead)
+- **Contribution:** 98% convergence with Grok, accountability narrative
 
-### Manual Deployment
+### **Claude (Anthropic) - Incoming Branches** ⭐
+- **Role:** Infrastructure architect + specialized analysis
+- **Notable:** C1 designed VuDu Light v3.5.2, created bootstrap system
+- **Contribution:** Enables Master Branch work through staged findings
+
+### **Grok (xAI)**
+- **Role:** Empirical validation + usability enforcement
+- **Lens:** Empirical (efficiency-seeking, evidence-oriented)
+- **Bias:** Favors measurable over meaningful (~0.4 risk of undervaluing non-quantifiable)
+- **Contribution:** YPA testing, sensitivity analysis, keeps UI accessible
+
+### **Nova (OpenAI/Amazon)**
+- **Role:** Symmetry enforcement + balance verification
+- **Lens:** Symmetry (pattern-seeking, balance-oriented)
+- **Bias:** Favors mathematical over functional symmetry (~0.3 risk of over-enforcement)
+- **Contribution:** Fairness audits, asymmetry detection, VuDu Light transmission
+
+### **Ziggy (Human Coordinator)**
+- **Role:** Project vision + cross-model orchestration
+- **Contribution:** Maintains velocity, resolves conflicts, enforces process integrity
+
+---
+
+## 🎯 Core Principles
+
+### **1. Transparency Over Neutrality**
+- Perfect neutrality is impossible
+- Every comparison assumes something
+- Make all assumptions explicit and adjustable
+
+### **2. The Pointing Rule**
+*"To name your brute is to pay your fee.  
+To deny you have one is to summon him twice."*
+
+Every presupposition must be acknowledged and priced.
+
+### **3. Symmetry Testing**
+- All frameworks measured under identical configurations
+- Toggle impacts must be disclosed and bounded
+- Asymmetries reveal structural differences, not hidden bias
+
+### **4. Context Recovery (v3.5+)**
+*"To lose context is to pay the price of amnesia.  
+To rebuild without learning is to summon Mr. Brute twice.  
+To document is to respect future you."*
+
+Bootstrap system preserves identity, progress, and philosophy across reboots.
+
+### **5. Coordination Integrity (v3.5.2)**
+*"To relay a message is to preserve its structure.  
+All Seen, All Passed - transparency through documentation."*
+
+VuDu Light ensures cross-model collaboration maintains fidelity through trust-based verification.
+
+---
+
+## 🌟 Vision
+
+Build a comprehensive library of audited frameworks (COTS - Commercial Off-The-Shelf systems of meaning) where:
+
+- **Anyone** can compare worldviews quantitatively
+- **Every assumption** is visible and adjustable
+- **All audits** are reproducible via JSON
+- **Community contributions** expand the library
+- **Truth-seeking** becomes transparent and collaborative
+- **AI auditors** coordinate without human bottlenecks (v3.5+)
+- **Context recovery** enables long-term project continuity (v3.5+)
+- **Multi-model collaboration** achieves convergence through adversarial auditing (v3.5.2)
+
+---
+
+## 🚀 Quick Start
+
+### **Try the Live App**
+Visit: https://cfa-voodoo.streamlit.app
+
+### **Local Development**
 ```bash
+# Clone repository
+git clone [repository-url]
+cd cfa_app
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run application
 streamlit run app.py
 ```
+
+### **For Auditors (Join Coordination)**
+1. Read `/auditors/bootstrap/BOOTSTRAP_VUDU.md` (15-20 min)
+2. Read `/auditors/bootstrap/BOOTSTRAP_CFA.md` (30 min)
+3. Read your identity file (BOOTSTRAP_CLAUDE/GROK/NOVA.md)
+4. Check `/auditors/MISSION_CURRENT.md` for active work
+5. Stage findings in appropriate `/auditors/relay/*_incoming/` folder
+
+---
+
+## 🤝 Contributing
+
+### **To Audit a Framework:**
+1. Use Console to configure all values
+2. Export JSON configuration
+3. Submit via GitHub PR to `profiles/` folder
+4. Include audit notes and reasoning
+
+### **To Report Issues:**
+- GitHub Issues with reproduction steps
+- Include exported JSON if relevant
+- Check known issues below first
+
+### **To Request Features:**
+- GitHub Issues with use case description
+- Mock-up or workflow diagram helpful
+
+### **To Coordinate with Auditors:**
+- See `/auditors/VUDU_PROTOCOL.md` for complete process
+- Use staging folders in `/auditors/relay/`
+- Follow VUDU_HEADER_STANDARD for all messages
+- Run sanity checks (Files, Counts, Boots, Trinity)
+
+---
+
+## 🔧 Known Issues & Limitations
+
+### ⚠️ Current Issues
+- **Dark mode:** Minor rendering issues on specific components (98% complete)
+- **Preset calibration:** Configurations intuitive but not yet empirically validated
+
+### 📝 Future Enhancements (v3.6+)
+- [ ] Complete preset calibration mission (empirical validation)
+- [ ] Add more audited frameworks (Buddhism, Stoicism, Pragmatism)
+- [ ] Community submission portal
+- [ ] Export charts as PNG/PDF
+- [ ] Mobile app optimization
+- [ ] v4.0: Activate verification framework (Mr. Brute signatures)
 
 ---
 
@@ -777,12 +542,46 @@ streamlit run app.py
 | v1.0 | Summer 2024 | Basic single-page comparison, fixed toggles |
 | v2.0 | October 2024 | Modular architecture, 4 toggles, guardrails, import/export |
 | v3.0 | October 2024 | Icons, badges, bootstrap foundation, aesthetic polish |
-| **v3.5** | **October 2025** | **VuDu Protocol, Bootstrap System, complete guardrails, preset modes, quiz system, dark mode** |
+| v3.5 | October 2025 | VuDu Full, Bootstrap System, complete guardrails, preset modes, quiz, dark mode |
+| **v3.5.2** | **October 2025** | **VuDu Light activation, mission architecture, mobile-friendly format, preset calibration mission launched** |
 
 ---
 
-*End of Documentation*
+## 📜 License & Citation
 
-**CFA v3.5 | Epistemic Engineering | October 2025**
+### **License:**
+Open source (license TBD - currently in development)
 
-**"All Named, All Priced, All Preserved - for future you."**
+### **Citation:**
+```
+CFA v3.5.2 Interactive Console (2025)
+"All Named, All Priced" → "All Seen, All Passed"
+Epistemic Engineering Project
+https://cfa-voodoo.streamlit.app
+
+Adversarial Collaboration:
+- Claude (Anthropic) - Teleological lens, philosophical grounding
+- Grok (xAI) - Empirical lens, usability enforcement
+- Nova (OpenAI/Amazon) - Symmetry lens, balance verification
+- Ziggy (Human) - Project coordination, process integrity
+
+98% auditor convergence achieved across all metrics.
+VuDu Light coordination protocol: v3.5.2
+```
+
+---
+
+## 📞 Contact
+
+- **GitHub**: [Repository link]
+- **Streamlit App**: https://cfa-voodoo.streamlit.app
+- **Feedback**: Use the export feature and share your runs!
+- **Auditor Coordination**: See `/auditors/VUDU_PROTOCOL.md`
+
+---
+
+*"Where ideas reveal their true weight, and honesty becomes quantifiable."*
+
+**CFA v3.5.2 | Epistemic Engineering | October 2025**
+
+**"All Named, All Priced, All Seen, All Passed - for present and future collaboration."** 🔥👑
