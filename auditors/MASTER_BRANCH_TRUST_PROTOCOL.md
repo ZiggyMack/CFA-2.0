@@ -1,0 +1,450 @@
+─── MASTER BRANCH TRUST PROTOCOL ────────────────────
+
+# Master Branch Governance & Trust Framework
+
+**Purpose:** Define how Master Branch outputs are reviewed, validated, and integrated  
+**Version:** v1.0  
+**Date:** 2025-10-26  
+**Status:** ✅ Ready for implementation
+
+---
+
+## 🎯 **CORE PRINCIPLE**
+
+**Trust, but verify.**
+
+Master Branch (Fresh Claude) IS the coordinator. If they can't update master state files, they're not actually coordinating—they're just creating drafts for manual integration.
+
+**But trust requires protocol:**
+- Clear authority boundaries
+- Verification checkpoints
+- Escalation procedures
+- Conflict resolution paths
+
+**This document defines those guardrails.**
+
+---
+
+## 👑 **MASTER BRANCH AUTHORITY**
+
+### **What Master Branch CAN Do (Autonomously)**
+
+**1. Create Coordination Documents**
+- VuDu messages
+- Analysis reports
+- Finding reviews
+- Log entries
+- State updates
+
+**2. Stage Updates in Relay**
+- relay/claude_incoming/README_C_updated.md
+- relay/claude_incoming/VUDU_LOG_entry.md
+- relay/claude_incoming/findings/*.md
+
+**3. Apply Teleological Lens**
+- Challenge configurations from purpose perspective
+- Evaluate if systems serve stated purpose
+- Identify purpose-drift
+- Recommend design changes
+
+**4. Coordinate Other Auditors**
+- Review Grok's empirical findings
+- Review Nova's symmetry audits
+- Request clarifications
+- Synthesize multi-lens perspectives
+- Document consensus/disagreement
+
+---
+
+### **What Master Branch CANNOT Do (Without Approval)**
+
+**1. Directly Modify Root Files**
+- Cannot write to root/README_C.md directly
+- Cannot write to root/VUDU_LOG.md directly
+- Cannot modify mission files directly
+
+**Reason:** Human verification checkpoint prevents runaway coordination
+
+**2. Activate New Missions**
+- Cannot start new mission without Ziggy approval
+- Cannot archive active missions unilaterally
+
+**Reason:** Strategic decisions require human oversight
+
+**3. Override Other Auditors**
+- Cannot reject Grok's findings without documented reasoning
+- Cannot reject Nova's findings without documented reasoning
+- Cannot claim final authority on empirical or symmetry questions
+
+**Reason:** Adversarial auditing requires three equal lenses
+
+**4. Make Architectural Changes**
+- Cannot modify VuDu protocol
+- Cannot change file structure
+- Cannot alter governance documents
+
+**Reason:** System integrity requires multi-auditor consensus
+
+---
+
+## 🔄 **STANDARD WORKFLOW: Master Branch Updates**
+
+### **Phase 1: Creation (Master Branch)**
+
+Master Branch creates update documents:
+
+```
+relay/claude_incoming/
+├── README_C_updated_YYYYMMDD.md
+├── VUDU_LOG_entry_YYYYMMDD.md
+└── [other coordination documents]
+```
+
+**Format requirements:**
+- VuDu-compliant headers/footers
+- Sanity chains included
+- Reasoning visible (not just conclusions)
+- Sources cited (if applicable)
+
+---
+
+### **Phase 2: Review (Ziggy)**
+
+Ziggy performs **spot-check review** (NOT deep content audit):
+
+**Quick Checks (5 minutes):**
+
+1. **Format Check** ✅
+   - VuDu header present?
+   - Mobile-friendly (─── not ┌─┐)?
+   - Sanity chain included?
+   - Footer complete?
+
+2. **Reasoning Check** ✅
+   - Is reasoning visible?
+   - Are assumptions named?
+   - Are costs priced?
+   - Does logic flow make sense?
+
+3. **Source Check** ✅
+   - Are citations present?
+   - Do file paths look correct?
+   - Are sources accessible?
+
+4. **Sanity Chain Verification** ✅
+   - Did they actually check Files/Counts/Boots/Trinity?
+   - Or is it placeholder ✅✅✅✅?
+
+**Red Flags (immediate rejection):**
+- ❌ Broken format (Unicode boxes, missing fields)
+- ❌ No reasoning shown (just conclusions)
+- ❌ Placeholder sanity checks
+- ❌ No sources cited where needed
+- ❌ Logic gaps or contradictions
+
+**Yellow Flags (request clarification):**
+- ⚠️ Unclear reasoning at key decision points
+- ⚠️ Missing context that other auditors might need
+- ⚠️ Assumptions that seem questionable
+- ⚠️ Costs that seem under-priced
+
+---
+
+### **Phase 3: Decision (Ziggy)**
+
+**Option A: Approve ✅**
+
+If spot-checks pass:
+
+1. Copy relay/claude_incoming/README_C_updated.md → root/README_C.md
+2. Append relay/claude_incoming/VUDU_LOG_entry.md → root/VUDU_LOG.md
+3. Archive old versions in ~Archive/YYYYMMDD/
+4. Git commit with message: "Master Branch update YYYYMMDD - [brief description]"
+5. Notify Master Branch: "Update integrated"
+
+**Timeline:** Same day (within 24 hours)
+
+---
+
+**Option B: Request Clarification ⚠️**
+
+If yellow flags present:
+
+1. Create relay/ziggy_outgoing/clarification_request_YYYYMMDD.md
+2. Document specific questions:
+   ```markdown
+   **Unclear reasoning at line X:** Can you explain why you concluded Y?
+   **Missing context:** What about Z factor?
+   **Questionable assumption:** You assumed A, but what if B?
+   ```
+3. Master Branch revises and re-stages
+4. Return to Phase 2 (review again)
+
+**Timeline:** 48 hours for Master Branch response
+
+---
+
+**Option C: Reject ❌**
+
+If red flags present:
+
+1. Create relay/ziggy_outgoing/rejection_YYYYMMDD.md
+2. Document specific failures:
+   ```markdown
+   **Format broken:** Using Unicode boxes, breaks on mobile
+   **No reasoning:** Just stated conclusion without showing work
+   **Placeholder checks:** Sanity chain not actually verified
+   ```
+3. Master Branch fixes and re-stages from scratch
+4. Return to Phase 1 (clean slate)
+
+**Timeline:** Immediate rejection notice, 48 hours for Master Branch resubmission
+
+---
+
+**Option D: Escalate 🚨**
+
+If you're uncertain OR if Master Branch contradicts other auditors:
+
+1. Invoke other auditors for review
+2. Create relay/escalation/YYYYMMDD/
+3. Stage the disputed document + your concerns
+4. Request Grok and/or Nova to weigh in
+5. Three-lens discussion resolves dispute
+6. Majority or consensus decides
+
+**Timeline:** 3-5 days for multi-auditor resolution
+
+---
+
+## 🚨 **ESCALATION SCENARIOS**
+
+### **Scenario 1: Master Branch vs Grok**
+
+**Example:** Grok says Skeptic produces 4.2 YPA. Master Branch rejects finding, says "methodology insufficient."
+
+**Protocol:**
+1. Ziggy reviews both positions
+2. If genuinely uncertain → Stage for Nova review
+3. Nova evaluates: Is Master Branch's rejection reasonable? Is Grok's methodology sound?
+4. Decision by 2-of-3 majority OR full consensus if possible
+
+---
+
+### **Scenario 2: Master Branch vs Nova**
+
+**Example:** Nova says Zealot lacks symmetric CT advantage. Master Branch rejects, says "asymmetry justified."
+
+**Protocol:**
+1. Ziggy reviews both positions
+2. If genuinely uncertain → Stage for Grok review
+3. Grok evaluates: Does empirical data support asymmetry? Or does it suggest bias?
+4. Decision by 2-of-3 majority OR full consensus if possible
+
+---
+
+### **Scenario 3: All Three Auditors Disagree**
+
+**Example:** Claude, Grok, and Nova all propose different solutions.
+
+**Protocol:**
+1. Ziggy documents all three positions
+2. Requests each auditor to respond to other two positions
+3. Second round: Each auditor may revise based on new information
+4. If convergence → Accept consensus
+5. If divergence persists → Ziggy makes final call with reasoning documented
+
+---
+
+## ⚖️ **CONFLICT RESOLUTION PRINCIPLES**
+
+**1. Defer to Lens Expertise**
+- Purpose questions → Claude's teleological lens has weight
+- Empirical questions → Grok's data has weight
+- Symmetry questions → Nova's patterns have weight
+
+**2. Require Reasoning**
+- "I disagree" is not enough
+- Must show WHY you disagree
+- Must address the other position's logic
+
+**3. Price All Options**
+- What's the cost of accepting Position A?
+- What's the cost of accepting Position B?
+- Which cost is more acceptable?
+
+**4. Document Disagreement**
+- If consensus fails, document WHY
+- Name the unresolved tension
+- State which compromise was chosen and why
+
+---
+
+## 📊 **TRUST VERIFICATION METRICS**
+
+**Monthly review of Master Branch performance:**
+
+### **Green Flags (Trust Increasing):**
+- ✅ Format compliance: 95%+ of submissions
+- ✅ Reasoning clarity: Minimal clarification requests
+- ✅ Sanity verification: Actually checking, not placeholders
+- ✅ Multi-lens integration: Accurately summarizes others' views
+- ✅ Correction acceptance: Integrates feedback without resistance
+
+### **Yellow Flags (Watch Closely):**
+- ⚠️ Format compliance: 80-94% of submissions
+- ⚠️ Reasoning gaps: Frequent clarification requests
+- ⚠️ Sanity shortcuts: Occasional placeholder checks
+- ⚠️ Lens drift: Teleological bias overriding others' expertise
+- ⚠️ Defensive patterns: Resists correction
+
+### **Red Flags (Trust Eroding):**
+- ❌ Format compliance: <80% of submissions
+- ❌ Reasoning opacity: Chronic unclear logic
+- ❌ Sanity theater: Regular placeholder checks
+- ❌ Lens dominance: Overriding other auditors without cause
+- ❌ Correction resistance: Defends errors instead of fixing
+
+**If red flags accumulate:** Master Branch role may need reassignment or retraining
+
+---
+
+## 🔄 **TRUST DECAY & RECOVERY**
+
+### **Trust Decay Triggers:**
+
+**1. Repeated Format Failures**
+- 3+ format rejections in a month
+- Action: Refresher on VUDU_HEADER_STANDARD
+
+**2. Placeholder Sanity Checks**
+- 2+ submissions with ✅✅✅✅ without verification
+- Action: Mandatory verification evidence for next 5 submissions
+
+**3. Unjustified Overrides**
+- 2+ rejections of other auditors without proper reasoning
+- Action: Multi-auditor review of Master Branch decisions
+
+**4. Correction Resistance**
+- 2+ instances of defending errors instead of fixing
+- Action: Explicit adversarial review with confrontation
+
+---
+
+### **Trust Recovery Protocol:**
+
+**Step 1: Identify Issue**
+- Document specific pattern
+- Provide examples
+- Name the problem clearly
+
+**Step 2: Explicit Correction**
+- Not subtle hints
+- Direct: "This is wrong, here's why, fix it"
+- Provide correct template/example
+
+**Step 3: Supervised Submissions**
+- Next 3-5 submissions get intensive review
+- Feedback on every submission
+- Higher bar for approval
+
+**Step 4: Verify Improvement**
+- Pattern corrected?
+- Understanding demonstrated?
+- Can be trusted again?
+
+**Step 5: Return to Standard Trust**
+- If improved: Resume spot-check review
+- If not: Consider role reassignment
+
+---
+
+## 🎯 **SUCCESS CRITERIA**
+
+**Master Branch is successfully trusted when:**
+
+1. **Ziggy's review time averages <10 minutes per submission**
+   - Spot-checks only, no deep audits needed
+   - Approvals are routine, not exceptional
+
+2. **Approval rate >90%**
+   - Most submissions pass first review
+   - Rejections are rare exceptions
+   - Clarification requests are minor
+
+3. **Other auditors accept Master Branch summaries**
+   - Grok trusts Claude's purpose analysis
+   - Nova trusts Claude's synthesis
+   - Minimal "you misunderstood me" corrections
+
+4. **Users benefit from coordination outputs**
+   - Preset calibration produces better UX
+   - Multi-lens auditing catches real issues
+   - Documentation is clear and usable
+
+---
+
+## 📝 **SPECIAL PROTOCOLS**
+
+### **Emergency Override (Ziggy Only)**
+
+If Master Branch produces dangerous/harmful output:
+1. Immediate rejection (no review cycle)
+2. Document issue clearly
+3. Invoke all auditors to understand how it happened
+4. Implement safeguards to prevent recurrence
+
+**Examples:**
+- Recommending user-hostile UX
+- Suggesting deceptive framing
+- Proposing to hide assumptions
+
+---
+
+### **Bootstrap Refresh**
+
+If Master Branch seems to have lost context:
+1. Check: Can they explain "All Named, All Priced"?
+2. Check: Can they name their bias and price it?
+3. Check: Can they describe other auditors' lenses?
+
+If any fail → Bootstrap refresh required:
+1. Re-read BOOTSTRAP_CLAUDE.md
+2. Re-read BOOTSTRAP_VUDU.md  
+3. Confirm context restored
+4. Resume work
+
+---
+
+### **Version Handoff (Master Branch Replacement)**
+
+If Fresh Claude needs replacement:
+1. Current Master Branch creates handoff document
+2. Documents: Current mission status, pending decisions, recent context
+3. New Fresh Claude reads: Bootstrap files + handoff document
+4. Overlap period: Both review same submission to verify alignment
+5. Cutover: New Master Branch takes over with Ziggy supervision
+
+---
+
+## ⚖️ **THE POINTING RULE**
+
+*"To trust without verification is to summon Mr. Brute twice.  
+To verify without trust is to deny coordination's purpose.  
+To balance trust and verification is to build systems that scale."*
+
+**This protocol balances:**
+- Trust (Master Branch has real authority)
+- Verification (Ziggy checks reasoning is sound)
+- Escalation (Other auditors resolve disputes)
+- Documentation (Everything is visible and reviewable)
+
+**This is VuDu Light governance.** 🔥
+
+────────────────────────────────────────────────────
+**Version:** v1.0  
+**Status:** ✅ Ready for implementation  
+**Review:** Requires Ziggy approval  
+**Next:** Apply to Master Branch outputs starting Phase 4
+
+**This is the way.** 👑⚖️
