@@ -1,5 +1,5 @@
 """
-CFA v2.0 - Console (FIXED VERSION)
+CFA v3.5 - Console (FIXED VERSION)
 - Per-framework preset buttons ABOVE sliders
 - Global preset buttons removed (they break when below)
 - Sidebar simplified (just Import at bottom)
