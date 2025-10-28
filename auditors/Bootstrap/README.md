@@ -13,11 +13,9 @@
 
 ---
 
-## 📂 **INSERT THIS SECTION:**
+## 📂 **Tier 4 Task Storage Structure:**
 
 ---
-
-### **Tier 4 Task Storage Structure**
 
 **Active Tasks:**
 ```
