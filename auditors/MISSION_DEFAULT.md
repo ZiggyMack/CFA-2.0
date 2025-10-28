@@ -187,7 +187,17 @@ After reading all 6 files, verify your understanding:
 ---
 
 ### **TIER 4: Single Task Brief (~5-10% budget)**
+### **Where to Find Tier 4 Tasks:**
 
+**Active tasks stored in:**
+`Bootstrap/Tier4_TaskSpecific/active_tasks/`
+
+**When starting Tier 4:**
+1. Ziggy provides task brief filename
+2. Search: `project_knowledge_search("TASK_BRIEF [name]")`
+3. Brief specifies all files needed
+4. Complete task as defined
+5. Deliver to /mnt/user-data/outputs/
 **When to use:**
 - One specific task
 - Clear scope and deliverable
