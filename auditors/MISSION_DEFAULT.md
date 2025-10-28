@@ -219,6 +219,161 @@ After reading all 6 files, verify your understanding:
    - Paths will be specified in the task brief
    - Use project_knowledge_search for project files
    - Use view tool for uploaded files
+---
+
+### **Where to Find Tier 4 Tasks**
+
+**Active task briefs stored in:**
+```
+Bootstrap/Tier4_TaskSpecific/active_tasks/
+```
+
+**When starting Tier 4 session:**
+
+**Step 1:** Ziggy provides task brief filename
+```
+Example: "Your task is TASK_BRIEF_AXIOMS_REVIEW_GROK.md"
+```
+
+**Step 2:** Search project knowledge
+```
+project_knowledge_search("TASK_BRIEF [name from Ziggy]")
+```
+
+**Step 3:** Brief specifies everything needed
+- Task definition (what to do)
+- Files to read (2-5 files, specified by name)
+- Success criteria (when you're done)
+- Deliverable format (what to create)
+- Tier 4 boundaries (what NOT to do)
+
+**Step 4:** Execute task as defined
+- Read specified files (~5-10% budget)
+- Complete defined work (~90-95% budget)
+- Stay within task scope (no expansion)
+
+**Step 5:** Deliver result
+```
+Location: /mnt/user-data/outputs/[DELIVERABLE_NAME].md
+```
+
+**That's the complete Tier 4 workflow.** ✅
+
+---
+
+### **Common Tier 4 Use Cases**
+
+**Examples of appropriate Tier 4 tasks:**
+- Review specific document (with questions provided)
+- Update specific file section (with content provided)
+- Validate specific claim (with criteria provided)
+- Complete specific calculation (with inputs provided)
+- Create specific brief (with template provided)
+
+**Key characteristics:**
+- ✅ Self-contained (all info in task brief)
+- ✅ Clear scope (no ambiguity about "done")
+- ✅ Focused work (one specific deliverable)
+- ✅ Minimal context (2-5 files sufficient)
+- ✅ No coordination (just execute and deliver)
+
+---
+
+### **Task Brief Anatomy**
+
+**Every Tier 4 task brief includes:**
+
+1. **Task Definition**
+   - Clear objective statement
+   - Specific deliverable named
+   - Success criteria defined
+
+2. **Files Needed**
+   - Exact filenames (no searching required)
+   - Search queries provided
+   - Purpose of each file explained
+
+3. **Tier 4 Boundaries**
+   - What you CAN do (task scope)
+   - What you CANNOT do (outside scope)
+   - When to escalate (if boundary hit)
+
+4. **Quick Start**
+   - Step-by-step execution guide
+   - Expected timeline
+   - Budget guidance
+
+**If any of these missing → Not a proper Tier 4 brief → Escalate** ⚠️
+
+---
+
+### **Budget Tracking**
+
+**Tier 4 target efficiency:**
+```
+Bootstrap (brief + files): 5-10%
+Work (actual task):        90-95%
+Total session:             ~15-20%
+```
+
+**If bootstrap exceeds 15%:**
+- Task brief may list too many files
+- Files may be too large
+- Task scope may be too broad
+- **Escalate to Ziggy** ⚠️
+
+**Tier 4 should feel focused and efficient.** ✅
+
+---
+
+### **After Task Completion**
+
+**What happens next:**
+
+1. You deliver to `/mnt/user-data/outputs/`
+2. Ziggy downloads your deliverable
+3. Ziggy reviews (acceptance or revision)
+4. Task brief archived to `completed/` folder
+5. **No further action needed from you** ✅
+
+**You don't stage in relay/ folders.**  
+**You don't coordinate with other auditors.**  
+**You don't wait for integration approval.**  
+**You just execute → deliver → done.**
+
+**This is Tier 4 efficiency.** ⚡
+
+---
+
+## 🎯 **CRITICAL DISTINCTION**
+
+### **Tier 4 vs Relay Folders:**
+
+**Tier 4 pattern (single task):**
+```
+Task brief → Read files → Execute → Deliver to /outputs/ → Done
+```
+
+**Relay pattern (coordination):**
+```
+Staging → Review → Integration → Multi-auditor → Consensus
+```
+
+**Use Tier 4 when:**
+- ✅ Single focused task
+- ✅ No coordination needed
+- ✅ Clear deliverable
+- ✅ Self-contained scope
+
+**Use relay/ when:**
+- ✅ Multi-auditor work
+- ✅ Iterative refinement
+- ✅ Master Branch coordination
+- ✅ Complex staging needed
+
+**Most work should be Tier 4.** Coordination is expensive. ⚡
+
+---
 
 **After reading:** You can complete the defined task. 
 
