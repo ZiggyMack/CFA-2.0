@@ -97,7 +97,7 @@ def render():
     # Header
     col1, col2 = st.columns([6, 1])
     with col1:
-        st.markdown('<p style="font-size:2.5rem;font-weight:bold;color:#1f77b4;">⚖️ CFA v2.0 Console</p>', unsafe_allow_html=True)
+        st.markdown('<p style="font-size:2.5rem;font-weight:bold;color:#1f77b4;">⚖️ CFA v3.5 Console</p>', unsafe_allow_html=True)
     with col2:
         if st.button("🏠 Home"):
             st.session_state.page = 'landing'
