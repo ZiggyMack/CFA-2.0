@@ -45,7 +45,83 @@ auditors/
 │   │
 │   └── BOOTSTRAP_*.py                 ← Recovery scripts
 ```
+---
 
+### **Impact Metrics (Expected)**
+
+**Efficiency gains:**
+- Tier 2 validation: 5-10x more work time vs Tier 1
+- Tier 4 tasks: 10x more work time vs Tier 1
+- Average across sessions: ~50% more work capacity
+
+**Capability preservation:**
+- Tier 1 still available when needed
+- Strategic work unaffected
+- Coordination fully capable
+
+**Budget optimization:**
+- Match cost to need
+- No waste on unnecessary context
+- Preserve runway for actual work
+
+---
+
+### **Evolution from v3.5**
+
+**v3.5.2:** Single bootstrap path (50% uniform cost)
+- All sessions read 6 foundation files
+- Work budget: 50% per session
+- Optimal for coordination, overkill for validation
+
+**v3.7:** Tiered bootstrap (25% average cost)
+- Four tier options (50% / 15% / 10% / 5%)
+- Work budget: 75% average per session
+- Right capability for right need
+
+**Philosophy preserved:** Same foundation files (roots unchanged)  
+**Architecture improved:** More efficient recovery paths
+
+---
+
+## 🎯 **When to Use Which Bootstrap**
+
+### **Use Tier 1 (50%) when:**
+- Starting new Master Branch coordination role
+- Making strategic or architectural decisions
+- Coordinating multiple auditors
+- Executing complex missions
+- Need full context and authority
+
+### **Use Tier 2 (15%) when:**
+- Just need validation or review
+- Checking alignment with ethos
+- External audit perspective
+- No coordination needed
+- **Most common for routine work**
+
+### **Use Tier 3 (10%) when:**
+- Previous session hit token limit mid-task
+- Clear handoff document exists
+- Just need to finish specific work
+- Maintaining consistency matters
+
+### **Use Tier 4 (5-10%) when:**
+- Single well-defined task
+- Clear scope and deliverable
+- Minimal context needed
+- Quick turnaround required
+
+---
+
+### **Reference Documents**
+
+**For complete details:**
+- MISSION_DEFAULT.md → Cold start tier selection (execution)
+- BOOTSTRAP_TIER_USAGE_GUIDE.md → Decision support (for Ziggy)
+- TIER_CAPABILITY_BOUNDARIES.md → Enforcement system (for Claude)
+- Individual tier briefs → Specific tier documentation
+
+---
 ---
 
 ## 🧩 Three-Layer Bootstrap System
