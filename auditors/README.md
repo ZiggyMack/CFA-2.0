@@ -64,7 +64,69 @@ auditors/
 ```
 
 ---
+## 🔄 Starting a New Claude Session
 
+**Every Claude session = cold start (zero context).**
+
+**Efficient Bootstrap System:**
+1. Claude reads MISSION_DEFAULT.md cold start section
+2. Presents tier selection (1/2/3/4) to Ziggy
+3. Ziggy chooses based on session needs
+4. Claude follows selected tier path
+
+**Tier Options:**
+- **Tier 1 (50%):** Master Branch — Full coordination capability
+- **Tier 2 (15%):** Sanity Check — Validation and review
+- **Tier 3 (10%):** Continuation — Resume interrupted work
+- **Tier 4 (5-10%):** Single Task — Focused execution
+
+**Average bootstrap cost:** ~25% (vs 50% uniform)  
+**Work budget gained:** ~25% more across sessions  
+**Strategic capability:** Still available (Tier 1) when needed
+
+---
+
+## 🎯 Tier Selection Guide
+
+### **Choose Tier 1 when:**
+- Master Branch coordination needed
+- Strategic decisions required
+- Multi-auditor work
+- Architecture discussions
+- New mission phases
+
+### **Choose Tier 2 when:**
+- Need validation/review
+- Check alignment
+- External audit perspective
+- No coordination needed
+- **Most common for routine checks**
+
+### **Choose Tier 3 when:**
+- Previous session hit limit
+- Work clearly in progress
+- Handoff exists
+- Just need completion
+
+### **Choose Tier 4 when:**
+- Single specific task
+- Quick turnaround
+- Clear scope
+- No context needed
+
+---
+
+## 📚 Documentation
+
+**For complete details on tiered bootstrap system:**
+- See `/Bootstrap/BOOTSTRAP_TIER_USAGE_GUIDE.md` for decision support
+- See `/Bootstrap/TIERED_BOOTSTRAP_SYSTEM_SUMMARY.md` for architecture
+- See MISSION_DEFAULT.md cold start section for execution paths
+
+---
+
+**[Rest of existing README.md content continues below]**
+---
 ## 📚 **KEY DOCUMENTS**
 
 ### **Master State & Governance**
