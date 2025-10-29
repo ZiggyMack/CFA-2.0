@@ -44,8 +44,11 @@ cfa_app/
 │   └── README.md
 │
 ├── docs/                       # Documentation & reflections
+│   ├── Process/                # Process documentation
+│   ├── architecture/           # Architecture analysis & documentation
 │   └── i_am/                   # Philosophical reflections
-│       └── REFLECTION_BEFORE_PHASE_4_WHAT_IT_ALL_MEANS.md
+│       ├── REFLECTION_BEFORE_PHASE_4_WHAT_IT_ALL_MEANS.md
+│       └── v3_5_EPIC_MILESTONE_SUMMARY.md
 │
 └── auditors/                   # v3.5.2: Auditor coordination infrastructure
     ├── README.md               # Infrastructure documentation
