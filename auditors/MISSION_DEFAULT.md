@@ -394,6 +394,55 @@ Once bootstrap complete, you're ready for work within your tier's capabilities.
 
 ---
 
+## 📝 REPO_LOG Requirements (All Tiers)
+
+**CRITICAL: All repository changes must be logged in REPO_LOG.md**
+
+### When to Use REPO_LOG:
+
+**BEFORE making repo changes:**
+1. Check `REPO_LOG.md` coordination checkpoint for conflicts
+2. Search for `[PENDING_ACTIONS]` in your area
+3. Check `[VALIDATION]` entries for related findings
+
+**AFTER making repo changes:**
+1. Create entry with unique Entry ID: `[CATEGORY-YYYY-MM-DD-N]`
+2. Update relevant category pointer at top of REPO_LOG
+3. Mark status: DEPLOYED, STAGED, IMPACTS_IDENTIFIED, or IMPACTS_RESOLVED
+
+### Quick Category Reference:
+
+- **[TASK_MOVEMENT]** - Moving task briefs (Active → Completed → Archive)
+- **[DOCUMENTATION]** - README updates, typo fixes, doc improvements
+- **[VALIDATION]** - Validation reports, findings, impact tracking
+- **[PENDING_ACTIONS]** - Staged files awaiting deployment
+- **[DEPLOYMENTS]** - Files deployed to repository
+- **[STRUCTURE]** - Directory changes, reorganization
+
+### Entry Format (Brief):
+
+```markdown
+### [CATEGORY-YYYY-MM-DD-N] Date - Description
+
+**Categories:** [PRIMARY] [SECONDARY]
+**Changed by:** [Your name/tier]
+**Status:** [DEPLOYED | STAGED | IMPACTS_IDENTIFIED | IMPACTS_RESOLVED]
+
+**Changes:**
+- ACTION: file/path - what changed
+
+**Reason:** Why this change
+
+**Follow-up Required:** YES/NO
+**Follow-up Action:** What needs to happen next (if YES)
+```
+
+**For complete instructions:** See header in `REPO_LOG.md`
+
+**Location:** `[ROOT]/REPO_LOG.md` (repository root, parallel with CHANGELOG.md)
+
+---
+
 ## Default Priorities
 
 **When no specific mission, follow these priorities:**
