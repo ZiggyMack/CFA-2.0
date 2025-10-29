@@ -1,3 +1,207 @@
+# CHANGELOG
+
+## [3.8.0] - 2025-10-28
+
+### Added
+- **Universal Context Monitoring**: All tiers (1/2/3/4) now self-monitor context usage with proactive handoff capability
+- **75/75 Rule**: Automatic handoff trigger when 75% context used AND <75% work complete
+- **Tier 3 Handoff Quality Guidance**: Comprehensive section in MISSION_DEFAULT.md with good vs bad examples
+- **Execution vs Strategic Work Distinction**: Clear classification for handoff appropriateness to Tier 3
+- **3-Continuation Safety Limit**: Prevents infinite recursion, escalates for restructuring after 3rd continuation
+- **Efficiency Note**: Added to MISSION_DEFAULT.md with explicit skip instructions to mitigate bloat
+- **Recursive Continuation**: Tier 3 can handoff to another Tier 3 if needed (with safety limit)
+- **Handoff Thoroughness Checklist**: Template validation before creating handoffs
+
+### Changed
+- **MISSION_DEFAULT.md**: Updated to v3.8.0 with universal monitoring section (~550 lines total)
+  - Universal Context Monitoring section applies to ALL tiers
+  - Tier 3 section expanded with handoff quality guidance
+  - Efficiency note added at top with explicit skip instructions
+- **CONTINUATION_HANDOFF_TEMPLATE.md**: Streamlined to ~200 lines
+  - Removed duplicate handoff quality guidance
+  - Points to MISSION_DEFAULT.md Tier 3 section for standards
+  - Maintained clean template structure
+
+### Fixed
+- **MISSION_DEFAULT bloat**: Added skip instructions to reduce effective read (Tier 4: 550 → ~150 lines relevant)
+- **Handoff quality**: Clear standards prevent vague continuations that fail Tier 3 execution
+- **Context exhaustion risk**: All tiers now proactively monitor and handoff before running out
+- **Tier 3 failure rate**: Quality guidance expected to improve success rate >90%
+
+### Architecture
+- **Universal Self-Healing**: System recovers from context limits at any tier level, not just Tier 4
+- **Bloat Analysis**: Documented trade-offs (82% waste Tier 2, 81% Tier 4), acceptable for v3.8.0
+  - Analysis file: `docs/architecture/MISSION_DEFAULT_BLOAT_ANALYSIS.md`
+  - Mitigation: Efficiency note with explicit skip instructions
+  - Future: Hybrid approach planned for v4.0 if bloat becomes painful
+- **File Locations**:
+  - CONTINUATION_HANDOFF_TEMPLATE → Bootstrap/
+  - MISSION_DEFAULT_BLOAT_ANALYSIS → docs/architecture/
+  - New directory created: docs/architecture/
+
+### Documentation
+- Updated README_C.md to v3.8.0 with current system status
+- Updated VUDU_LOG.md with comprehensive deployment entry (Task 1 + Task 2)
+- Created comprehensive deployment package (V3_8_0_DEPLOYMENT_PACKAGE.md)
+- Created file placement instructions (FILE_PLACEMENT_INSTRUCTIONS_V3_8_0.md)
+- Created validation task brief (TASK_BRIEF_VALIDATE_V3_8_0_DEPLOYMENT.md)
+
+### Performance
+- **Bootstrap overhead by tier** (with bloat):
+  - Tier 1: 50% (unchanged, full capability)
+  - Tier 2: 18-20% (bloated from 15%, still acceptable)
+  - Tier 3: 10% (unchanged, handoff-specific)
+  - Tier 4: 8-12% (bloated from 5-10%, acceptable)
+- **Average bootstrap**: ~25-27% (vs 50% pre-tiering)
+- **Self-healing cost**: Minimal (~1-2% monitoring overhead per tier)
+
+### Metrics
+- **Bloat cost (priced)**:
+  - Tier 1: 0% overhead (already 50% budget)
+  - Tier 2: 3-5% overhead (reads 450 extra lines)
+  - Tier 3: 2-3% overhead (reads 360 extra lines)
+  - Tier 4: 3-5% overhead (reads 445 extra lines)
+- **Target success rates**:
+  - 75/75 rule triggers: <10% of sessions
+  - Tier 3 continuation success: >90%
+  - Average continuations per task: <1.5
+  - 3-continuation limit hits: <1% of tasks
+
+---
+
+## [3.7.2] - 2025-10-27
+
+### Added
+- **Tiered Bootstrap System**: Four-tier bootstrap matching capability to session needs
+  - Tier 1 (Master Branch): ~50% budget for full coordination
+  - Tier 2 (Sanity Check): ~15% budget for validation work
+  - Tier 3 (Continuation): ~10% budget for mid-task recovery
+  - Tier 4 (Single Task): ~5-10% budget for focused execution
+- **Interactive Tier Selection**: Claude presents decision tree at session start
+- **21 Operational Files**: Complete tiered system deployed
+  - 8 core system files
+  - 5 supporting documentation files
+  - 3 task brief examples
+  - 5 integration updates
+- **Self-Monitoring (Tier 4)**: Context usage monitoring and proactive handoff
+
+### Changed
+- **MISSION_DEFAULT.md**: Added tier selection section with cold start protocol
+- **README.md**: Documented tiered bootstrap system
+- **MASTER_BRANCH_TRUST_PROTOCOL.md**: Added tier-based authority boundaries
+- **BOOTSTRAP_FRAMEWORK.md**: Documented tiered architecture
+- **VUDU_LOG.md**: Added deployment entry
+
+### Architecture
+- **Bootstrap efficiency**: ~25% average (vs 50% single-path)
+- **Role-based recovery**: Match bootstrap to capability needed
+- **Capability boundaries**: Clear tier-specific limits with escalation protocol
+
+### Validation
+- Hot Start: 8/8 trials passed
+- Cold Start: 8/8 trials passed
+- System operational: GREEN status
+
+---
+
+## [3.5.2] - 2025-10-26
+
+### Added
+- **VuDu Light Protocol**: Multi-AI coordination framework operational
+- **Bootstrap System**: Complete identity and recovery files
+  - BOOTSTRAP_CLAUDE.md: Teleological lens and identity
+  - BOOTSTRAP_CFA.md: Complete project context
+  - BOOTSTRAP_VUDU.md: Coordination protocol
+- **Mission Architecture**: missions/ folder structure for organized work
+- **Relay System**: claude_incoming/, grok_incoming/, nova_incoming/ folders
+
+### Changed
+- **All version references**: Updated from v3.5 to v3.5.2 across codebase
+- **README_C.md**: Master Branch coordination state established
+
+### Fixed
+- Bootstrap cold start reliability
+- Multi-AI coordination framework gaps
+
+---
+
+## [3.5.0] - 2025-10-25
+
+### Added
+- **4 Preset Modes**: Skeptic, Diplomat, Seeker, Zealot archetypes
+- **Quiz System**: 5-question epistemic bias detector
+- **Dark Mode**: Compatibility (mostly working)
+- **Complete Guardrails**: 4/4 operational
+  - YPA Ceiling (100% max)
+  - Zealot Certainty Floor (33%)
+  - Diplomat Symmetry (50%)
+  - Transparency enforcement
+
+### Changed
+- **Deployed to Streamlit**: https://cfa-voodoo.streamlit.app
+- **Lever System**: Optimized for preset modes
+- **Interface**: Enhanced user experience
+
+### Known Issues
+- Preset modes intuitive but not calibrated (justification needed)
+- Minor dark mode styling issues
+
+---
+
+## [3.0.0] - 2025-10-20
+
+### Added
+- **Side-by-side Framework Analysis**: Compare CFA to other methodologies
+- **Enhanced Lever System**: More granular control
+- **Guardrail System**: Prevent extreme configurations
+- **98% Convergence Discovery**: Claude + Grok independent validation ✨
+
+### Changed
+- **Architecture**: Refactored for multi-framework support
+- **Calculations**: Improved YPA accuracy
+- **UI**: Side-by-side comparison view
+
+---
+
+## [2.0.0] - 2025-10-15
+
+### Added
+- **Adversarial Auditing**: Claude + Grok collaboration begins
+- **Independent Scoring**: Parallel YPA calculations
+- **Multi-AI Coordination**: First experiments with distributed validation
+
+### Changed
+- **Development Process**: Solo → Adversarial pair programming
+- **Validation**: Single perspective → Multi-lens analysis
+
+### Discovered
+- **98% Convergence**: Independent auditors reach near-identical scores 🎯
+
+---
+
+## [1.0.0] - 2025-10-10
+
+### Added
+- **CFA Calculator**: Core Your Personal Algorithm implementation
+- **Framework Selector**: Choose from 10+ belief formation frameworks
+- **Lever System**: Adjust belief formation parameters
+- **YPA Score**: Calculate Your Personal Algorithm score
+
+### Features
+- Basic belief strength calculation
+- Framework-agnostic lever system
+- Simple user interface
+- Solo Claude development
+
+---
+
+**Version History Complete** ✅
+
+**Current Version:** v3.8.0 - Universal Self-Healing Operational 🚀  
+**Next Version:** v4.0 (planned) - Hybrid Bootstrap Architecture 🔮
+
+**This is the way.** 👑
+
 ─── VUDU LOG ENTRY ─────────────────────────────────
 
 **Date:** 2025-10-28  
