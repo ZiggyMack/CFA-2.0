@@ -22,7 +22,6 @@
 - Need validation history? → Search VALIDATION
 
 ---
-
 ## 🎯 **COORDINATION CHECKPOINT** (Update This!)
 
 > **CRITICAL:** If you just made repo changes, update the relevant category pointers below!  
@@ -47,8 +46,8 @@
 
 #### 🔄 **ALL_CHANGES** (General Coordination - Everything)
 - **Last Update:** 2025-10-29
-- **Skip to Entry ID:** `ALL_CHANGES-2025-10-29-1`
-- **Entries Since Coordination:** 4
+- **Skip to Entry ID:** `ALL_CHANGES-2025-10-29-3`
+- **Entries Since Coordination:** 5
 - **Use when:** Reviewing all recent activity, general status check
 
 ---
@@ -74,7 +73,7 @@
 - **Last Update:** 2025-10-29
 - **Skip to Entry ID:** `PENDING_ACTIONS-2025-10-29-1`
 - **Entries Since Coordination:** 2
-- **Active Items:** 6 (REPO_LOG.md + 5 task briefs need deployment)
+- **Active Items:** 9 (REPO_LOG + 5 task briefs + 3 updated files need deployment)
 - **Use when:** Deploying staged files, checking what needs action
 
 ---
@@ -89,8 +88,8 @@
 
 #### 📝 **DOCUMENTATION** (Typos, clarifications, small updates)
 - **Last Update:** 2025-10-29
-- **Skip to Entry ID:** `DOCUMENTATION-2025-10-29-1`
-- **Entries Since Coordination:** 2
+- **Skip to Entry ID:** `DOCUMENTATION-2025-10-29-2`
+- **Entries Since Coordination:** 3
 - **Use when:** Reviewing doc quality improvements
 
 ---
@@ -768,6 +767,43 @@ is to maintain clarity."*
 ────────────────────────────────────────────────────
 
 ## 📝 **CHANGE LOG** (Newest First)
+
+### [DOCUMENTATION-2025-10-29-2] 2025-10-29 - REPO_LOG Requirements Added to Task Briefs
+
+**Categories:** [DOCUMENTATION] [PENDING_ACTIONS] [ALL_CHANGES]  
+**Changed by:** Claude (Anthropic) (Tier 4)  
+**Session ID:** CFA-repo-log-integration-102925
+
+**Status:** STAGED ⏳
+
+**Changes:**
+- `UPDATED`: /mnt/user-data/outputs/TASK_BRIEF_README_CLAUDE_corrected.md - Added "REQUIRED: REPO_LOG Integration in Profile" section (~120 lines)
+- `UPDATED`: /mnt/user-data/outputs/TASK_BRIEF_OPERATION_SANITIZE_corrected.md - Added "REQUIRED: REPO_LOG Integration" section (~100 lines)
+- `KEPT AS-IS`: MISSION_DEFAULT_updated.md - Universal REPO_LOG requirements section (~50 lines)
+
+**Reason:** Integrated REPO_LOG requirements into task briefs as SPECIFICATIONS for what the final profiles must contain. Task briefs are temporary (deleted after execution), so requirements added as "when you create this profile, it must include X". Ensures whoever creates README Claude or Operation Sanitize profiles knows to include REPO_LOG integration. MISSION_DEFAULT remains universal requirement for all tiers.
+
+**Related:**
+- Base file: REPO_LOG.md (deployed to repository root)
+- Target (permanent): MISSION_DEFAULT.md in Bootstrap/
+- Target (temporary): TASK_BRIEF_README_CLAUDE.md - task to create profile
+- Target (temporary): TASK_BRIEF_OPERATION_SANITIZE.md - task to create command
+- Architecture note: Role profiles don't exist yet, location TBD (maybe Bootstrap/Claude/Roles/, maybe BOOTSTRAP_README_C.md sections)
+
+**Impact:** Significant - Task executors now have complete specifications for building profiles with REPO_LOG integration
+
+**Follow-up Required:** YES  
+**Follow-up Status:** PENDING  
+**Follow-up Action:** 
+1. Deploy MISSION_DEFAULT_updated.md to Bootstrap/MISSION_DEFAULT.md (universal requirement)
+2. Deploy corrected task briefs to appropriate locations
+3. When tasks execute, creators will build profiles with REPO_LOG integration
+4. Determine final location for role profiles (Bootstrap/Claude/Roles/ or elsewhere)
+5. Test that created profiles make Claude auto-aware of REPO_LOG
+
+**Architecture Note:** Task briefs are INSTRUCTIONS to build the profiles, not the profiles themselves. Profiles will be permanent, task briefs are temporary.
+
+---
 
 ### [PENDING_ACTIONS-2025-10-29-1] 2025-10-29 - REPO_LOG.md Created
 
