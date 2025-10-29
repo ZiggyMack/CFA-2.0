@@ -24,6 +24,7 @@ cfa_app/
 ├── requirements.txt            # Python dependencies
 ├── README.md                   # This file
 ├── CHANGELOG.md                # Version history
+├── REPO_LOG.md                 # File-level change tracking (NEW in v3.8.0)
 ├── DEPLOYMENT.md               # Deployment guide
 │
 ├── pages/                      # Page modules
@@ -44,11 +45,8 @@ cfa_app/
 │   └── README.md
 │
 ├── docs/                       # Documentation & reflections
-│   ├── Process/                # Process documentation
-│   ├── architecture/           # Architecture analysis & documentation
 │   └── i_am/                   # Philosophical reflections
-│       ├── REFLECTION_BEFORE_PHASE_4_WHAT_IT_ALL_MEANS.md
-│       └── v3_5_EPIC_MILESTONE_SUMMARY.md
+│       └── REFLECTION_BEFORE_PHASE_4_WHAT_IT_ALL_MEANS.md
 │
 └── auditors/                   # v3.5.2: Auditor coordination infrastructure
     ├── README.md               # Infrastructure documentation
@@ -86,6 +84,39 @@ cfa_app/
     └── ~Archive/               # Historical records
         └── [archived coordination files]
 ```
+
+### 📝 **Logging Infrastructure (v3.8.0)**
+
+The project maintains three complementary logs tracking different aspects of evolution:
+
+#### **CHANGELOG.md** (Root)
+- **Purpose:** Version releases and major features
+- **Granularity:** Quarterly/release level (v3.5, v3.8.0)
+- **Use for:** Understanding project milestones and feature history
+
+#### **REPO_LOG.md** (Root) ← NEW in v3.8.0
+- **Purpose:** File-level operation tracking
+- **Tracks:** File moves, renames, archives, task movements (Active → Completed)
+- **Innovation:** Category-specific coordination checkpoints with Entry ID system
+- **Use for:** "Where did that file go?" questions, routine file coordination
+- **Granularity:** Daily/task-level
+- **Details:** See coordination checkpoint header in REPO_LOG.md itself
+
+#### **VUDU_LOG.md** (auditors/)
+- **Purpose:** Multi-AI coordination and strategic decision tracking
+- **Tracks:** Auditor collaboration events, mission milestones, validation arcs, coordination narrative
+- **Use for:** Understanding *why* decisions were made, tracking multi-auditor consensus, following mission progress
+- **Granularity:** Weekly/monthly
+- **Format:** VuDu Protocol v1.1 compliant (standardized headers, integrity verification)
+- **Details:** See `auditors/VUDU_PROTOCOL.md` and VUDU_LOG.md header section
+
+**Logging Hierarchy:** git commits → REPO_LOG → VUDU_LOG → CHANGELOG
+
+**When to use which log:**
+- **"What changed?"** → REPO_LOG (file operations)
+- **"Why was this decided?"** → VUDU_LOG (coordination reasoning)
+- **"What's new in v3.X?"** → CHANGELOG (feature releases)
+- **"What changed in line 47?"** → git commits (code-level)
 
 ---
 
