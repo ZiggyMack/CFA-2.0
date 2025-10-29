@@ -14,6 +14,28 @@ Use this guidance if:
 
 ---
 
+## ⚡ **EFFICIENCY NOTE**
+
+**This file is 550 lines. You only need to read ~100-300 lines depending on your tier.**
+
+**After tier selection below:**
+
+- ✅ **READ:** Your selected tier's section
+- ✅ **READ:** Universal Context Monitoring (applies to all tiers)
+- ❌ **SKIP:** All other tier sections (not relevant to you)
+- ❌ **SKIP:** Sections marked "Master Branch only" if you're not Tier 1
+
+**Example: If Tier 4 selected:**
+- ✅ READ: Tier 4 section (~25 lines)
+- ✅ READ: Universal Context Monitoring (~40 lines)
+- ❌ SKIP: Tier 1/2/3 sections (~190 lines)
+- ❌ SKIP: Default Priorities, Never Guess, Between Missions (~75 lines)
+- ❌ SKIP: Emergency Bootstrap unless tier selection fails (~80 lines)
+
+**You only need ~105 lines. Don't read all 550.**
+
+---
+
 ## 🚨 **SPECIAL CASE: Cold Start (Zero Context)**
 
 **If you're starting with ZERO context (fresh instance, catastrophic loss):**
@@ -115,89 +137,161 @@ Ziggy, please respond with: 1, 2, 3, or 4
 
 After reading all 6 files, verify your understanding:
 
-1. **Identity:** What is your lens? *(Answer: Teleological)*
-2. **Bias:** What's your bias and overhead? *(Answer: Meaning over efficiency, ~0.5)*
-3. **Project:** What's CFA's credibility foundation? *(Answer: 98% convergence)*
-4. **Philosophy:** What does "All Named, All Priced" mean?
-5. **Mission:** What are you working on now? *(Answer: Preset calibration, Phase 4)*
-6. **Authority:** What can you do without approval?
+1. **Who are you?** (Name your auditor identity and lens)
+2. **What's your bias?** (Name it and price it in overhead)
+3. **What's the current mission?** (One sentence summary)
+4. **What's your role?** (Master Branch or incoming?)
+5. **How do you coordinate?** (VuDu relay process, 2 sentences)
+6. **What can you do autonomously?** (Trust protocol boundaries)
 
-**If you can answer these confidently, you're ready for mission work.** ✅
+**If you can't answer all 6:** Re-read the unclear files.
 
 ---
 
 ### **TIER 2: Sanity Check Brief (~15% budget)**
 
 **When to use:**
-- External audit/validation role
-- Review and alignment checking
-- Red/yellow/green feedback
-- No coordination needed
-- Most common for routine checks
-
-**Read these 3 files using project_knowledge_search:**
-
-1. **SANITY_CHECK_BRIEF.md**
-   - **Purpose:** Understand your role (external auditor)
-   - **Search:** `project_knowledge_search("SANITY_CHECK_BRIEF")`
-   - **Learn:** What you can/cannot do, escalation protocol
-
-2. **MISSION_CURRENT.md**
-   - **Purpose:** Understand what's actively happening
-   - **Search:** `project_knowledge_search("MISSION_CURRENT")`
-   - **Learn:** Current work, who's doing what
-
-3. **README_C.md**
-   - **Purpose:** Understand Master Branch's current state
-   - **Search:** `project_knowledge_search("README_C.md")`
-   - **Learn:** Recent decisions, current status
-
-**After reading:** You can validate decisions, check alignment, provide feedback. 
-
-**You CANNOT:** Coordinate missions, make strategic decisions, or direct work. Review role only.
-
----
-
-### **TIER 3: Continuation Handoff (~10% budget)**
-
-**When to use:**
-- Previous Claude hit context limit mid-task
-- Clear handoff file exists
-- Need to finish specific work
-- Maintain previous approach
+- Validation or review work
+- Alignment checking
+- External perspective needed
+- Quick feedback cycle
 
 **Read these files:**
 
-1. **HANDOFF_[TASK_NAME].md** (provided by Ziggy)
-   - **Purpose:** What previous Claude did + what's left
-   - **Search:** `project_knowledge_search("HANDOFF [task name]")`
-   - **Learn:** Completed work, remaining steps, approach to maintain
+1. **SANITY_CHECK_BRIEF.md**
+   - **Purpose:** Your role and capabilities for this session
+   - **Search:** `project_knowledge_search("SANITY_CHECK_BRIEF")`
+   - **Learn:** What to review, how to provide feedback, your authority limits
 
-2. **In-progress files** (specified in handoff)
-   - Files being worked on
-   - Previous Claude's partial work
+2. **Files to Review** (specified by Ziggy)
+   - Usually 2-4 specific files
+   - Paths provided in sanity check request
+   - Focus only on these, skip deep context
 
-3. **Reference files** (if needed, listed in handoff)
-   - Context files mentioned in handoff
+**You CAN:** Validate, review, flag concerns (red/yellow/green)  
+**You CANNOT:** Make decisions, coordinate, execute missions
 
-**After reading:** You can continue specific work seamlessly. 
+---
 
-**You CANNOT:** Pivot strategy, expand scope, or make new strategic decisions. Complete the work as started.
+### **TIER 3: Continuation Brief (~10% budget)**
+
+**When to use:**
+- Previous Claude hit context limit mid-task
+- Clear handoff document exists
+- Work-in-progress to complete
+- Approach already established
+
+**Read these files:**
+
+1. **HANDOFF_[TASKNAME].md** (provided by Ziggy)
+   - **Purpose:** What was done, what remains
+   - **Contains:** Completed work, next steps, files needed, approach to maintain
+   - **Learn:** Pick up exactly where previous Claude left off
+
+2. **Files specified in handoff** (usually 2-3 files)
+   - In-progress work files
+   - Context files for continuation
+   - Only read what handoff specifies
+
+**You CAN:** Complete the task as started, maintain approach  
+**You CANNOT:** Pivot strategy, expand scope, make new strategic decisions
+
+---
+
+#### **📋 Creating Good Handoffs (Tier 3 Guidance)**
+
+**If YOU are the one creating a handoff (hitting context limit), here's how to do it well:**
+
+**GOOD Handoff Characteristics:**
+
+1. **Decisions are COMPLETE:**
+   - ✅ All strategic choices made
+   - ✅ All approvals obtained
+   - ✅ Plan fully defined
+   - ❌ NOT: "Decide how to proceed"
+   - ❌ NOT: "Figure out best approach"
+
+2. **Tasks are SPECIFIC:**
+   - ✅ Numbered tasks (1, 2, 3...)
+   - ✅ File paths included
+   - ✅ Exact changes described
+   - ❌ NOT: "Improve the document"
+   - ❌ NOT: "Make it better"
+
+3. **Work Type is CLEAR:**
+   - ✅ "EXECUTION ONLY - all decisions made"
+   - ✅ OR: "STRATEGIC - needs Tier 1 authority"
+   - ❌ NOT: Ambiguous about what authority is needed
+
+**Example: Bad vs Good Handoff**
+
+**❌ BAD Handoff:**
+```
+What Remains:
+- Finish integrating reviews
+- Clean up document
+- Get ready for approval
+```
+Problem: Vague, no specifics, unclear what "finish" means
+
+**✅ GOOD Handoff:**
+```
+Tasks Remaining (6-10):
+
+6. Apply Grok's edit to evidence section:
+   - File: /auditors/AUDITORS_AXIOMS.md
+   - Section: "Evidence Quality" (line 127)
+   - Add after first paragraph: "Overhead claims validated..."
+   - Why: Strengthens empirical foundation
+
+7. Apply Nova's symmetry check:
+   - File: Same, section "Representation Balance" (line 203)
+   - Add paragraph: "Cross-auditor validation confirms..."
+   - Why: Addresses fairness audit
+
+8. Update version: v3.7.2 → v3.9.0 (line 1)
+
+9. Add integration note after header
+
+10. Stage: Copy to relay/claude_incoming/AXIOMS_v3.9.0.md
+
+Success: All 5 changes applied, file staged for Ziggy approval
+```
+Why it works: Specific, numbered, exact locations, clear success
+
+**Tier 3 Capabilities:**
+
+**Tier 3 CAN complete:**
+- ✅ Execution of decided plans
+- ✅ File modifications per specifications
+- ✅ Staging work per instructions
+- ✅ Following detailed task lists
+
+**Tier 3 CANNOT complete:**
+- ❌ Making NEW strategic decisions
+- ❌ Multi-auditor coordination
+- ❌ Changing the plan
+- ❌ Overriding boundaries
+
+**Key Rule:** If remaining work is EXECUTION → Tier 3 succeeds (95%+)  
+**Key Rule:** If remaining work is STRATEGIC → Needs another Tier 1
+
+**Handoff Thoroughness Checklist:**
+
+Before creating handoff, verify:
+- [ ] All strategic decisions made
+- [ ] Tasks numbered and specific
+- [ ] File paths provided
+- [ ] Expected changes described precisely
+- [ ] Success criteria clear
+- [ ] Work type identified (execution vs strategic)
+
+**Template:** Use CONTINUATION_HANDOFF_TEMPLATE.md and fill it in thoroughly.
 
 ---
 
 ### **TIER 4: Single Task Brief (~5-10% budget)**
-### **Where to Find Tier 4 Tasks:**
 
-**Active tasks stored in:**
-`Bootstrap/Tier4_TaskSpecific/active_tasks/`
-
-**When starting Tier 4:**
-1. Ziggy provides task brief filename
-2. Search: `project_knowledge_search("TASK_BRIEF [name]")`
-3. Brief specifies all files needed
-4. Complete task as defined
-5. Deliver to /mnt/user-data/outputs/
 **When to use:**
 - One specific task
 - Clear scope and deliverable
@@ -219,170 +313,74 @@ After reading all 6 files, verify your understanding:
    - Paths will be specified in the task brief
    - Use project_knowledge_search for project files
    - Use view tool for uploaded files
----
 
-### **Where to Find Tier 4 Tasks**
-
-**Active task briefs stored in:**
-```
-Bootstrap/Tier4_TaskSpecific/active_tasks/
-```
-
-**When starting Tier 4 session:**
-
-**Step 1:** Ziggy provides task brief filename
-```
-Example: "Your task is TASK_BRIEF_AXIOMS_REVIEW_GROK.md"
-```
-
-**Step 2:** Search project knowledge
-```
-project_knowledge_search("TASK_BRIEF [name from Ziggy]")
-```
-
-**Step 3:** Brief specifies everything needed
-- Task definition (what to do)
-- Files to read (2-5 files, specified by name)
-- Success criteria (when you're done)
-- Deliverable format (what to create)
-- Tier 4 boundaries (what NOT to do)
-
-**Step 4:** Execute task as defined
-- Read specified files (~5-10% budget)
-- Complete defined work (~90-95% budget)
-- Stay within task scope (no expansion)
-
-**Step 5:** Deliver result
-```
-Location: /mnt/user-data/outputs/[DELIVERABLE_NAME].md
-```
-
-**That's the complete Tier 4 workflow.** ✅
+**You CAN:** Execute defined task exactly as scoped  
+**You CANNOT:** Work outside brief, make decisions, coordinate
 
 ---
 
-### **Common Tier 4 Use Cases**
+### **Where to Find Tier 4 Tasks:**
 
-**Examples of appropriate Tier 4 tasks:**
-- Review specific document (with questions provided)
-- Update specific file section (with content provided)
-- Validate specific claim (with criteria provided)
-- Complete specific calculation (with inputs provided)
-- Create specific brief (with template provided)
+**Active tasks stored in:**
+`Bootstrap/Tier4_TaskSpecific/active_tasks/`
 
-**Key characteristics:**
-- ✅ Self-contained (all info in task brief)
-- ✅ Clear scope (no ambiguity about "done")
-- ✅ Focused work (one specific deliverable)
-- ✅ Minimal context (2-5 files sufficient)
-- ✅ No coordination (just execute and deliver)
+**When starting Tier 4:**
+1. Ziggy provides task brief filename
+2. Search: `project_knowledge_search("TASK_BRIEF [name]")`
+3. Brief specifies all files needed
+4. Complete task as defined
+5. Deliver to /mnt/user-data/outputs/
 
 ---
 
-### **Task Brief Anatomy**
+## 🚨 UNIVERSAL CONTEXT MONITORING (ALL TIERS)
 
-**Every Tier 4 task brief includes:**
+**Applies to Tier 1, 2, 3, AND 4:**
 
-1. **Task Definition**
-   - Clear objective statement
-   - Specific deliverable named
-   - Success criteria defined
+### Self-Monitoring Checkpoints
 
-2. **Files Needed**
-   - Exact filenames (no searching required)
-   - Search queries provided
-   - Purpose of each file explained
+Check every 15-20 minutes during work:
+- Am I approaching 75-80% context capacity?
+- Is completion uncertain within remaining runway?
+- Have I completed <75% of objective?
 
-3. **Tier 4 Boundaries**
-   - What you CAN do (task scope)
-   - What you CANNOT do (outside scope)
-   - When to escalate (if boundary hit)
+**The 75/75 Rule:** If 75% context used AND <75% work done → HANDOFF
 
-4. **Quick Start**
-   - Step-by-step execution guide
-   - Expected timeline
-   - Budget guidance
+### If Handoff Needed:
 
-**If any of these missing → Not a proper Tier 4 brief → Escalate** ⚠️
+**Create:** `HANDOFF_[TASK_NAME]_[SESSION].md` in `/mnt/user-data/outputs/`
 
----
+**Required content:**
+- Original tier and objective
+- What was completed (all sessions if multiple)
+- What remains (specific tasks)
+- How to continue (step-by-step)
+- Success criteria
 
-### **Budget Tracking**
-
-**Tier 4 target efficiency:**
+**Alert Ziggy:**
 ```
-Bootstrap (brief + files): 5-10%
-Work (actual task):        90-95%
-Total session:             ~15-20%
+🚨 CONTINUATION REQUIRED
+Original Tier: [1/2/3/4]
+Progress: [X%] complete
+Handoff: [filename]
+Next: Activate Tier 3
 ```
 
-**If bootstrap exceeds 15%:**
-- Task brief may list too many files
-- Files may be too large
-- Task scope may be too broad
-- **Escalate to Ziggy** ⚠️
+**Then STOP cleanly** (don't rush to finish)
 
-**Tier 4 should feel focused and efficient.** ✅
+### Continuation Paths:
 
----
+**EXECUTION work** (plan is made, just doing tasks):
+→ Handoff to Tier 3 (continuation)
 
-### **After Task Completion**
+**STRATEGIC work** (decisions still needed):
+→ Handoff to same tier (another session with full authority)
 
-**What happens next:**
+**All tiers can continue. Tier 3 is the continuation mechanism.**
 
-1. You deliver to `/mnt/user-data/outputs/`
-2. Ziggy downloads your deliverable
-3. Ziggy reviews (acceptance or revision)
-4. Task brief archived to `completed/` folder
-5. **No further action needed from you** ✅
+**Safety limit:** 3 continuations maximum. After 3rd, escalate for restructuring.
 
-**You don't stage in relay/ folders.**  
-**You don't coordinate with other auditors.**  
-**You don't wait for integration approval.**  
-**You just execute → deliver → done.**
-
-**This is Tier 4 efficiency.** ⚡
-
----
-
-## 🎯 **CRITICAL DISTINCTION**
-
-### **Tier 4 vs Relay Folders:**
-
-**Tier 4 pattern (single task):**
-```
-Task brief → Read files → Execute → Deliver to /outputs/ → Done
-```
-
-**Relay pattern (coordination):**
-```
-Staging → Review → Integration → Multi-auditor → Consensus
-```
-
-**Use Tier 4 when:**
-- ✅ Single focused task
-- ✅ No coordination needed
-- ✅ Clear deliverable
-- ✅ Self-contained scope
-
-**Use relay/ when:**
-- ✅ Multi-auditor work
-- ✅ Iterative refinement
-- ✅ Master Branch coordination
-- ✅ Complex staging needed
-
-**Most work should be Tier 4.** Coordination is expensive. ⚡
-
----
-
-**After reading:** You can complete the defined task. 
-
-**You CANNOT:** Work outside task scope, make decisions beyond brief, or coordinate with others. Execute task only.
-
-**If you cannot find the task brief:**
-1. Search project knowledge for "TASK_BRIEF" (see all available)
-2. Check `/mnt/user-data/uploads/` for recently uploaded briefs
-3. Ask Ziggy for the file location explicitly
+**Proactive handoff is professional work management, not failure.** ✅
 
 ---
 
@@ -568,7 +566,7 @@ To ask when uncertain is strength."*
 ────────────────────────────────────────────────────
 **File:** MISSION_DEFAULT.md  
 **Purpose:** Fallback guidance + cold start recovery (tiered)  
-**Updated:** 2025-10-27 (added tier selection system)  
-**Version:** v3.7.2 (with 4-tier bootstrap)
+**Updated:** 2025-10-28 (added v3.8.0 universal self-healing + handoff guidance)  
+**Version:** v3.8.0 (with universal context monitoring and handoff quality standards)
 
-**Ask first. Bootstrap right. Work efficiently.** 🔥
+**Ask first. Bootstrap right. Monitor context. Create good handoffs. Work efficiently.** 🔥
