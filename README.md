@@ -24,7 +24,6 @@ cfa_app/
 ├── requirements.txt            # Python dependencies
 ├── README.md                   # This file
 ├── CHANGELOG.md                # Version history
-├── REPO_LOG.md                 # File-level change tracking (NEW in v3.8.0)
 ├── DEPLOYMENT.md               # Deployment guide
 │
 ├── pages/                      # Page modules
@@ -45,8 +44,11 @@ cfa_app/
 │   └── README.md
 │
 ├── docs/                       # Documentation & reflections
+│   ├── Process/                # Process documentation
+│   ├── architecture/           # Architecture analysis & documentation
 │   └── i_am/                   # Philosophical reflections
-│       └── REFLECTION_BEFORE_PHASE_4_WHAT_IT_ALL_MEANS.md
+│       ├── REFLECTION_BEFORE_PHASE_4_WHAT_IT_ALL_MEANS.md
+│       └── v3_5_EPIC_MILESTONE_SUMMARY.md
 │
 └── auditors/                   # v3.5.2: Auditor coordination infrastructure
     ├── README.md               # Infrastructure documentation
@@ -84,6 +86,8 @@ cfa_app/
     └── ~Archive/               # Historical records
         └── [archived coordination files]
 ```
+
+---
 
 ### 📝 **Logging Infrastructure (v3.8.0)**
 
