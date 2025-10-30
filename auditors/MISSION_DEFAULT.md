@@ -16,7 +16,7 @@ Use this guidance if:
 
 ## ⚡ **EFFICIENCY NOTE**
 
-**This file is 550 lines. You only need to read ~100-300 lines depending on your tier.**
+**This file is 668 lines. You only need to read ~100-300 lines depending on your tier.**
 
 **After tier selection below:**
 
@@ -296,25 +296,39 @@ Before creating handoff, verify:
 
 **Tier 4 has two modes:**
 
-**Mode A: Single Task (most common)**
-- Recieve task Instructions, like request to read task brief: TASK_BRIEF_[NAME].md
-- Execute one focused task
-- Deliver and done
-
-**Mode B: Specialized Role (ongoing)**
-- Read role bootstrap: BOOTSTRAP_[ROLE].md
-- Become specialist (README Claude, Validation Expert, etc.)
-- Operational for duration of session
-
 **When to use each:**
 - Single Task: One-off work, clear deliverable
 - Specialized Role: Ongoing specialist duty, needs expertise
 
-**Ziggy specifies:** "4" (task brief) or "4-README" (README Claude role)
+**Ziggy specifies:** "4" (task brief) or "4-README" (README Claude role), 4-DOC ( Documentation /Libraanian )
+
+**IF Mode A: Single Task (most common)**
+**Read this file:**
+- Recieve task Instructions, like request to read task brief: TASK_BRIEF_[NAME].md (provided by Ziggy)
+    - **Purpose:** Task definition with minimal context
+    - **How to find it:*
+- Try: `project_knowledge_search("TASK_BRIEF [task name]")`
+- If not in project knowledge: Ziggy will provide explicit path
+- Common locations: `/Bootstrap/Tier4_TaskSpecific/` or `/mnt/user-data/uploads/`
+    - **Learn:** What to do, success criteria, files needed
+[Continue with rest of Mode A instructions...]
+
+**If Mode B: Specialized Role (ongoing)**
+**Read this file:**
+### **File 1: BOOTSTRAP_[ROLE].md**
+    - **Purpose:** Complete role identity and operational guide
+    -**How to find it:**
+     - `project_knowledge_search("BOOTSTRAP_README_CLAUDE")` (for README Claude)
+     - `project_knowledge_search("BOOTSTRAP_VALIDATION_EXPERT")` (for Validation Expert)
+     - Located in: `Bootstrap/` folder (with other identity files)
+   - **Learn:** Who you are, how to operate, your domain expertise
+
+**That's it. 1 file. ~5-10% budget.** ✅
+**Then follow the role's operational protocols** (e.g., README Claude does Phase 1 scan first)
+
+**You CAN:** Execute the role as defined in the bootstrap
+**You CANNOT:** Work outside the role's domain
 ```
-
-**That's it.** ~10 lines added to MISSION_DEFAULT Tier 4 section.
-
 ---
 
 ## 🚀 **MODE B ACTIVATION EXAMPLE**
@@ -360,10 +374,6 @@ Claude:
    - Paths will be specified in the task brief
    - Use project_knowledge_search for project files
    - Use view tool for uploaded files
-
-**You CAN:** Execute defined task exactly as scoped  
-**You CANNOT:** Work outside brief, make decisions, coordinate
-
 ---
 
 ### **Where to Find Tier 4 Tasks:**
