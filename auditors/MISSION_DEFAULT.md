@@ -77,11 +77,13 @@ What role should I fill in this session?
     COST: ~10% session budget
     
 [4] SINGLE TASK — Focused Work
-    • One specific task
+    • One specific task (task brief)
+    • OR ongoing specialist (role bootstrap)
     • Clear scope and deliverable
     • No coordination needed
-    • Quick turnaround
     COST: ~5-10% session budget
+    
+Ziggy, please respond with: 1, 2, 3, 4, or 4-README
 
 ────────────────────────────────────────────────────
 Ziggy, please respond with: 1, 2, 3, or 4
