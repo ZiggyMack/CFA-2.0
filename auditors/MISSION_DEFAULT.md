@@ -294,11 +294,56 @@ Before creating handoff, verify:
 
 ### **TIER 4: Single Task Brief (~5-10% budget)**
 
-**When to use:**
-- One specific task
-- Clear scope and deliverable
-- No coordination needed
-- Quick turnaround
+**Tier 4 has two modes:**
+
+**Mode A: Single Task (most common)**
+- Recieve task Instructions, like request to read task brief: TASK_BRIEF_[NAME].md
+- Execute one focused task
+- Deliver and done
+
+**Mode B: Specialized Role (ongoing)**
+- Read role bootstrap: BOOTSTRAP_[ROLE].md
+- Become specialist (README Claude, Validation Expert, etc.)
+- Operational for duration of session
+
+**When to use each:**
+- Single Task: One-off work, clear deliverable
+- Specialized Role: Ongoing specialist duty, needs expertise
+
+**Ziggy specifies:** "4" (task brief) or "4-README" (README Claude role)
+```
+
+**That's it.** ~10 lines added to MISSION_DEFAULT Tier 4 section.
+
+---
+
+## 🚀 **MODE B ACTIVATION EXAMPLE**
+
+**Option 1:**
+```
+User: Hey Claude, cold start. What tier?
+
+Claude: [presents tier selection 1/2/3/4]
+
+User: 4-README
+
+Claude: 
+  - Searches for BOOTSTRAP_README_CLAUDE.md ✅
+  - Reads it (~7% budget)
+  - "I am README Claude, documentation master"
+  - "Phase 1: I need to scan the repo first"
+  - Begins Phase 1 scan protocol
+```
+
+**Option 2 (ad-hoc):**
+```
+User: [uploads BOOTSTRAP_README_CLAUDE.md]
+User: Read this and become README Claude
+
+Claude:
+  - Reads uploaded file ✅
+  - "I am README Claude, documentation master"
+  - Begins Phase 1 scan protocol
 
 **Read these files:**
 
