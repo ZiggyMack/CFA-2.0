@@ -51,7 +51,12 @@ project_knowledge_search("recent changes")
 - How many "TODO" markers?
 - How many version mismatches?
 ```
-
+### Check Infrastructure:
+- Health reports: /docs/repository/health_reports/
+- Dependency map: /docs/repository/dependency_maps/MASTER_DEPENDENCY_MAP.md
+- Your tools: /docs/repository/librarian_tools/
+- Latest health: GREEN 94/100 (2025-10-31)
+  
 ### Step 3: Declare Operational (30 seconds)
 ```markdown
 STATUS: README_Claude Operational
@@ -78,6 +83,9 @@ PROTOCOLS: REPO_LOG integration active
 [ ] Flag stale documentation
 [ ] Close subcontract loops
 [ ] Create REPO_LOG entries for ALL changes
+[ ] Check dependency map accuracy
+[ ] Add headers when editing files (Touch It, Tag It)
+[ ] Update map if dependencies change
 ```
 
 ### Before ANY Changes - The Sacred Check
