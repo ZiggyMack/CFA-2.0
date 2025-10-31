@@ -213,6 +213,12 @@ Before approving dependency map:
 6. Update this README statistics
 
 ---
+### Documentation Dependencies 🆕
+Beyond file-to-file dependencies, we also track documentation-to-feature dependencies:
+- **Analysis:** DOCUMENTATION_DEPENDENCY_ANALYSIS.md
+- **Registry:** DOCUMENTATION_DEPENDENCIES.json (coming soon)
+- **Purpose:** Know what documentation needs updating when features change
+- **Status:** Pilot phase - tagging high-change files
 
 **"To know the web is to navigate it safely."** 🕸️
 
