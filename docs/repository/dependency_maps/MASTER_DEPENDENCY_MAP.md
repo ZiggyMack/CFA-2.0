@@ -1,7 +1,7 @@
 <!---
 FILE: MASTER_DEPENDENCY_MAP.md
 PURPOSE: Complete repository dependency tracking for safe changes
-VERSION: v2.2 (Comprehensive + Conceptual Edition)
+VERSION: v2.1 (Comprehensive + Conceptual Edition)
 STATUS: Active
 DEPENDS_ON: Semantic headers in files
 NEEDED_BY: All maintainers, DOC_CLAUDE, calibration mission
@@ -9,7 +9,7 @@ MOVES_WITH: /docs/repository/dependency_maps/
 LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-13]
 --->
 
-# MASTER DEPENDENCY MAP - v2.2
+# MASTER DEPENDENCY MAP - v2.1
 
 **Generated:** October 31, 2025  
 **Coverage:** 100% file enumeration, 40% dependency mapping  
@@ -766,7 +766,7 @@ Tasks:
 **100% file enumeration + 40% dependency mapping = Mission-ready.**
 
 ────────────────────────────────────────────────────
-**Version:** v2.2 - Comprehensive + Conceptual Edition  
+**Version:** v2.1 - Comprehensive + Conceptual Edition  
 **Philosophy:** Enumerate everything, map critical paths, maintain honestly  
 **Coverage:** Complete enumeration, focused mapping  
 **Health:** 87/100 (B+) - Excellent structure, good coverage  
