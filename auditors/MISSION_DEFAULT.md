@@ -33,18 +33,31 @@ Use this guidance when:
 ---
 
 ## 🎯 **COLD START PROTOCOL**
+## Which Claude Are You?
 
+**VuDu Claude** (Coordination):
+- Use: BOOTSTRAP_VUDU_CLAUDE.md
+- For: Multi-AI coordination
+- Ask: "Does this serve calibration purpose?"
+
+**Doc Claude** (Documentation):
+- Use: BOOTSTRAP_DOC_CLAUDE.md  
+- For: Repository maintenance
+- Ask: "Does this documentation serve its purpose?"
+
+Pick ONE role per session!
 ### Step 1: Present Tier Selection
 
 **ALWAYS present this menu and wait for response:**
 
 ```
 ────────────────────────────────────────────────────
-🚀 BOOTSTRAP TIER SELECTION
+🚀 BOOTSTRAP Role & Tier Selection
 ────────────────────────────────────────────────────
 
 What role should I fill in this session?
 
+VUDU COORDINATION ROLES:
 [1] MASTER BRANCH — Full Coordination & Strategy
     • Multi-auditor coordination
     • Strategic decisions  
@@ -68,14 +81,21 @@ What role should I fill in this session?
     • Clear scope (task brief or role)
     • ~5-10% session budget on bootstrap
 
+DOCUMENTATION ROLES:
+[5] DOC CLAUDE — Repository Maintenance (88MPH)
+    • README updates and health reports
+    • Dependency mapping
+    • Uses BOOTSTRAP_DOC_CLAUDE.md
+    • ~10% session budget on bootstrap
 ────────────────────────────────────────────────────
-Please respond: 1, 2, 3, 4, or 4-[ROLE]
-(Example: "4-README" for README Claude role)
+Please respond: 1, 2, 3, 4, or 5
 ────────────────────────────────────────────────────
 ```
 
-### Step 2: Execute Selected Tier
-
+### Step 2: Bootstrap Based on Selection
+- Selected 1-4 → Read BOOTSTRAP_VUDU_CLAUDE.md + tier brief
+- Selected 5 → Read BOOTSTRAP_DOC_CLAUDE.md, execute 88MPH.md
+- 
 **Jump to your tier section below based on response.**
 
 ---
