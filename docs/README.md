@@ -58,21 +58,24 @@ This `/docs/` directory contains:
 
 ```
 docs/
-├── Process/                    # Development & deployment processes
-│   ├── deployment_workflow.md
-│   └── validation_process.md
-├── Validation/                 # Test results and quality reports
-│   ├── reports/               # Validation findings
-│   │   └── [validation_reports.md files]
-│   └── criteria/              # Success criteria docs
-│       └── [validation_criteria.md files]
-├── architecture/              # System design & analysis
-│   ├── MISSION_DEFAULT_BLOAT_ANALYSIS.md  # v3.8.0 analysis
-│   └── system_design.md
-├── i_am/                      # Philosophical reflections
-│   ├── REFLECTION_BEFORE_PHASE_4_WHAT_IT_ALL_MEANS.md
-│   └── v3_5_EPIC_MILESTONE_SUMMARY.md
-└── README.md                  # This file
+├── Process/                    # Workflows
+├── Validation/                 # Test results
+├── architecture/              # System design
+├── i_am/                      # Philosophy
+└── repository/                # 🆕 REPOSITORY META-DOCS
+    ├── README.md              # Navigation for this folder
+    ├── health_reports/        # Periodic assessments
+    │   ├── README.md
+    │   ├── 2025-10-31_GREEN.md  # Today's report
+    │   └── _Archive/          # Historical reports
+    ├── dependency_maps/       # File relationship maps
+    │   ├── README.md
+    │   ├── MASTER_DEPENDENCY_MAP.md  # Current map
+    │   └── validation/        # Map verification logs
+    └── librarian_tools/       # 88MPH protocols, etc
+        ├── README.md
+        ├── 88MPH_PROTOCOL.md
+        └── HEADER_STANDARD.md
 ```
 
 ## Content Categories
