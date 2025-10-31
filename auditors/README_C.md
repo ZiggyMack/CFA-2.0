@@ -8,6 +8,10 @@
 **Last Updated:** 2025-10-28  
 **Status:** Universal self-healing operational
 
+## 🎭 Need a Claude?
+
+Coordination → BOOTSTRAP_VUDU_CLAUDE.md
+Documentation → BOOTSTRAP_DOC_CLAUDE.md
 ---
 
 ## 🎯 **CURRENT STATUS**
