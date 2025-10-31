@@ -1,4 +1,41 @@
-# CFA - Changelog
+<!---
+FILE: CHANGELOG.md
+PURPOSE: Track version history and major feature releases
+VERSION: v3.8.0
+STATUS: Active
+DEPENDS_ON: None
+NEEDED_BY: README.md, deployment processes, all users
+MOVES_WITH: / (root)
+LAST_UPDATE: 2025-10-30 [DOCUMENTATION-2025-10-30-8]
+---># CFA - Changelog
+
+# CHANGELOG
+
+## [3.8.0] - 2025-10-30
+### Added
+- Universal File Header Standard for instant file comprehension
+- Comprehensive documentation navigation (missions/, relay/, docs/ READMEs)
+- Operation Sanitize 88MPH protocol for rapid repo improvements
+- REPO_LOG integration for granular change tracking
+
+### Changed
+- Enhanced bootstrap system with semantic headers
+- Improved documentation structure with teleological organization
+- Updated coordination protocols with clearer relay system
+
+### Fixed
+- Missing critical README files in key directories
+- Documentation discovery issues resolved
+- Staging backlog cleared with proper deployment tracking
+
+## [3.7.2] - 2025-10-29
+### Changed
+- Validation status: YELLOW (75% complete)
+- Task movements tracked in REPO_LOG
+- Bootstrap documentation enhanced
+
+## Previous versions...
+[Historical changelog content continues...]
 
 ## v3.5 (October 2025) - "The Recovery" 🔄
 
