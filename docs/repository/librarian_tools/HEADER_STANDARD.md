@@ -1,3 +1,4 @@
+<!-- deps: file_structure, documentation -->
 # UNIVERSAL FILE HEADER STANDARD v1.0
 
 **Purpose:** Enable instant file understanding and dependency mapping  

@@ -1,3 +1,4 @@
+<!-- deps: validation_process, documentation -->
 # v3.5 COMPREHENSIVE DISCREPANCY AUDIT - ALL CONFLICTS FOUND ✅
 
 **Audited By:** Claude (Anthropic) - Master Branch  

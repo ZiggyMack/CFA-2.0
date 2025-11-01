@@ -1,3 +1,4 @@
+<!-- deps: vudu_protocol -->
 ```markdown
 # 🔬 Grok Incoming - Work Coordination
 

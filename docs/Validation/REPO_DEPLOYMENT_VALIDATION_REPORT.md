@@ -1,3 +1,4 @@
+<!-- deps: validation_process, bootstrap_system -->
 ─── VALIDATION REPORT [CORRECTED] ──────────────────
 
 # REPO_DEPLOYMENT_VALIDATION_REPORT_v2_CORRECTED.md

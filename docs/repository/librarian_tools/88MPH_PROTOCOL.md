@@ -1,3 +1,4 @@
+<!-- deps: bootstrap_system, documentation -->
 ─── REPO LIBRARIAN MISSION ───────────────────────────
 
 # 88MPH.md - Doc_Claude Instant Activation (v2.0)

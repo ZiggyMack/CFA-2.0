@@ -9,6 +9,7 @@ MOVES_WITH: /docs/repository/dependency_maps/
 LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-4]
 --->
 
+<!-- deps: file_structure, documentation -->
 # Dependency Maps
 
 **Purpose:** Track and visualize file interdependencies across the repository  

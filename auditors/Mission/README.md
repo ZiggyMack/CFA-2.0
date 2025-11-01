@@ -9,6 +9,7 @@ MOVES_WITH: /auditors/missions/
 LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-1]
 --->
 
+<!-- deps: mission_system, vudu_protocol -->
 # Missions Directory
 
 **Lines:** 180  

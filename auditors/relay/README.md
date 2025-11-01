@@ -9,6 +9,7 @@ MOVES_WITH: /auditors/relay/
 LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-2]
 --->
 
+<!-- deps: vudu_protocol -->
 # Relay System
 
 **Lines:** 248  

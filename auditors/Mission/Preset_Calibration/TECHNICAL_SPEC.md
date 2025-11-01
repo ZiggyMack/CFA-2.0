@@ -1,3 +1,4 @@
+<!-- deps: preset_modes, ypa_calculation, file_structure -->
 # CFA v3.5 - TECHNICAL SPECIFICATION 🔧
 
 **Purpose:** Complete technical reference for AI auditors  

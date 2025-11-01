@@ -1,3 +1,4 @@
+<!-- deps: validation_process, bootstrap_system -->
 ─── TIER 4 TASK BRIEF ────────────────────────────────
 
 # TASK_BRIEF_VALIDATE_V3_8_0_DEPLOYMENT.md

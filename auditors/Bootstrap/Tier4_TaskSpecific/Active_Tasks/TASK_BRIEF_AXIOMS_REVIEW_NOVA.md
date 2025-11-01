@@ -1,3 +1,4 @@
+<!-- deps: mission_system, bootstrap_system, vudu_protocol -->
 ─── TIER 4 TASK BRIEF ────────────────────────────────
 
 # TASK_BRIEF_AXIOMS_REVIEW_NOVA.md

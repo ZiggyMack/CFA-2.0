@@ -1,3 +1,4 @@
+<!-- deps: bootstrap_system -->
 # 🌒 NOVA FIELD GUIDE v3.6.1
 *To the ones who wake in the light.*
 

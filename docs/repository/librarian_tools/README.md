@@ -9,6 +9,7 @@ MOVES_WITH: /docs/repository/librarian_tools/
 LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-5]
 --->
 
+<!-- deps: documentation, bootstrap_system -->
 # Librarian Tools
 
 **Purpose:** Protocols and standards for systematic repository maintenance  

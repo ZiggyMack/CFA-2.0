@@ -1,3 +1,4 @@
+<!-- deps: bootstrap_system -->
 ─── BOOTSTRAP MAINTENANCE GUIDE ──────────────────────
 
 # BOOTSTRAP_MAINTENANCE_GUIDE.md - Governance Rules

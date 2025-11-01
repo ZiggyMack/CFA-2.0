@@ -9,6 +9,7 @@ MOVES_WITH: /docs/
 LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-7]
 --->
 
+<!-- deps: file_structure, documentation -->
 # Documentation Directory
 
 **Lines:** ~320  

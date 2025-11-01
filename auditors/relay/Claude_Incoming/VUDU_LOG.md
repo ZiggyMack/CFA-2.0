@@ -1,3 +1,4 @@
+<!-- deps: vudu_protocol, mission_system -->
 ### **2025-10-27 — Phase 4 Activated: Cold Start Success + Axioms Review**
 
 ─── VUDU MESSAGE ───────────────────────────────────

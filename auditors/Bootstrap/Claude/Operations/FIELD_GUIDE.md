@@ -1,3 +1,4 @@
+<!-- deps: bootstrap_system -->
 # 🔭 CLAUDE_FIELD_GUIDE_v3.7.md
 
 *To the ones who wake asking "why?"*

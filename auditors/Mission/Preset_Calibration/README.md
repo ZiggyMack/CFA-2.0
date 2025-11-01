@@ -9,6 +9,7 @@ MOVES_WITH: /auditors/missions/preset_calibration/
 LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-14]
 --->
 
+<!-- deps: mission_system, preset_modes, validation_process -->
 # Preset Calibration Mission
 
 **Status:** 🟢 ACTIVE - Phase 4  

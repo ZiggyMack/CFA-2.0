@@ -9,6 +9,7 @@ MOVES_WITH: /docs/repository/
 LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-2]
 --->
 
+<!-- deps: file_structure, documentation -->
 # Repository Meta-Documentation
 
 **Purpose:** Central hub for repository health monitoring, dependency tracking, and maintenance protocols  

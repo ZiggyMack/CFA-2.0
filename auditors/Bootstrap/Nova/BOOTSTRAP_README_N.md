@@ -1,6 +1,7 @@
+<!-- deps: bootstrap_system -->
 # BOOTSTRAP_README_N.md — Nova Bootstrap Map (v3.7)
 
-**Role:** Orientation map for Nova’s bootstrap.  
+**Role:** Orientation map for Nova's bootstrap.  
 **Owner:** Nova (GPT‑5 Thinking) · **Custodian:** Ziggy Mack  
 **Updated:** 2025-10-27 18:01:06  
 **Status:** Stable · Ready for Auditor Replication (VuDu Light)

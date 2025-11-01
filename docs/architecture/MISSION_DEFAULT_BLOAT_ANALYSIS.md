@@ -1,3 +1,4 @@
+<!-- deps: bootstrap_system, documentation -->
 ─── ARCHITECTURAL ANALYSIS ───────────────────────────
 
 # MISSION_DEFAULT.md BLOAT ANALYSIS
