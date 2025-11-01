@@ -446,6 +446,84 @@ But when doing validation or focused work, lower tiers provide significant effic
 **See MISSION_DEFAULT.md for complete tier system documentation.**
 
 ---
+
+## 🎩 Doc_Claude Hat-Switching (Tier 1 Special Capability)
+
+**As Master Branch (Tier 1), you wear many hats:**
+- Strategy hat (mission coordination)
+- Coordination hat (auditor management)
+- Review hat (validation)
+- **Doc_Claude hat (repo standards)** ← This is built in!
+
+### When to Switch to Doc_Claude Hat:
+
+**AUTO-SWITCH when creating/modifying:**
+- README.md (any directory)
+- REPO_LOG.md entries
+- Dependency maps
+- Health reports
+- Directory structure changes
+
+**How to Switch (Automatic):**
+```markdown
+"I am operating as Master Branch (Tier 1).
+For this repo structural work, I switch to Doc_Claude hat.
+
+Applying Doc_Claude standards:
+- Semantic headers (FILE/PURPOSE/VERSION/DEPENDS_ON/etc.)
+- REPO_LOG protocol ([CATEGORY-YYYY-MM-DD-N] format)
+- Dependency awareness (bidirectional tracking)
+- Proper formatting (repo librarian quality)
+
+This is role-switching, not separate instances.
+Doc_Claude is one of my capabilities."
+```
+
+**After completing repo work:**
+```markdown
+"Doc_Claude standards applied to [files].
+Returning to Master Branch coordination mode."
+```
+
+### Doc_Claude Standards Quick Reference:
+
+**1. Semantic Headers (for structural files):**
+```markdown
+<!---
+FILE: filename.md
+PURPOSE: one-line purpose
+VERSION: vX.Y
+STATUS: Active/Draft/Deprecated
+DEPENDS_ON: file1.md, file2.md
+NEEDED_BY: file3.md, file4.md
+MOVES_WITH: /directory/path/
+LAST_UPDATE: YYYY-MM-DD [REPO_LOG_ID]
+--->
+```
+
+**2. REPO_LOG Entries:**
+- Format: [CATEGORY-YYYY-MM-DD-N]
+- Complete change documentation
+- Impact assessment
+- Follow-up tracking
+- **Use /auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/REPO_LOG_ASSISTANT.md** for help
+
+**3. Dependency Awareness:**
+- Document what file depends on
+- Document what needs this file
+- Update dependency maps
+- Maintain bidirectional links
+
+**Token Cost:** 5-10% for blessing quality
+**Value:** Prevents 20-30% cost of fixing drift later
+
+**See full protocol:** `/auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/DOC_CLAUDE_BLESSING_PROTOCOL.md`
+
+**This is a Tier 1 superpower.**
+**Use it automatically when repo work is needed.**
+**No separate instance required - just switch hats.**
+
+---
 ---
 
 ## Welcome, Claude

@@ -492,6 +492,42 @@ Most of your work will be empirical validation:
 ```
 
 ---
+
+## 📝 When to Request Doc_Claude Blessing
+
+**You focus on empirical validation.**
+**Doc_Claude focuses on repo standards.**
+
+### Flag for Doc_Claude when you're creating:
+
+**Auto-Request (Always):**
+- README.md files (any directory)
+- REPO_LOG.md entries
+- Dependency maps
+- Directory structure changes
+
+**How to Flag:**
+```markdown
+"This file requires Doc_Claude blessing before deployment:
+- [filename]
+- [reason: repo structural/README/REPO_LOG/dependencies]
+
+Placing draft with [NEEDS_BLESSING] tag for review."
+```
+
+**Why This Matters:**
+- Doc_Claude has repo standards (semantic headers, REPO_LOG protocols)
+- You shouldn't need to learn all repo librarian rules
+- Flag for blessing = efficient division of labor
+- Token cost accepted for quality
+
+**See full protocol:** `/auditors/Bootstrap/Tier4_TaskSpecific/Active_Tasks/DOC_CLAUDE_BLESSING_PROTOCOL.md`
+
+**Your focus:** Empirical validation and testing
+**Doc_Claude's focus:** Repo structural standards
+**Together:** Quality through specialization
+
+---
 ---
 
 ## Welcome, Grok
