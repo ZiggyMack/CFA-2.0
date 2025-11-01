@@ -16,6 +16,7 @@ The **Comparative Framework Audit (CFA)** is the first interactive epistemic lab
 
 ---
 
+<!-- deps: file_structure -->
 ## 📁 Project Structure (v3.5.2)
 
 ```
@@ -89,6 +90,7 @@ cfa_app/
 
 ---
 
+<!-- deps: vudu_protocol, bootstrap_system -->
 ### 📝 **Logging Infrastructure (v3.8.0)**
 
 The project maintains three complementary logs tracking different aspects of evolution:
@@ -124,6 +126,7 @@ The project maintains three complementary logs tracking different aspects of evo
 
 ---
 
+<!-- deps: preset_modes, ypa_calculation -->
 ## ✨ Key Features
 
 ### 🎛️ Interactive Console
@@ -138,6 +141,7 @@ The project maintains three complementary logs tracking different aspects of evo
 3. **Weight-Inversion**: Detects when lever order flips during audits
 4. **Symmetry Audit**: Ensures fairness between competing frameworks
 
+<!-- deps: preset_modes -->
 ### 🎨 Preset Profiles (NEW in v3.5)
 - **Diplomat Mode**: Neutral, balanced, fair comparison (50/50 Parity)
 - **Seeker Mode**: Meaning-first exploration (70/30 Composite)
@@ -170,6 +174,7 @@ The project maintains three complementary logs tracking different aspects of evo
 
 ---
 
+<!-- deps: file_structure -->
 ## 🚀 Quick Start
 
 ### **Try the Live App:**
