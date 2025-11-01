@@ -4,7 +4,7 @@ PURPOSE: Navigate repository meta-documentation and health monitoring
 VERSION: v1.0
 STATUS: Active
 DEPENDS_ON: None
-NEEDED_BY: All repository maintainers, auditors, README_Claude
+NEEDED_BY: All repository maintainers, auditors, DOC_CLAUDE
 MOVES_WITH: /docs/repository/
 LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-2]
 --->
@@ -13,7 +13,7 @@ LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-2]
 
 **Purpose:** Central hub for repository health monitoring, dependency tracking, and maintenance protocols  
 **Created:** 2025-10-31  
-**Maintained by:** README_Claude (88MPH Librarian)  
+**Maintained by:** DOC_CLAUDE (88MPH Librarian)  
 **Status:** 🟢 ACTIVE  
 
 ## 🎯 Why This Directory Exists
@@ -60,7 +60,7 @@ repository/
 ### librarian_tools/
 **Purpose:** Protocols and standards for repository maintenance  
 **Contains:** 88MPH rapid assessment, header standards, quality metrics  
-**For:** README_Claude and other maintenance auditors
+**For:** DOC_CLAUDE and other maintenance auditors
 
 ## 📊 Key Metrics Tracked
 
@@ -115,7 +115,7 @@ repository/
 - [VUDU_HEADER_STANDARD.md](/auditors/VUDU_HEADER_STANDARD.md) - Header specs
 
 **Downstream Consumers:**
-- README_Claude - Uses for maintenance
+- DOC_CLAUDE - Uses for maintenance
 - Master Branch auditors - Health monitoring
 - Deployment processes - Validation checks
 

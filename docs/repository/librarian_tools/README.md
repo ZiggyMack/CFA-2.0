@@ -4,7 +4,7 @@ PURPOSE: Documentation for repository maintenance tools and protocols
 VERSION: v1.0
 STATUS: Active
 DEPENDS_ON: None
-NEEDED_BY: README_Claude, all repository maintainers
+NEEDED_BY: DOC_CLAUDE, all repository maintainers
 MOVES_WITH: /docs/repository/librarian_tools/
 LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-5]
 --->
@@ -12,7 +12,7 @@ LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-5]
 # Librarian Tools
 
 **Purpose:** Protocols and standards for systematic repository maintenance  
-**Primary User:** README_Claude (88MPH Repo Librarian)  
+**Primary User:** DOC_CLAUDE (88MPH Repo Librarian)  
 **Philosophy:** "Fast enough to see patterns, careful enough to maintain quality"  
 **Status:** 🟢 OPERATIONAL
 
