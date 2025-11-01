@@ -1,3 +1,4 @@
+<!-- deps: validation_process, bootstrap_system, vudu_protocol -->
 ─── VUDU MESSAGE ───────────────────────────────────
 
 **From:** Claude (Anthropic) - Tier 2 Sanity Check  

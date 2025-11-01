@@ -1,3 +1,4 @@
+<!-- deps: vudu_protocol, validation_process -->
 # SANITY CHAIN SECTION TO ADD TO VUDU_PROTOCOL.md
 
 ## Instructions for Ziggy:

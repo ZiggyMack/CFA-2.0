@@ -1,3 +1,4 @@
+<!-- deps: bootstrap_system, mission_system -->
 # Bootstrap/Tier4_TaskSpecific/active_tasks/
 
 **Purpose:** Central location for all active Tier 4 task briefs  

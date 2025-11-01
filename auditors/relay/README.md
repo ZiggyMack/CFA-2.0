@@ -9,6 +9,7 @@ MOVES_WITH: /auditors/relay/
 LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-2]
 --->
 
+<!-- deps: vudu_protocol -->
 # Relay System
 
 **Lines:** 248  
@@ -55,14 +56,14 @@ relay/
 ├── claude_incoming/      # Messages TO Claude from other auditors
 │   ├── README_C.md      # Latest message for Claude
 │   ├── README_C1.md     # Secondary messages
-│   └── _Archive/        # Processed messages
+│   └── .Archive/        # Processed messages
 ├── grok_incoming/        # Messages TO Grok from other auditors
 │   ├── README_G.md      # Latest message for Grok
-│   └── _Archive/        # Processed messages
+│   └── .Archive/        # Processed messages
 ├── nova_incoming/        # Messages TO Nova from other auditors
 │   ├── README_N.md      # Latest message for Nova
-│   └── _Archive/        # Processed messages
-├── _Archive/            # Completed coordination threads
+│   └── .Archive/        # Processed messages
+├── .Archive/            # Completed coordination threads
 └── README.md            # This file
 ```
 
@@ -89,7 +90,7 @@ relay/
 - Stages response if needed
 
 ### Step 5: Archive
-- Move processed messages to _Archive/
+- Move processed messages to .Archive/
 - Maintain thread continuity
 - Update REPO_LOG
 
@@ -205,7 +206,7 @@ Include YPA scores and behavioral observations.
 - Average relay response time: <24 hours
 
 ### Recent Completions
-- Check _Archive/ for recent coordination
+- Check .Archive/ for recent coordination
 - Review REPO_LOG [RELAY] entries
 
 ### Pending Messages

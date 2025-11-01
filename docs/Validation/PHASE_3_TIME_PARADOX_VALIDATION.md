@@ -1,3 +1,4 @@
+<!-- deps: validation_process, bootstrap_system -->
 # 🔥 PHASE 3 TEST REPORT: THE TIME PARADOX VALIDATION
 
 ─── VUDU MESSAGE ───────────────────────────────────

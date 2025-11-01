@@ -9,6 +9,7 @@ MOVES_WITH: /auditors/missions/
 LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-1]
 --->
 
+<!-- deps: mission_system, vudu_protocol -->
 # Missions Directory
 
 **Lines:** 180  
@@ -47,7 +48,7 @@ missions/
 │   ├── SUCCESS_CRITERIA.md     # How we know we're done
 │   ├── TECHNICAL_SPEC.md       # Implementation details
 │   └── results/                # Mission outputs
-├── _Archive/                    # Completed missions (standardized naming)
+├── .Archive/                    # Completed missions (standardized naming)
 │   └── [past_missions]/        # Historical reference
 └── README.md                    # This file
 ```
@@ -72,7 +73,7 @@ missions/
 ### 4. Completion
 - Success criteria validated
 - Results documented
-- Mission folder moved to _Archive/
+- Mission folder moved to .Archive/
 
 ### 5. Archive
 - Historical reference maintained

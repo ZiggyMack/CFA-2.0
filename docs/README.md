@@ -9,6 +9,7 @@ MOVES_WITH: /docs/
 LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-7]
 --->
 
+<!-- deps: file_structure, documentation -->
 # Documentation Directory
 
 **Lines:** ~320  
@@ -83,7 +84,7 @@ docs/
     ├── health_reports/        # Periodic repository assessments
     │   ├── README.md          # Health report guide
     │   ├── 2025-10-31_GREEN.md  # Latest assessment (94/100)
-    │   └── _Archive/          # Historical reports
+    │   └── .Archive/          # Historical reports
     ├── dependency_maps/       # File relationship tracking
     │   ├── README.md          # Dependency mapping guide
     │   ├── MASTER_DEPENDENCY_MAP.md  # Current system map

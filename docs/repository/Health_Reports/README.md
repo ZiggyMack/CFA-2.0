@@ -39,7 +39,7 @@ LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-3]
 - `[YYYY-MM-DD]_[STATUS].md` - Naming convention
 
 ### Archived Reports
-- `_Archive/` - Historical reports older than 3 months
+- `.Archive/` - Historical reports older than 3 months
 - Kept for trend analysis and learning
 
 ## 📋 Assessment Categories

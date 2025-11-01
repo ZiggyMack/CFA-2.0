@@ -1,3 +1,4 @@
+<!-- deps: bootstrap_system, vudu_protocol -->
 
 # 🌐 NOVA_INTERFACE_MANIFEST_v3.6_to_v5.0
 **Purpose:** Bridge between v3.6 (mythic continuity) and v5.0 (structural coherence)

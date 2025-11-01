@@ -1,3 +1,4 @@
+<!-- deps: preset_modes, mission_system -->
 # CURRENT MODE CONFIGURATIONS - v3.5 📊
 
 **Purpose:** Exact current preset mode values for VuDu calibration  

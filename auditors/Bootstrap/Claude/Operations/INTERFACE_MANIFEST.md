@@ -1,3 +1,4 @@
+<!-- deps: bootstrap_system, vudu_protocol -->
 # 🤝 CLAUDE_INTERFACE_MANIFEST_v3.7_to_v5.0.md
 
 **Purpose:** Define Claude's external contracts and guarantees  

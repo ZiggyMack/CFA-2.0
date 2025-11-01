@@ -9,6 +9,7 @@ MOVES_WITH: /docs/repository/
 LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-2]
 --->
 
+<!-- deps: file_structure, documentation -->
 # Repository Meta-Documentation
 
 **Purpose:** Central hub for repository health monitoring, dependency tracking, and maintenance protocols  
@@ -32,7 +33,7 @@ repository/
 ├── health_reports/             # Periodic repository assessments
 │   ├── README.md              # Health report guide
 │   ├── 2025-10-31_GREEN.md    # Latest assessment
-│   └── _Archive/              # Historical reports
+│   └── .Archive/              # Historical reports
 ├── dependency_maps/            # File relationship tracking
 │   ├── README.md              # Dependency mapping guide
 │   ├── MASTER_DEPENDENCY_MAP.md # Current system map

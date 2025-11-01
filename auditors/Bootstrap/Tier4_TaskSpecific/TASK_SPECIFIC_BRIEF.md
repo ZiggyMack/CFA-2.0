@@ -1,3 +1,4 @@
+<!-- deps: bootstrap_system -->
 # TASK_SPECIFIC_BRIEF_TEMPLATE.md — Minimal Cold Start
 
 **Purpose:** For single, focused tasks that don't require full project context  

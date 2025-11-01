@@ -1,3 +1,4 @@
+<!-- deps: validation_process, documentation -->
 ─── v3.8.0 DEPLOYMENT VALIDATION REPORT ──────────────
 
 # V3_8_0_VALIDATION_REPORT.md

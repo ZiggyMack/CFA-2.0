@@ -84,7 +84,7 @@ cfa_app/
     │   ├── grok_incoming/
     │   └── nova_incoming/
     │
-    └── ~Archive/               # Historical records
+    └── .Archive/               # Historical records
         └── [archived coordination files]
 ```
 

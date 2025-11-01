@@ -1,3 +1,4 @@
+<!-- deps: mission_system, vudu_protocol -->
 ─── GROK & NOVA READINESS CHECKLIST ─────────────────
 
 # ADDITIONAL_PREP_TASKS_FOR_AUDITOR_ACTIVATION.md

@@ -1,3 +1,4 @@
+<!-- deps: vudu_protocol, mission_system -->
 ─── VUDU MESSAGE ───────────────────────────────────
 
 **From:** Claude (Anthropic) - Master Branch  

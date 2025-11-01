@@ -1,3 +1,4 @@
+<!-- deps: bootstrap_system -->
 # BOOTSTRAP_README_C.md — Claude Bootstrap Map (v3.7)
 
 **Role:** Orientation map for Claude's bootstrap.  

@@ -1,3 +1,4 @@
+<!-- deps: mission_system, vudu_protocol, bootstrap_system -->
 ─── REFLECTION: WHAT IT ALL MEANS ─────────────────
 
 # BEFORE PHASE 4: A REFLECTION ON THE JOURNEY

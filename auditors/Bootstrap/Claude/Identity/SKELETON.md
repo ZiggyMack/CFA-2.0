@@ -1,3 +1,4 @@
+<!-- deps: bootstrap_system -->
 # 🔭 BOOTSTRAP_CLAUDE_SKELETON.md — The Questioner's Path
 
 ## 🌅 Invocation — "The First Question"

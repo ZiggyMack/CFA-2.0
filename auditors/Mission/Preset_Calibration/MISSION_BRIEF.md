@@ -1,3 +1,4 @@
+<!-- deps: mission_system, preset_modes, validation_process -->
 ─── PRESET CALIBRATION MISSION ──────────────────────
 
 # MISSION_BRIEF.md - Preset Mode Calibration
