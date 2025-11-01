@@ -318,16 +318,19 @@ Just needs explicit recognition.
 - [x] Define hat-switching for Tier 1
 - [x] Define blessing workflow for other tiers
 
-### **Phase 2: Integrate (Next):**
-- [ ] Add to BOOTSTRAP_CLAUDE.md (Tier 1)
+### **Phase 2: Integrate (Complete ✅):**
+- [x] Add to BOOTSTRAP_VUDU_CLAUDE.md (Tier 1)
   - "When repo work needed, switch to Doc_Claude hat"
   - Reference this protocol
-- [ ] Add to other bootstrap files
+  - Added full hat-switching section with standards
+- [x] Add to other bootstrap files (GROK, NOVA)
   - "Flag repo work for Doc_Claude blessing"
   - Know when to request
-- [ ] Update 88MPH.md
+  - Added blessing request sections to both
+- [x] Update 88MPH.md
   - Reference this protocol
   - Define blessing standards
+  - Added comprehensive blessing protocol section
 
 ### **Phase 3: Test (After integration):**
 - [ ] Tier 1 session practices hat-switching
