@@ -3,41 +3,46 @@
 # Maintained by: DOC_CLAUDE (Documentation Orchestration Claude)
 # Format: YAML for human readability and inline comments
 # Created: 2025-10-31
-# Version: v1.0
+# Last Updated: 2025-11-01 (Phase 1 Day 3-4 complete)
+# Version: v1.1
 
 # ===== CORE FEATURES =====
 
 preset_modes:
   stability: occasional      # Changes during calibration missions
   current_value: 4          # Skeptic, Diplomat, Seeker, Zealot
-  last_changed: 2025-10-27
+  last_changed: 2025-11-01  # Phase 1 Day 3-4 tagging complete
   owner: DOC_CLAUDE
   
   depends_on:
-    - console.py#PRESET_CONFIGS
+    - pages/console.py#PRESET_CONFIGS
     - calculations.py#scoring_logic
     - pages/manual.py#mode_display
-  
+
   documented_in:
     - path: README.md
       section: features
       priority: primary
       line_hint: "~120-140"
-      
-    - path: MISSION_CURRENT.md
+      tagged: true  # Phase 1 Day 1-2
+
+    - path: auditors/MISSION_CURRENT.md
       section: calibration-objectives
       priority: primary
       line_hint: "Phase 4 section"
-      
-    - path: console.py
+      tagged: true  # Phase 1 Day 1-2
+
+    - path: pages/console.py
       section: preset-configurations
       priority: primary
-      line_hint: "PRESET_CONFIGS dict"
-      
-    - path: SUCCESS_CRITERIA.md
+      line_hint: "Lines 179-226, 536-662"
+      tagged: true  # Phase 1 Day 3-4
+
+    - path: auditors/Mission/Preset_Calibration/SUCCESS_CRITERIA.md
       section: validation-targets
       priority: secondary
-      line_hint: "Preset validation section"
+      line_hint: "Metrics and criteria sections"
+      tagged: true  # Phase 1 Day 3-4
       
     - path: pages/manual.py
       section: mode-descriptions
@@ -64,7 +69,7 @@ preset_modes:
 
 file_structure:
   stability: stable         # Rarely changes, but critical when it does
-  last_changed: 2025-10-15
+  last_changed: 2025-11-01  # Phase 1 Day 3-4 tagging complete
   owner: DOC_CLAUDE
   
   depends_on:
@@ -75,17 +80,20 @@ file_structure:
     - path: DEPLOYMENT.md
       section: project-structure
       priority: primary
-      line_hint: "Directory tree diagram"
-      
+      line_hint: "Lines 23-71, 259-286"
+      tagged: true  # Phase 1 Day 3-4
+
     - path: README.md
       section: quick-start
       priority: primary
-      line_hint: "Installation section"
-      
+      line_hint: "Lines 19-89, 177-189"
+      tagged: true  # Phase 1 Day 1-2
+
     - path: README.md
-      section: setup
+      section: logging-infrastructure
       priority: primary
-      line_hint: "Local development"
+      line_hint: "Lines 93-125"
+      tagged: true  # Phase 1 Day 1-2
       
     - path: app.py
       section: imports

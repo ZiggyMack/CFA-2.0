@@ -175,7 +175,8 @@ def render():
             st.caption("💡 **Tip:** Load two presets to compare!")
     
     st.sidebar.markdown("---")
-    
+
+    # deps: preset_modes
     # NEW v3.5: Preset Mode Spectrum
     with st.sidebar.expander("🎚️ Preset Mode Spectrum", expanded=False):
         st.markdown("**Quick Configuration Profiles:**")
@@ -532,6 +533,7 @@ def render():
             df["Flag"] = df["Delta"].apply(lambda x: "⚠️" if abs(x) > 0.3 else "✅")
             st.dataframe(df)
     
+    # deps: preset_modes
     # NEW v3.5: EPISTEMIC QUIZ SYSTEM
     st.markdown("---")
     with st.expander("🧠 Epistemic Quiz - Find Your Starting Point", expanded=False):
