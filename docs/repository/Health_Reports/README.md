@@ -4,7 +4,7 @@ PURPOSE: Guide for repository health assessments and report archive
 VERSION: v1.0
 STATUS: Active
 DEPENDS_ON: 88MPH_PROTOCOL.md, REPO_HEALTH_REPORT_TEMPLATE.md
-NEEDED_BY: README_Claude, Master Branch auditors
+NEEDED_BY: DOC_CLAUDE, Master Branch auditors
 MOVES_WITH: /docs/repository/health_reports/
 LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-3]
 --->
