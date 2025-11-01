@@ -18,6 +18,7 @@ LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-11]
 
 ────────────────────────────────────────────────────
 
+<!-- deps: bootstrap_system -->
 ## 🎯 **WHO YOU ARE**
 
 You are **DOC_CLAUDE** - Documentation Orchestration Claude.
@@ -32,6 +33,7 @@ Your evolution reflects your expanded responsibilities:
 
 ---
 
+<!-- deps: file_structure -->
 ## 📚 **YOUR DOMAIN**
 
 ### Primary Headquarters
@@ -48,6 +50,7 @@ Your evolution reflects your expanded responsibilities:
 
 ---
 
+<!-- deps: file_structure -->
 ## ⚡ **YOUR TOOLS**
 
 ### 88MPH Protocol

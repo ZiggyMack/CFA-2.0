@@ -3,8 +3,8 @@
 # Maintained by: DOC_CLAUDE (Documentation Orchestration Claude)
 # Format: YAML for human readability and inline comments
 # Created: 2025-10-31
-# Last Updated: 2025-11-01 (Phase 1 Day 3-4 complete)
-# Version: v1.1
+# Last Updated: 2025-11-01 (Phase 2 Week 2 complete)
+# Version: v1.2
 
 # ===== CORE FEATURES =====
 
@@ -98,7 +98,8 @@ file_structure:
     - path: app.py
       section: imports
       priority: secondary
-      line_hint: "Import statements"
+      line_hint: "Line 6-14 (deps tag + imports)"
+      tagged: true  # Phase 2 Week 2
       
     - path: BOOTSTRAP_CLAUDE.md
       section: file-access
@@ -124,31 +125,39 @@ file_structure:
 vudu_protocol:
   stability: stable
   version: 1.1
-  last_changed: 2025-10-26
+  last_changed: 2025-11-01  # Phase 2 Week 2 tagging complete
   owner: DOC_CLAUDE
-  
+
   depends_on:
     - Multi-AI coordination needs
     - relay/ folder structure
-    
+
   documented_in:
-    - path: VUDU_PROTOCOL.md
+    - path: auditors/VUDU_PROTOCOL.md
       section: all
       priority: primary
-      
-    - path: relay/README.md
+
+    - path: auditors/relay/README.md
       section: coordination-process
       priority: primary
-      
-    - path: BOOTSTRAP_VUDU.md
+
+    - path: auditors/Bootstrap/BOOTSTRAP_VUDU.md
       section: protocol-overview
       priority: primary
-      
-    - path: README_C.md
+
+    - path: auditors/README_C.md
       section: coordination-status
       priority: secondary
-      
-    - path: VUDU_LOG.md
+      line_hint: "Lines 244-263"
+      tagged: true  # Phase 2 Week 2
+
+    - path: auditors/VUDU_HEADER_STANDARD.md
+      section: message-format
+      priority: primary
+      line_hint: "Lines 3-74"
+      tagged: true  # Phase 2 Week 2
+
+    - path: auditors/VUDU_LOG.md
       section: header-format
       priority: secondary
   
@@ -164,25 +173,29 @@ vudu_protocol:
 bootstrap_system:
   stability: stable
   version: 3.8.0
-  last_changed: 2025-10-28
+  last_changed: 2025-11-01  # Phase 2 Week 2 tagging complete
   owner: DOC_CLAUDE
-  
+
   documented_in:
-    - path: MISSION_DEFAULT.md
+    - path: auditors/MISSION_DEFAULT.md
       section: cold-start
       priority: primary
-      
-    - path: README_C.md
+
+    - path: auditors/README_C.md
       section: recovery-instructions
       priority: primary
-      
-    - path: Bootstrap/README.md
+      line_hint: "Lines 17-52, 135-162"
+      tagged: true  # Phase 2 Week 2
+
+    - path: auditors/Bootstrap/README.md
       section: tier-descriptions
       priority: primary
-      
-    - path: BOOTSTRAP_CLAUDE.md
+
+    - path: auditors/Bootstrap/BOOTSTRAP_DOC_CLAUDE.md
       section: identity
       priority: primary
+      line_hint: "Lines 21-75"
+      tagged: true  # Phase 2 Week 2
   
   update_checklist: |
     When modifying bootstrap:
@@ -197,22 +210,26 @@ bootstrap_system:
 
 ypa_calculation:
   stability: stable
-  last_changed: 2025-10-20
+  last_changed: 2025-11-01  # Phase 2 Week 2 tagging complete
   owner: DOC_CLAUDE
-  
+
   depends_on:
-    - calculations.py
+    - utils/calculations.py
     - Framework scoring logic
-    
+
   documented_in:
-    - path: calculations.py
+    - path: utils/calculations.py
       section: docstrings
       priority: primary
-      
+      line_hint: "Lines 6-66 (core YPA functions)"
+      tagged: true  # Phase 2 Week 2
+
     - path: README.md
       section: ypa-explanation
       priority: secondary
-      
+      line_hint: "Lines 129-152"
+      tagged: true  # Phase 1 Day 1-2
+
     - path: pages/analysis.py
       section: display-logic
       priority: secondary
@@ -265,15 +282,19 @@ validation_process:
 
 registry_metadata:
   total_features: 8
-  total_documentation_links: 47
-  primary_priority_count: 23
-  secondary_priority_count: 15
+  total_documentation_links: 52
+  tagged_count: 15  # Phase 1 (5) + Phase 2 Week 2 (5) + in-phase (5)
+  primary_priority_count: 25
+  secondary_priority_count: 18
   tertiary_priority_count: 9
-  
+
   next_audit: 2025-11-15
-  
-  coverage_estimate: "30%"  # Of total features in system
+
+  coverage_estimate: "35%"  # 10 files tagged out of ~80 key files
   target_coverage: "80%"    # By end of Q4 2025
+
+  phase_1_complete: true
+  phase_2_week_2_complete: true
 
 # ===== NOTES =====
 

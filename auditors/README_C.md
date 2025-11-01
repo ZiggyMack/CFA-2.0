@@ -14,6 +14,7 @@ Coordination → BOOTSTRAP_VUDU_CLAUDE.md
 Documentation → BOOTSTRAP_DOC_CLAUDE.md
 ---
 
+<!-- deps: bootstrap_system -->
 ## 🎯 **CURRENT STATUS**
 
 ### **Version Information**
@@ -107,6 +108,7 @@ Documentation → BOOTSTRAP_DOC_CLAUDE.md
 
 ---
 
+<!-- deps: mission_system, preset_modes -->
 ## 🚀 **CURRENT MISSION: Preset Calibration**
 
 ### **Mission Status**
@@ -130,8 +132,10 @@ Documentation → BOOTSTRAP_DOC_CLAUDE.md
 
 ---
 
+<!-- deps: bootstrap_system -->
 ## 🔧 **SYSTEM ARCHITECTURE**
 
+<!-- deps: bootstrap_system -->
 ### **Tiered Bootstrap System (v3.7.2 → v3.8.0)**
 
 **Four Bootstrap Tiers:**
@@ -237,8 +241,10 @@ After bootstrap, answer these:
 
 ---
 
+<!-- deps: vudu_protocol -->
 ## 📖 **DOCUMENTATION STANDARDS**
 
+<!-- deps: vudu_protocol -->
 ### **VuDu Message Format**
 All relay messages use VUDU_HEADER_STANDARD format:
 ```markdown

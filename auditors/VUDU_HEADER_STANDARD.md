@@ -1,5 +1,6 @@
 # VUDU_HEADER_STANDARD.md - Message Format Specification
 
+<!-- deps: vudu_protocol -->
 ## Purpose
 Standardized message format for all VuDu Light coordination.
 
@@ -16,6 +17,7 @@ Unicode box characters (┌─┐│└┘) render inconsistently on mobile devi
 
 ---
 
+<!-- deps: vudu_protocol -->
 ## Standard Header Format
 
 ```
@@ -68,6 +70,7 @@ Unicode box characters (┌─┐│└┘) render inconsistently on mobile devi
 
 ---
 
+<!-- deps: vudu_protocol, validation_process -->
 ## Standard Footer Format
 
 ```

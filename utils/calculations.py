@@ -3,6 +3,8 @@ CFA v2.0 - Core Calculation Utilities
 All math and scoring logic in one place
 """
 
+# deps: ypa_calculation, preset_modes
+
 from typing import Dict, Tuple, List
 
 PF_TYPES = ["Instrumental", "Composite_70_30", "Holistic_50_50"]
