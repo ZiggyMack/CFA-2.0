@@ -4,7 +4,7 @@ PURPOSE: Guide for dependency mapping and relationship tracking
 VERSION: v1.0
 STATUS: Active
 DEPENDS_ON: Semantic headers in all files
-NEEDED_BY: README_Claude, validation processes, refactoring teams
+NEEDED_BY: DOC_CLAUDE, validation processes, refactoring teams
 MOVES_WITH: /docs/repository/dependency_maps/
 LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-4]
 --->
