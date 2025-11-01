@@ -21,8 +21,10 @@ Every configuration choice has explicit, cross-auditor validated justification.
 
 ---
 
+<!-- deps: preset_modes, validation_process -->
 ## 📊 **QUANTITATIVE SUCCESS METRICS**
 
+<!-- deps: preset_modes -->
 ### **Metric 1: YPA Behavioral Validation**
 
 **Goal:** Modes behave as claimed
@@ -58,6 +60,7 @@ Zealot Mode:
 
 ---
 
+<!-- deps: preset_modes, validation_process -->
 ### **Metric 2: Symmetry Verification**
 
 **Goal:** Opposing modes properly balanced
@@ -146,8 +149,10 @@ Status: PASS if 0 guardrail violations across all modes
 
 ---
 
+<!-- deps: validation_process, vudu_protocol -->
 ## 📝 **QUALITATIVE SUCCESS CRITERIA**
 
+<!-- deps: preset_modes -->
 ### **Criterion 1: Philosophical Coherence**
 
 **Goal:** Each mode embodies its claimed archetype
@@ -224,6 +229,7 @@ Rating: Justified / Unjustified
 
 ---
 
+<!-- deps: validation_process, vudu_protocol -->
 ### **Criterion 4: Cross-Auditor Convergence**
 
 **Goal:** All three auditors agree on final configuration

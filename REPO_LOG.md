@@ -6,7 +6,7 @@ STATUS: Active
 DEPENDS_ON: None
 NEEDED_BY: All auditors making repository changes, CHANGELOG.md
 MOVES_WITH: / (root)
-LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-11]
+LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-4]
 --->
 
 # REPO_LOG.md - Repository Change Log
@@ -51,15 +51,15 @@ LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-11]
 ## 📊 COORDINATION CHECKPOINT
 
 **Last Full Coordination:** 2025-11-01
-**Entries Since:** 1
-**Pending Items:** 0 (DOC_CLAUDE fortifications deployed ✅)
+**Entries Since:** 2
+**Pending Items:** 0 (DOC_CLAUDE operational, 88MPH.md UX fixed ✅)
 
 ### Category Pointers:
 
 - **[TASK_MOVEMENT]:** Last entry 2025-10-29-2
 - **[VALIDATION]:** Last entry 2025-10-29-2
 - **[PENDING_ACTIONS]:** Last entry 2025-11-01-1
-- **[DOCUMENTATION]:** Last entry 2025-11-01-1
+- **[DOCUMENTATION]:** Last entry 2025-11-01-4
 - **[STRUCTURE]:** Last entry 2025-11-01-1
 - **[DEPLOYMENTS]:** Last entry 2025-10-29-2
 - **[ALL_CHANGES]:** Last entry 2025-11-01-1
@@ -67,6 +67,26 @@ LAST_UPDATE: 2025-10-31 [DOCUMENTATION-2025-10-31-11]
 -----
 
 ## 📝 CHANGE LOG
+
+### [DOCUMENTATION-2025-11-01-4] 2025-11-01 - 88MPH.md UX Fix (Critical)
+
+**Categories:** [DOCUMENTATION]
+**Changed by:** DOC_CLAUDE (Repo Librarian)
+**Session ID:** readme-claude-88mph-011CUgHTs3EjgHdXg9Sy4Tvf
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `UPDATED`: /88MPH.md - Added prominent activation warning at top, clarified automatic DOC_CLAUDE identity, reinforced "no choice needed" throughout
+
+**Reason:** User reported that Claude instances reading 88MPH.md were still asking "which role do you want?" instead of automatically activating as DOC_CLAUDE. Fixed UX ambiguity to make activation instant and unambiguous.
+
+**Impact:** Critical UX improvement - Ensures clear separation:
+- VuDu Claude path: Read MISSION_DEFAULT.md → Choose tier → Coordinate
+- Doc_Claude path: Read 88MPH.md → Instant activation (no choice)
+
+**Follow-up Required:** NO
+
+-----
 
 ### [DOCUMENTATION-2025-11-01-1] 2025-11-01 - DOC_CLAUDE Fortifications Deployed
 

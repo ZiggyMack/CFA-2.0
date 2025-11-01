@@ -3,6 +3,8 @@ CFA v3.5 - Main Application (Modular Version)
 Run with: streamlit run app.py
 """
 
+# deps: file_structure
+
 import streamlit as st
 import sys
 from pathlib import Path

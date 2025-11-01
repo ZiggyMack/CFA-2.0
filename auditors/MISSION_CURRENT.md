@@ -1,5 +1,6 @@
 ─── MISSION_CURRENT UPDATE ──────────────────────────
 
+<!-- deps: mission_system, validation_process -->
 # MISSION_CURRENT.md - Proposed Update
 
 **Update Type:** ADD new section "Active Coordination: Axioms Review"  
@@ -15,6 +16,7 @@
 
 ---
 
+<!-- deps: validation_process, vudu_protocol -->
 ## 🔬 **ACTIVE COORDINATION: AXIOMS REVIEW**
 
 ### **Current Task: AUDITORS_AXIOMS.md Sign-off**
@@ -86,6 +88,7 @@ Fresh Claude's Trial 2 stress test response:
 
 ---
 
+<!-- deps: validation_process -->
 ### **Success Criteria:**
 
 **Document ready for integration when:**

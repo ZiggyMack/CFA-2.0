@@ -20,6 +20,7 @@ streamlit run app.py
 
 ---
 
+<!-- deps: file_structure -->
 ## 📁 Required File Structure (v3.5)
 
 ```
@@ -183,6 +184,7 @@ streamlit run pages/landing.py
 
 ---
 
+<!-- deps: vudu_protocol, bootstrap_system -->
 ## 🔄 NEW in v3.5: Auditor Infrastructure Deployment
 
 ### What is /auditors/ Folder?
@@ -254,6 +256,7 @@ The `/auditors/` folder contains:
 
 ---
 
+<!-- deps: file_structure -->
 ## 🔄 Updating from v2.0 → v3.5
 
 ### What Changed:
