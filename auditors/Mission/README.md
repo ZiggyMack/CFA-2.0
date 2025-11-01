@@ -47,7 +47,7 @@ missions/
 │   ├── SUCCESS_CRITERIA.md     # How we know we're done
 │   ├── TECHNICAL_SPEC.md       # Implementation details
 │   └── results/                # Mission outputs
-├── _Archive/                    # Completed missions (standardized naming)
+├── .Archive/                    # Completed missions (standardized naming)
 │   └── [past_missions]/        # Historical reference
 └── README.md                    # This file
 ```
@@ -72,7 +72,7 @@ missions/
 ### 4. Completion
 - Success criteria validated
 - Results documented
-- Mission folder moved to _Archive/
+- Mission folder moved to .Archive/
 
 ### 5. Archive
 - Historical reference maintained

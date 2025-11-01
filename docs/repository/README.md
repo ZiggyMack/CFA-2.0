@@ -32,7 +32,7 @@ repository/
 ├── health_reports/             # Periodic repository assessments
 │   ├── README.md              # Health report guide
 │   ├── 2025-10-31_GREEN.md    # Latest assessment
-│   └── _Archive/              # Historical reports
+│   └── .Archive/              # Historical reports
 ├── dependency_maps/            # File relationship tracking
 │   ├── README.md              # Dependency mapping guide
 │   ├── MASTER_DEPENDENCY_MAP.md # Current system map

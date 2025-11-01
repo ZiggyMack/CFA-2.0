@@ -1,3 +1,4 @@
+<!-- deps: bootstrap_system -->
 ─── BOOTSTRAP FRAMEWORK ──────────────────────────────
 
 # BOOTSTRAP_FRAMEWORK.md - Auditor Bootstrap System

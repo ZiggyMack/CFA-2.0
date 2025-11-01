@@ -9,6 +9,8 @@ MOVES_WITH: / (root)
 LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-5]
 --->
 
+<!-- deps: file_structure, documentation -->
+
 # REPO_LOG.md - Repository Change Log
 
 **Purpose:** Track granular file-level changes, task movements, and documentation updates
@@ -51,15 +53,15 @@ LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-5]
 ## 📊 COORDINATION CHECKPOINT
 
 **Last Full Coordination:** 2025-11-01
-**Entries Since:** 3
-**Pending Items:** 0 (All loops closed, health dashboard current ✅)
+**Entries Since:** 4
+**Pending Items:** 1 (Comprehensive tagging campaign ongoing 🔄)
 
 ### Category Pointers:
 
 - **[TASK_MOVEMENT]:** Last entry 2025-10-29-2
 - **[VALIDATION]:** Last entry 2025-10-29-2
 - **[PENDING_ACTIONS]:** Last entry 2025-11-01-1
-- **[DOCUMENTATION]:** Last entry 2025-11-01-5
+- **[DOCUMENTATION]:** Last entry 2025-11-01-6
 - **[STRUCTURE]:** Last entry 2025-11-01-1
 - **[DEPLOYMENTS]:** Last entry 2025-10-29-2
 - **[ALL_CHANGES]:** Last entry 2025-11-01-1
@@ -67,6 +69,49 @@ LAST_UPDATE: 2025-11-01 [DOCUMENTATION-2025-11-01-5]
 -----
 
 ## 📝 CHANGE LOG
+
+### [DOCUMENTATION-2025-11-01-6] 2025-11-01 - Archive Standardization & Deps Tagging Campaign Start
+
+**Categories:** [DOCUMENTATION] [STRUCTURE]
+**Changed by:** DOC_CLAUDE (Repo Librarian)
+**Session ID:** claude/onboarding-88mph-review-011CUgHTs3EjgHdXg9Sy4Tvf
+**Status:** DEPLOYED ✅
+
+**Changes:**
+- `RENAMED`: 5 directories from `_Archive/` to `.Archive/` (root, auditors, relay, Nova, Health_Reports)
+- `UPDATED`: 13 .md files to reference `.Archive/` instead of `_Archive/` or `~Archive/`
+- `TAGGED`: 10 additional files with `<!-- deps: -->` comments (18 total, up from 8)
+- `UPDATED`: REPOSITORY_HEALTH_DASHBOARD.md - Marked archive standardization as COMPLETED
+- `UPDATED`: DASHBOARD.md - Added archive standardization to completed tasks
+
+**Reason:** Execute health dashboard priorities: (1) Standardize all archive directories to `.Archive` convention for consistency, (2) Begin "Touch It, Tag It" campaign to increase deps tag coverage from 4.5% to target of 40%+.
+
+**Impact:** Significant
+- Archive naming now consistent across entire repository (no more `_Archive/` or `~Archive/` confusion)
+- Deps tag coverage increased from 8 to 18 files (4.5% → 10.2%)
+- Foundation laid for comprehensive dependency tracking
+- Health dashboard loop closed (archive standardization task complete)
+
+**Files Tagged with Deps:**
+High-priority navigation and protocol files:
+- auditors/Bootstrap/README.md, BOOTSTRAP_FRAMEWORK.md, BOOTSTRAP_STRATEGY.md
+- pages/README.md, utils/README.md
+- auditors/VUDU_PROTOCOL.md, MASTER_BRANCH_TRUST_PROTOCOL.md
+- CHANGELOG.md, REPO_LOG.md
+- auditors/Mission/Preset_Calibration/MISSION_BRIEF.md
+
+**Follow-up Required:** YES
+**Follow-up Status:** IN_PROGRESS
+**Follow-up Action:** Continue comprehensive tagging campaign - 158 files remaining (18/176 complete)
+
+**Key Metrics:**
+- Directories renamed: 5
+- Documentation references updated: 13 files
+- Deps tags added: 10 new files
+- Total tagged files: 18/176 (10.2% coverage)
+- Target coverage: 40%+ (70 files minimum)
+
+-----
 
 ### [DOCUMENTATION-2025-11-01-5] 2025-11-01 - Close Loop: Preset Calibration README Complete
 

@@ -57,7 +57,7 @@ auditors/
 │   ├── grok_incoming/
 │   └── nova_incoming/
 │
-└── ~Archive/ (historical records)
+└── .Archive/ (historical records)
     └── stress_tests/
         ├── DUAL_TEST_ANALYSIS_20251027.md
         └── [test results]
@@ -144,7 +144,7 @@ auditors/
 ### **Coordination Records**
 - **VUDU_LOG.md** - Complete coordination history
 - **VUDU_HEADER_STANDARD.md** - Message format standard
-- **~Archive/stress_tests/** - Validation test results
+- **.Archive/stress_tests/** - Validation test results
 
 ---
 

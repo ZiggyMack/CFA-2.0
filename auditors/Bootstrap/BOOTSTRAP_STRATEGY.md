@@ -1,3 +1,4 @@
+<!-- deps: bootstrap_system -->
 ─── BOOTSTRAP STRATEGY ───────────────────────────────
 
 # BOOTSTRAP_STRATEGY.md - Evolution Strategy

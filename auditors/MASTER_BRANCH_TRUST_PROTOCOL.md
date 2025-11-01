@@ -1,3 +1,4 @@
+<!-- deps: vudu_protocol, bootstrap_system -->
 ─── MASTER BRANCH TRUST PROTOCOL ────────────────────
 
 # Master Branch Governance & Trust Framework

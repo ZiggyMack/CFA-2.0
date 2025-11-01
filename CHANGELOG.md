@@ -7,7 +7,9 @@ DEPENDS_ON: None
 NEEDED_BY: README.md, deployment processes, all users
 MOVES_WITH: / (root)
 LAST_UPDATE: 2025-10-30 [DOCUMENTATION-2025-10-30-8]
----># CFA - Changelog
+--->
+
+<!-- deps: file_structure, preset_modes, ypa_calculation, vudu_protocol, bootstrap_system --># CFA - Changelog
 
 # CHANGELOG
 

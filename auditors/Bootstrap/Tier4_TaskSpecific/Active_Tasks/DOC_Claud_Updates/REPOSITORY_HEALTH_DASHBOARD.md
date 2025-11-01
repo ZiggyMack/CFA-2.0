@@ -52,9 +52,9 @@ Archives   ████████████░░░░░░░░░ 60%  
 
 ### 🟢 **MEDIUM (This Month)**
 ```markdown
-[ ] Standardize archive folders to .archive/
-    Current: Mix of _Archive, ~Archive
-    Time: ~1 hour gradual
+[✅] COMPLETED: Standardize archive folders to .Archive/
+    Status: All 5 archives renamed to .Archive
+    Completed: 2025-11-01
     Owner: DOC_CLAUDE
 
 [ ] Implement DOC_DEP pilot (5 files)
@@ -107,8 +107,8 @@ Directory                    READMEs    Coverage    Quality
 
 ### **Circular Dependencies:** 0 ✅
 ### **Orphan Files:** 2 ⚠️
-- `/auditors/_Archive/PROCESS_HEADER_STANDARD_v3.2.md`
-- `/auditors/_Archive/PROCESS_HEADER_STANDARD v3.0.md`
+- `/auditors/.Archive/PROCESS_HEADER_STANDARD_v3.2.md`
+- `/auditors/.Archive/PROCESS_HEADER_STANDARD v3.0.md`
 
 ### **Missing Dependencies:** 3 🔴
 - BOOTSTRAP_DOC_CLAUDE.md (needs creation after rebrand)
